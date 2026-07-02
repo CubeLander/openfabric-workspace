@@ -46,6 +46,12 @@ different surfaces of the model.
 10. `10_conclusion.md`
 11. `evidence_map.md`: local evidence inventory and source-of-truth map.
 
+The publication roadmap is tracked separately:
+
+```text
+../roadmap/openfabric-publication-roadmap.md
+```
+
 ## Paper Boundary
 
 OpenFabric studies a programming model and compiler architecture for spatial

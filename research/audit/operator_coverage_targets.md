@@ -40,6 +40,7 @@ Use these labels consistently in paper text, planning docs, and future audits.
 | Level | Meaning |
 | --- | --- |
 | `E2E_REPLAY` | Generated/refactored path is compared against vendor-visible package/support artifacts. |
+| `CUSTOMER_NUMERIC` | Generated package has run on the customer/vendor runtime surface and passed its numerical checker. |
 | `RUNTIME_TRACE` | RuntimePlanImage/API/common executor traces exist and are comparable. |
 | `PACKAGE_SCAFFOLD` | Case/package material exists but is not full runtime/numerical proof. |
 | `STRUCTURAL_PLAN` | DTensor/Tile/graph/runtime intent is explicit and inspectable. |
@@ -55,8 +56,9 @@ The strongest near-term paper story should combine:
 | GEMM | compute-heavy spatial tiling, shard/replicate placement, A broadcast/COPYT, B sharing, C partition | `E2E_REPLAY` |
 | GEMM+ReLU | fusion as tile op-chain, not an epilogue flag | `E2E_REPLAY` or `RUNTIME_TRACE` |
 | Softmax | row-wise reduce, staged scratch/materialization, normalize/store | `E2E_REPLAY` or `RUNTIME_TRACE` |
-| log10max | chained non-GEMM ops plus global scalar/reduction visibility | `PACKAGE_SCAFFOLD` now, improve toward `RUNTIME_TRACE` |
+| log10max | chained non-GEMM ops plus global scalar/reduction visibility | `CUSTOMER_NUMERIC` on DFU3500 package, improve the plan toward explicit LogicalCollective |
 | Broadcast/reduce microcases | NoC-first LogicalCollective exposure independent of GEMM | add `STRUCTURAL_PLAN`, then package/run evidence |
+| Tenstorrent microcase | second target for tile/NoC portability | start with `DESIGN_ONLY`, then simulator-backed runnable evidence |
 | Attention design case | Torch-level composite: GEMM + softmax + GEMM + lifetime/materialization | `DESIGN_ONLY` first, then structural plan |
 | Conv2d virtual im2col | layout/gather/materialization boundary | `DESIGN_ONLY`; keep direct gather unclaimed |
 
@@ -96,7 +98,10 @@ These are the minimum targets for a strong programming-model paper.
      materialization boundaries.
 
 4. **log10max / global scalar**
-   - Evidence goal: upgrade from `PACKAGE_SCAFFOLD` toward `RUNTIME_TRACE`.
+   - Current evidence: `CUSTOMER_NUMERIC`.
+   - Evidence goal: keep customer package/checker passing while upgrading the
+     internal plan from fallback scalar visibility toward explicit
+     `LogicalCollective`.
    - Must show: local chain plus global scalar visibility/fanout.
    - Guardrail: do not label PE00 materialized scalar as direct physical
      allreduce unless route evidence exists.
@@ -111,6 +116,14 @@ These are the minimum targets for a strong programming-model paper.
      - ring or tree allreduce sketch.
    - Must show: LogicalCollective participants, local roles, graph/dependency
      projection, and target route/COPY/COPYT intent.
+
+6. **Tenstorrent portability scout**
+   - Evidence goal: `DESIGN_ONLY` to simulator-backed runnable microcase.
+   - Existing lead: `research/targets/tenstorrent-portability-scout.md`.
+   - Must show: the OpenFabric mesh/tile/storage/collective abstraction is not
+     owned by DFU3500 naming or package shapes.
+   - Guardrail: do not claim Tenstorrent support until a TT-Metalium/TT-NN
+     artifact runs through a public simulator or device path.
 
 ### P1: Torch-Level Coverage Expansion
 

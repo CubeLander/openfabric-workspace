@@ -85,6 +85,39 @@ Important caveat:
 This is case-authoring automation evidence, not the entire DTensor frontend.
 ```
 
+### log10max Customer Milestone
+
+Path:
+
+```text
+OpenFabric/simict3500final/gpdpu/users/risc_nn_riscv/testcase/application/log10max_refactored
+OpenFabric/build/customer_delivery/log10max.tar.gz
+OpenFabric/README.md
+OpenFabric/SPM_PLAN_REFACTOR_PLAN.md
+```
+
+Key commit:
+
+```text
+1846dca Document log10max customer milestone
+```
+
+Use for:
+
+- first customer-runnable OpenFabric-generated operator package;
+- non-GEMM exposure case;
+- chained local tile work plus global scalar visibility;
+- flat SPM layout and subtask-local tensor access slot policy;
+- customer-side numerical checker evidence with `mismatch_count = 0`.
+
+Important caveat:
+
+```text
+The current package is valid delivery evidence, but the global scalar path
+should still be upgraded into an explicit LogicalCollective plan before the
+paper claims full collective lowering.
+```
+
 ### Legacy GEMM Template Fusion
 
 Path:
@@ -98,6 +131,37 @@ Use for:
 - vendor case baseline;
 - A/B/C partition and COPYT behavior;
 - task/subtask/template/graph surfaces.
+
+### Tenstorrent Portability Scout
+
+Path:
+
+```text
+research/targets/tenstorrent-portability-scout.md
+```
+
+External anchors:
+
+```text
+https://docs.tenstorrent.com/tt-metal/latest/tt-metalium/index.html
+https://docs.tenstorrent.com/tt-metal/latest/ttnn/ttnn/tensor.html
+https://github.com/tenstorrent/ttsim
+```
+
+Use for:
+
+- second-target roadmap;
+- mapping OpenFabric mesh/tile/storage/collective concepts onto a public
+  tile/NoC accelerator software stack;
+- motivating a simulator-backed portability microcase.
+
+Important caveat:
+
+```text
+This is currently a scout and target hypothesis, not implementation evidence.
+Do not claim Tenstorrent support until a public TT-Metalium/TT-NN artifact runs
+through simulator or device validation.
+```
 
 ### B-line Operator Status
 
