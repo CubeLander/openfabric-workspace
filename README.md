@@ -6,13 +6,15 @@ research/planning material side by side.
 ## Layout
 
 ```text
-OpenFabric/          local submodule pointing at ../OpenFabric
+OpenFabric/          GitHub-backed submodule with the active implementation
 research/planning/   paper and research planning notes
 research/audit/      coverage and evidence audits
 ```
 
-The `OpenFabric` submodule is pinned to the local milestone commit that records
-the first customer-runnable `log10max` delivery:
+The `OpenFabric` submodule URL remains the GitHub repository, while this local
+checkout uses the original Desktop `OpenFabric` repository moved into the
+workspace. It is pinned to the milestone commit that records the first
+customer-runnable `log10max` delivery:
 
 ```text
 1846dca Document log10max customer milestone
