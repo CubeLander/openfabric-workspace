@@ -1,0 +1,68 @@
+# macOS / filesystem noise
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editor / IDE local state
+*~
+*.swp
+*.swo
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Node / frontend package outputs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+coverage/
+
+# C/C++ / CMake / build products
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.d
+
+# Logs, temporary files, and local scratch
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+.tools/

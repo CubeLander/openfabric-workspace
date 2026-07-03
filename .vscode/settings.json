@@ -1,0 +1,27 @@
+{
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/OpenFabric/build/compile_commands.json",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.arguments": [
+    "--compile-commands-dir=${workspaceFolder}/OpenFabric/build",
+    "--query-driver=/usr/bin/cc,/usr/bin/c++,/usr/bin/gcc,/usr/bin/g++,/usr/bin/riscv64-unknown-elf-*"
+  ],
+  "cmake.sourceDirectory": "${workspaceFolder}/OpenFabric",
+  "cmake.configureOnOpen": false,
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/build/**": true,
+    "**/.cache/**": true,
+    "**/__pycache__/**": true,
+    "**/OpenFabric/openfabric/dfu3500/toolchain/untrusted_assembler/**/result/**": true,
+    "**/OpenFabric/openfabric/dfu3500/toolchain/untrusted_assembler/**/simulator_bin*/**": true,
+    "**/OpenFabric/openfabric/dfu3500/toolchain/untrusted_assembler/**/rtl_bin*/**": true
+  },
+  "search.exclude": {
+    "**/build/**": true,
+    "**/.cache/**": true,
+    "**/__pycache__/**": true,
+    "**/OpenFabric/openfabric/dfu3500/toolchain/untrusted_assembler/**/result/**": true,
+    "**/OpenFabric/openfabric/dfu3500/toolchain/untrusted_assembler/**/simulator_bin*/**": true,
+    "**/OpenFabric/openfabric/dfu3500/toolchain/untrusted_assembler/**/rtl_bin*/**": true
+  }
+}
