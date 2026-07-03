@@ -14,10 +14,11 @@ research/audit/      coverage and evidence audits
 
 The `OpenFabric` submodule URL remains the GitHub repository, while this local
 checkout uses the original Desktop `OpenFabric` repository moved into the
-workspace. It is currently pinned to the post-vendor-package cleanup line:
+workspace. It is currently pinned to the refreshed log10max-fp32 approved
+snapshot line:
 
 ```text
-56ed85d Add OpenFabric repo-local workflow skills
+1d7e936 updated log10max snapshot
 ```
 
 Use `research/` for paper/planning discussion and `OpenFabric/` for the active

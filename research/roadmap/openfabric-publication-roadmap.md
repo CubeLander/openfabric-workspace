@@ -3,7 +3,7 @@
 Status: active roadmap for turning the current DFU3500 milestone into a
 publishable OpenFabric research story.
 
-Date: 2026-07-02
+Date: 2026-07-03
 
 ## Publication Thesis
 
@@ -27,21 +27,30 @@ with Tenstorrent as the most attractive public candidate.
 The active OpenFabric submodule is pinned at:
 
 ```text
-1846dca Document log10max customer milestone
+1d7e936 updated log10max snapshot
 ```
 
-This commit records the first customer-runnable OpenFabric-generated operator
-package:
+This line carries the first customer-runnable OpenFabric-generated operator
+package forward into the renamed fp32 delivery contract and refreshed approved
+snapshot:
 
 ```text
-OpenFabric/build/customer_delivery/log10max.tar.gz
+OpenFabric/build/customer_delivery/log10max-fp32.tar.gz
+OpenFabric/openfabric/dfu3500/operators/log10max-fp32/snapshots/approved/default/log10max-fp32.tar.gz
 ```
 
-The package was generated from `log10max_refactored`, assembled and run through
-the customer-side DFU3500 flow, and passed the output checker with:
+The package is generated from `openfabric/dfu3500/operators/log10max-fp32`,
+assembled and run through the customer-side DFU3500 flow, and passed the output
+checker with:
 
 ```text
 mismatch_count = 0
+```
+
+The original customer-pass milestone was recorded at:
+
+```text
+1846dca Document log10max customer milestone
 ```
 
 This milestone matters for the paper because log10max is a non-GEMM exposure

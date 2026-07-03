@@ -70,7 +70,7 @@ Use for:
 Path:
 
 ```text
-OpenFabric/simict3500final/gpdpu/users/risc_nn_riscv/testcase/application/gemm_refactored
+OpenFabric/openfabric/dfu3500/operators/gemm
 ```
 
 Use for:
@@ -90,16 +90,18 @@ This is case-authoring automation evidence, not the entire DTensor frontend.
 Path:
 
 ```text
-OpenFabric/simict3500final/gpdpu/users/risc_nn_riscv/testcase/application/log10max_refactored
-OpenFabric/build/customer_delivery/log10max.tar.gz
+OpenFabric/openfabric/dfu3500/operators/log10max-fp32
+OpenFabric/build/customer_delivery/log10max-fp32.tar.gz
+OpenFabric/openfabric/dfu3500/operators/log10max-fp32/snapshots/approved/default/log10max-fp32.tar.gz
 OpenFabric/README.md
-OpenFabric/SPM_PLAN_REFACTOR_PLAN.md
 ```
 
-Key commit:
+Key commits:
 
 ```text
 1846dca Document log10max customer milestone
+47bcfb4 renamed log10max
+1d7e936 updated log10max snapshot
 ```
 
 Use for:
@@ -108,7 +110,8 @@ Use for:
 - non-GEMM exposure case;
 - chained local tile work plus global scalar visibility;
 - flat SPM layout and subtask-local tensor access slot policy;
-- customer-side numerical checker evidence with `mismatch_count = 0`.
+- customer-side numerical checker evidence with `mismatch_count = 0`;
+- checked approved snapshot package and diagnostic fingerprint gate.
 
 Important caveat:
 
@@ -123,14 +126,23 @@ paper claims full collective lowering.
 Path:
 
 ```text
-OpenFabric/simict3500final/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion
+OpenFabric/docs/handwritten-operator-contract.md
+OpenFabric/docs/vendor-workflow-evidence/
+OpenFabric/legacy_implementations/openfabric_bline/RUNNABLE_BASELINE.md
 ```
 
 Use for:
 
-- vendor case baseline;
+- archived vendor case baseline evidence;
 - A/B/C partition and COPYT behavior;
 - task/subtask/template/graph surfaces.
+
+Important caveat:
+
+```text
+The checked-in SimICT vendor package has been removed. Treat this as evidence
+and workflow context, not as an active source path.
+```
 
 ### Tenstorrent Portability Scout
 
