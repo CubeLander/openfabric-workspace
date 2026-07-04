@@ -9,19 +9,16 @@
 先读这些，它们定义当前路线的设计边界：
 
 ```text
-../TWO_LEVEL_DTENSOR_NOTES_CN.md
+../next_stage_refactor_direction.md
 ../SCOPED_TENSOR_PROJECTION_CLEANUP_AUDIT_CN.md
 handwritten-operator-contract.md
 vendor-assembler-input-protocol.md
-openfabric-lowering-principles.md
 runtime-plan-image.md
 operator-coverage-checklist.md
-address-binding-projections.md
-partial-reduce-stage-binding.md
 openfabric-vector-hardware-coverage.md
 ```
 
-`../TWO_LEVEL_DTENSOR_NOTES_CN.md` 现在是 workspace 级的最高命名指导。旧文档中
+`../next_stage_refactor_direction.md` 现在是 workspace 级的最高命名指导。旧文档中
 的 `DTensor` / `Tile Program` / `TileValue` / `ProcessorTileProgram` 不应再默认
 作为最终架构语言；需要按 `Tensor -> StreamTensorView -> FiberTensorView ->
 TypedTileValue -> Operand` 重新解释。

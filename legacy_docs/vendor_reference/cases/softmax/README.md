@@ -9,5 +9,6 @@
 
 ## 相关主链路
 
-- [runtime/workflow](../../../runtime/workflow/README.md)
+- [softmax-current-real-workflow.md](softmax-current-real-workflow.md)
+- [common_oper](../../common_oper/README.md)
 - [runtime_evidence/riscv-control-and-dpuapi.md](../../runtime_evidence/riscv-control-and-dpuapi.md)

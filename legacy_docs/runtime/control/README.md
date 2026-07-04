@@ -236,6 +236,10 @@ int DPU_Kernel_Start(int inst_reload, int task_num, void* instance_base,
 如果你想继续下一层：
 
 1. 先看 [runtime/data](../data/README.md) 完整确认字段。
-2. 再看 [runtime/simulator](../simulator/README.md) 看消息/模块如何消费。
-3. 再看 [runtime/workflow](../workflow/README.md) 了解 build/replay 过程的边界。
-4. 最后看 [runtime/debug](../debug/README.md) 做症状定位。
+2. 再看 [runtime evidence](../../vendor_reference/runtime_evidence/README.md)
+   看 RISC-V / DpuAPI / SimICT 行为证据。
+3. case / bundle / build workflow 事实优先看
+   [vendor_reference/cases](../../vendor_reference/cases/README.md) 和
+   [common_oper](../../vendor_reference/common_oper/README.md)。
+4. 少量 runtime binary/OCR 追溯材料保留在
+   [runtime_ocr](../debug/runtime_ocr/README.md)。

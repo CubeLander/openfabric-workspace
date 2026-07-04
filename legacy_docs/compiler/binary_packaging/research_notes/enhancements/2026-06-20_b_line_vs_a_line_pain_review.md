@@ -2,7 +2,8 @@
 
 Date: 2026-06-20
 
-Status: supervision note / architecture review
+Status: legacy pain/failure evidence. Current architecture is
+`../../../../../../next_stage_refactor_direction.md`.
 
 Related notes:
 
@@ -10,10 +11,13 @@ Related notes:
 docs/compiler/binary_packaging/research_notes/binary/2026-06-20_a_line_pain_retrospective.md
 docs/compiler/binary_packaging/research_notes/binary/2026-06-20_functional_probe_manual_abi_assumptions.md
 docs/compiler/binary_packaging/research_notes/enhancements/2026-06-20_a_line_binary_memory_mud_for_b_line.md
-docs/compiler/binary_packaging/research_notes/enhancements/rfc-stream-tile-plan-flat-lowering.md
 docs/compiler/binary_packaging/research_notes/enhancements/rfc-fiber-executable-role-binding.md
 docs/compiler/binary_packaging/research_notes/enhancements/rfc-b-line-template-op-binary-plan.md
 ```
+
+The removed StreamTilePlan RFCs are superseded by the Scoped Tensor Projection
+model. Keep this note for A-line/B-line failure lessons, not as an architecture
+entrypoint.
 
 ## Executive Summary
 

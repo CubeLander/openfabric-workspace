@@ -496,8 +496,8 @@ and runtime-proven.
 - Accept this RFC.
 - Add a tiny fixture inventory for `app0.conf`, one `template/0.csv`, and one
   `test_graph_extend.cpp` from GEMM and softmax.
-- Record the minimal assembler input file list in `planB.md` and the new bundle
-  README.
+- Record the minimal assembler input file list in the current
+  `docs/vendor-assembler-input-protocol.md` and the bundle README.
 
 No behavior change.
 

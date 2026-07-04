@@ -21,11 +21,11 @@ The current workspace-level design direction is `Scoped Tensor Projection`,
 recorded in:
 
 ```text
-TWO_LEVEL_DTENSOR_NOTES_CN.md
+next_stage_refactor_direction.md
 SCOPED_TENSOR_PROJECTION_CLEANUP_AUDIT_CN.md
 ```
 
-Use `TWO_LEVEL_DTENSOR_NOTES_CN.md` as the highest-level naming guidance. Older
+Use `next_stage_refactor_direction.md` as the highest-level naming guidance. Older
 `DTensor`, `Tile Program`, `TileValue`, and `ProcessorTileProgram` language in
 research or legacy documents should be treated as historical unless it is
 explicitly reconciled with:

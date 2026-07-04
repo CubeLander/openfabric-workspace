@@ -13,6 +13,7 @@
 
 ## 边界
 
-整理后的运行时模型放在 [runtime/control](../../runtime/control/README.md)、
-[runtime/data](../../runtime/data/README.md) 和
-[runtime/simulator](../../runtime/simulator/README.md)。本目录只保留原始证据和推断链。
+整理后的运行时模型放在 [runtime/control](../../runtime/control/README.md) 和
+[runtime/data](../../runtime/data/README.md)。case / build workflow 事实看
+[vendor cases](../cases/README.md) 与 [common_oper](../common_oper/README.md)。
+本目录只保留原始证据和推断链。

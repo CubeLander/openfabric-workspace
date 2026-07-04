@@ -4,7 +4,7 @@
 
 日期：2026-07-04
 
-本文件记录一次以 `TWO_LEVEL_DTENSOR_NOTES_CN.md` 为指导思想的 workspace
+本文件记录一次以 `next_stage_refactor_direction.md` 为指导思想的 workspace
 清扫计划。这里的目标不是把旧资料一把火烧掉，而是把它们重新分层：
 
 ```text
@@ -72,10 +72,8 @@ legacy_docs/
 这些文件应作为新阅读路径的核心：
 
 ```text
-TWO_LEVEL_DTENSOR_NOTES_CN.md
-docs/openfabric-lowering-principles.md
+next_stage_refactor_direction.md
 docs/operator-coverage-checklist.md
-docs/address-binding-projections.md
 docs/runtime-plan-image.md
 docs/vendor-workflow-evidence/
 docs/isa/
@@ -84,12 +82,8 @@ docs/isa/
 但它们不是同一层级：
 
 ```text
-TWO_LEVEL_DTENSOR_NOTES_CN.md
+next_stage_refactor_direction.md
   当前命名和模型的最高指导。
-
-docs/openfabric-lowering-principles.md
-  当前工程原则仍然重要，但 `Sites And Fiber Values` 部分可以进一步对齐
-  StreamTensorView / FiberTensorView。
 ```
 
 第一批需要更新旧术语的文件：
@@ -180,7 +174,7 @@ IEEE_Conference_Template/
 已开始：
 
 ```text
-1. 把 `TWO_LEVEL_DTENSOR_NOTES_CN.md` 标记为最高设计指导。
+1. 把 `next_stage_refactor_direction.md` 标记为最高设计指导。
 2. 给旧 DTensor/tile 指导文档加状态说明。
 3. 更新 workspace README / docs README 的阅读路径。
 ```
@@ -266,7 +260,7 @@ legacy_implementations/openfabric_bline/IEEE_Conference_Template/
 
 ### 2026-07-04 表层旧设计文档清理
 
-用户判断：`TWO_LEVEL_DTENSOR_NOTES_CN.md` 的新架构思想高于旧设计文档；被新架构
+用户判断：`next_stage_refactor_direction.md` 的新架构思想高于旧设计文档；被新架构
 覆盖、明显落伍、或会误导后续实现的旧设计文档可以删除。
 
 据此删除：
@@ -290,12 +284,15 @@ docs/lowering-shell-reorg.md
 docs/vendor-toolchain-source-organization.md
 docs/softmax-subtask-site-refactor.md
 docs/independent_prompt/
+docs/openfabric-lowering-principles.md
+docs/address-binding-projections.md
+docs/partial-reduce-stage-binding.md
 ```
 
 保留原则：
 
 ```text
-TWO_LEVEL_DTENSOR_NOTES_CN.md
+next_stage_refactor_direction.md
   继续作为最高架构指导。
 
 DFU3500_ADDRESS_COMPOSITION_NOTES.md
@@ -306,8 +303,6 @@ docs/vendor-workflow-evidence/
 docs/operator-coverage-checklist.md
 docs/openfabric-vector-hardware-coverage.md
 docs/runtime-plan-image.md
-docs/address-binding-projections.md
-docs/partial-reduce-stage-binding.md
   保留，因为它们更像事实、能力边界或 target lowering 约束，而不是旧架构主张。
 ```
 
@@ -358,6 +353,113 @@ report retained: 44K
 保留原则：文档和设计考古继续留下，因为里面仍可能有硬件事实、vendor evidence 和
 失败路线经验。旧 Python 代码、测试、工具、payload 和历史交付包不再作为可运行
 证据保留。
+
+### 2026-07-04 legacy_docs 清理
+
+用户继续授权：用 `next_stage_refactor_direction.md` 审计 `docs/`、`legacy_docs/`、
+`notes/`。学习笔记、甲方硬件笔记、ISA 笔记、vendor workflow 证据要保留；被新架构
+覆盖的旧设计路线可以删除。
+
+本轮请 subagents 分区只读审计：
+
+```text
+legacy_docs/compiler/design/
+legacy_docs/compiler_notes/ 与 legacy_docs/compiler/
+legacy_docs/compiler/binary_packaging/research_notes/
+legacy_docs/architecture/、legacy_docs/runtime/、legacy_docs/vendor_reference/、notes/
+```
+
+据此删除一批旧路线文档：
+
+```text
+legacy_docs/INDEX.md
+legacy_docs/CONTENT_INVENTORY.md
+legacy_docs/knowledge-field-owner.md
+legacy_docs/rfc-knowledge-index-refactor-2026-06-14.md
+
+legacy_docs/compiler/planB.md
+legacy_docs/compiler/lowering/README.md
+legacy_docs/compiler/design/README.md
+legacy_docs/compiler/design/tile-program-as-source-of-truth.md
+legacy_docs/compiler/design/global-tile-dependency-network.md
+legacy_docs/compiler/design/bline-current-architecture-review.md
+legacy_docs/compiler/design/bline-boundary-hardening-rfc.md
+legacy_docs/compiler/design/bline-organization-rfc.md
+legacy_docs/compiler/design/bline-log10max-ring-spmd-collective-rfc.md
+
+legacy_docs/compiler_notes/README.md
+legacy_docs/compiler_notes/TODO.md
+legacy_docs/compiler_notes/notes/archive/2026-06-14_chipop_oo_refactor_plan.md
+legacy_docs/compiler_notes/notes/archive/2026-06-14_knowledge_curation_plan.md
+legacy_docs/compiler_notes/notes/archive/tile_level_legacy_vs_new_dump.md
+legacy_docs/compiler_notes/notes/enhancements/2026-06-20_b_line_op_spec_driven_lowering_rfc.md
+legacy_docs/compiler_notes/notes/enhancements/2026-06-22_b_line_aggressive_parallel_execution_rfc.md
+legacy_docs/compiler_notes/notes/enhancements/2026-06-22_b_line_binary_operator_delivery_rfc.md
+legacy_docs/compiler_notes/notes/enhancements/2026-06-22_b_line_parallel_kickoff_status.md
+legacy_docs/compiler_notes/notes/log10max/archive/2026-06-16_rfc-log10max-app-to-tile-lowering.md
+legacy_docs/compiler_notes/notes/log10max/archive/2026-06-16_todo.md
+legacy_docs/compiler_notes/notes/log10max/archive/README.md
+legacy_docs/compiler_notes/notes/refactor/rfc-op-lowering-spec-strangler.md
+
+legacy_docs/compiler/binary_packaging/research_notes/archive/rfc-dfu-graph-lowering-from-processor-tile.md
+legacy_docs/compiler/binary_packaging/research_notes/archive/rfc-multi-accumulator-k-body-folding.md
+legacy_docs/compiler/binary_packaging/research_notes/archive/rfc-post-tile-lowering-branches.md
+legacy_docs/compiler/binary_packaging/research_notes/archive/rfc-tile-microblock-as-lowering-authority.md
+legacy_docs/compiler/binary_packaging/research_notes/archive/rfc-tileloop-to-vendor-lowering-execution-plan.md
+legacy_docs/compiler/binary_packaging/research_notes/archive/legacy_drafts/testcase_runtime_package_workflow.md
+legacy_docs/compiler/binary_packaging/research_notes/enhancements/2026-06-19_rfc-b-line-finalize-epilogue-template-semantics.archived.md
+legacy_docs/compiler/binary_packaging/research_notes/enhancements/pro-fiber-comments.md
+legacy_docs/compiler/binary_packaging/research_notes/enhancements/rfc-fiber-flat-ops-to-block-projection.md
+legacy_docs/compiler/binary_packaging/research_notes/enhancements/rfc-stream-tile-plan-flat-lowering.md
+
+legacy_docs/runtime/cases/README.md
+legacy_docs/runtime/control/dfu-hardware-relocation.md
+legacy_docs/runtime/control/dfu-kernel-runtime-work-split.md
+legacy_docs/runtime/control/dfu-relocatable-kernel-impl.md
+legacy_docs/runtime/control/dfu-runtime-programming-model.md
+legacy_docs/runtime/debug/README.md
+legacy_docs/runtime/simulator/README.md
+legacy_docs/runtime/simulator/local-mock-runtime.md
+legacy_docs/runtime/workflow/README.md
+```
+
+同时重写或修补这些入口，使它们不再把旧索引/旧 B-line 设计当权威：
+
+```text
+legacy_docs/README.md
+legacy_docs/compiler/README.md
+legacy_docs/runtime/README.md
+legacy_docs/runtime/control/README.md
+legacy_docs/compiler/cases/README.md
+legacy_docs/compiler_notes/notes/refactor/README.md
+legacy_docs/compiler/design/bline-vendor-assembler-input-bundle-rfc.md
+legacy_docs/vendor_reference/runtime_evidence/README.md
+legacy_docs/vendor_reference/cases/softmax/README.md
+legacy_docs/compiler/binary_packaging/research_notes/archive/legacy_drafts/README.md
+```
+
+本轮明确保留：
+
+```text
+legacy_docs/architecture/
+legacy_docs/runtime/data/
+legacy_docs/vendor_reference/
+legacy_docs/compiler/binary_packaging/
+legacy_docs/compiler/design/ 中含 DFU facts、GEMM/SUMMA、TT-Metal lessons、
+  route/operand/log10max binary evidence 的文档
+legacy_docs/compiler_notes/notes/ 中含 operator、decoder、topology、failure lessons 的文档
+notes/resolved/
+notes/vendor-toolchain-artifact-summary.md
+```
+
+暂缓删除的边界：
+
+```text
+含旧 `ProcessorTileProgram` / `TileMicroBlock` / `StreamTilePlan` 词的文档不自动删除。
+如果它们还保存 vendor row count、runtime struct、TaskResource replay、COPY patching、
+remote binary diff、operator failure lessons，就先留作事实矿层。
+下一轮应先把事实摘到当前 docs/ 或 vendor_reference/，再删除历史 RFC。
+```
 
 ## 当前判断
 

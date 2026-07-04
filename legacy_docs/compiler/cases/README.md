@@ -8,4 +8,5 @@
 - 用法：
   - 先从 compiler README 找主链入口
   - 再回到该文档校验前后端边界是否一致
-  - 用 `knowledge-field-owner` 复核是否踩过 `source_of_truth` 之外的链路
+  - 若涉及当前架构判断，回到根目录 `next_stage_refactor_direction.md`
+    和 `docs/README.md` 复核。

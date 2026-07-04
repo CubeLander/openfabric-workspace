@@ -1,7 +1,7 @@
 # Tenstorrent Portability Scout
 
 Status: research scout for a possible second OpenFabric backend target. Mapping
-language updated to follow `../../TWO_LEVEL_DTENSOR_NOTES_CN.md`.
+language updated to follow `../../next_stage_refactor_direction.md`.
 
 Date: 2026-07-02
 

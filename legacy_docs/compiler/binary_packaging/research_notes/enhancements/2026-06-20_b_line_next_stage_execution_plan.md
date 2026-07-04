@@ -1,11 +1,13 @@
-# B-line Next Stage Execution Plan: Fiber-Centric Runtime Struct Completion
+# B-line Runtime Struct Plan
 
 Date: 2026-06-20
-Status: Active execution plan
+Status: legacy execution-plan evidence. Current architecture is
+`../../../../../../next_stage_refactor_direction.md`.
 Scope: `compiler/gpdpu_compiler/core/stream_compiler`
 
-This file is the working plan for the next B-line engineering stage.  Future
-work should stick to this order unless a new note explicitly supersedes it.
+This file records a historical B-line engineering plan. Use it for runtime
+struct, folding, and failure lessons; do not use it as the next implementation
+plan.
 
 The core rule is:
 
@@ -38,10 +40,11 @@ Primary B-line references:
 - `docs/compiler/binary_packaging/research_notes/enhancements/2026-06-18_fiber_first_stream_tile_design.md`
 - `docs/compiler/binary_packaging/research_notes/enhancements/2026-06-19_b_line_fiber_executable_lowering.md`
 - `docs/compiler/binary_packaging/research_notes/enhancements/2026-06-20_b_line_vs_a_line_pain_review.md`
-- `docs/compiler/binary_packaging/research_notes/enhancements/rfc-stream-tile-plan-flat-lowering.md`
 - `docs/compiler/binary_packaging/research_notes/enhancements/rfc-fiber-executable-role-binding.md`
-- `docs/compiler/binary_packaging/research_notes/enhancements/rfc-fiber-flat-ops-to-block-projection.md`
 - `docs/compiler/binary_packaging/research_notes/enhancements/rfc-b-line-template-op-binary-plan.md`
+
+Removed StreamTilePlan / flat-op bridge RFCs are superseded by the Scoped Tensor
+Projection model.
 
 Task / app / mesh semantics that constrain the plan:
 
