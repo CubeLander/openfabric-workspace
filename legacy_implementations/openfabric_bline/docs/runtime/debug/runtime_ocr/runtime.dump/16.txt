@@ -1,0 +1,69 @@
+‘ee FusionAccess - HUAKEO2001
+
+xX liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client oa o x
+ae Applications huakeO2 - File Manager ({— Terminal - huake01@... {gy Terminal - huake01@... 23:37 EN || huakeod2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Mo1d75: 53 push %rbx
+
+401d76: 48 83 ec 38 sub $0x38,%rsp
+
+401d7a: 41 89 fc mov %edi,%rl2d
+
+401d7d: 48 89 f5 mov S%rsi,%rbp
+
+401d80: 48 8b 46 08 mov 0x8 (%rsi) ,%rax
+
+401d84: 48 89 05 ld 3b 20 00 mov %rax,0x203bl1d(%rip) # 6058a8 <g_search_path>
+
+401d8b: 48 8b 5e 10 mov 0x10(%rsi) ,%rbx
+
+401d8f: bf 87 45 40 00 mov $0x404587 , sedi
+
+401d94: b8 00 00 00 00 mov $0x0 , %eax
+
+401d99: e8 42 fb ff ff callq 4018e0 <printf@plt>
+
+401d9e: 48 8b 3d cb 3a 20 00 mov Ox203acb(%rip) ,%*rdi # 605870 <stdout@@GLIBC_2.2.5>
+
+401da5: e8 26 fd ff ff callq 40lad0 <fflush@plt>
+
+401daa: 48 89 ld Of 3b 20 00 mov S%rbx,0x203b0Tf (%rip) # 6058c0 <g_conf>
+
+401db1: 48 89 df mov Serbx, %*rdi
+
+401db4: e8 8f fe ff ff callq 401c48 <open_so>
+
+401db9: 48 89 05 08 3b 20 00 mov %rax,0x203b08(%rip) # 6058c8 <g_conf+0x8>
+
+401dc0: 48 85 c0 test %rax,%*rax
+
+401dc3: Of 84 93 04 00 00 je 40225c <main+0x4f0>
+
+401dc9: be b6 45 40 00 mov $0x4045b6, %esi
+
+40ldce: 48 89 c7 mov S%rax,%rdi
+
+401dd1: e8 38 ff ff ff callq 401d0e <dlsym_safe>
+
+401dd6: 48 8b 00 mov (%rax) ,%rax
+
+401dd9: 48 89 05 f0 3a 20 00 mov %rax,0x203afO0(%rip) # 6058d0 <g_conf+0x10>
+
+401de0: be b9 45 40 00 mov $0x4045b9 , sesi
+
+401de5: 48 8b 3d dc 3a 20 00 mov Ox203adc(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+40ldec: e8 ld ff ff ff callq 401d0e <dlsym_safe>
+
+401df1: 48 89 05 e0 3a 20 00 mov %rax,0x203ae0(%rip) # 6058d8 <g_conf+0x18>
+
+401df8: be cl 45 40 00 mov $0x4045c1,%esi
+
+40l1dfd: 48 8b 3d c4 3a 20 00 mov O0x203ac4(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+406,3 12%
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + @s @ AB” A soon |

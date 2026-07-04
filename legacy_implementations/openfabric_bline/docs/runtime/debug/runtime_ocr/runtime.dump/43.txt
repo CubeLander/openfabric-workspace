@@ -1,0 +1,70 @@
+ee FusionAccess - HUAKE02001
+
+3%) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client _ oO x
+ae Applications huakeO2 - File Manager. (gj Terminal - huake01@... {@ Terminal - huake01@... 23:49 EN || huakeod2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+fo29d7: e8 88 Oe 00 00 callq 403864 <rb_next>
+
+4029dc: 48 85 cO0 test %rax,%*rax
+
+4029df: 74 Od je 4029ee <thread_main+0x59d>
+
+4029e1: 4c 8b 60 20 mov 0x20(%rax) ,%r12
+
+4029e5: 49 83 e4 fe and sOxttttttfttttttfffe,r12
+
+4029e9: e9 22 ff ff ff jmpq 402910 <thread_main+0x4bf>
+
+4029ee: 41 bc 00 00 00 00 mov $0x0,%rl2d
+
+4029f4: e9 17 ff ff ff jmpq 402910 <thread_main+0x4bf>
+
+4029Tf9: 4c 8d 7d e8 lea -0x18(%rbp) ,%*r15
+
+4029fd: 64 4c 3b 3c 25 d8 ff cmp Sts: Oxtttftttttffttttds8,%r15
+
+402a04: tf ff
+
+402a06: 74 29 je 402a31 <thread_main+0x5e0>
+
+402a08: 48 8d 7d e8 lea -0x18(%rbp) , *rdi
+
+402a0c: 48 8b 74 24 08 mov Ox8(%rsp) ,%*rsi
+
+402al11: e8 5f 09 00 00 callq 403375 <rb_erase>
+
+402a16: 64 48 8b 04 25 f8 ff mov Sts: Oxtttftttttftttttts, srax
+
+402ald: tf ff
+
+402alf: 48 89 45 e8 mov %rax,-0x18(%rbp)
+
+402a23: 64 4c 89 3c 25 f8 ff mov %r15,%*fs:OxtttfttttttfTttts
+
+402a2a: Tf ff
+
+402a2c: e9 18 ff ff ff jmpq 402949 <thread_main+0x4f8>
+
+402a31: 4c 89 ff mov %r15,%rdi
+
+402a34: e8 2b Oe 00 00 callq 403864 <rb_next>
+
+402a39: 48 85 c0 test %rax ,%*rax
+
+402a3c: ba 00 00 00 00 mov $0x0, %edx
+
+402a41: 48 Of 44 c2 cmove %rdx,%rax
+
+402a45: 64 48 89 04 25 d8 ff mov S%rax, sts: Oxttttfttttttfttds
+
+402a4c: Tf ff
+
+402a4e: eb b8 jmp 402a08 <thread_main+0x5b/>
+
+1135,3 34%
+BE@DA
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + @Qums @& AB” AB sree |

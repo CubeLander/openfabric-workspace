@@ -1,0 +1,104 @@
+1) 把4个Rx寄存器128*32bits的数截断成128*8bits|，拼接方式|
+imm==0[) |results的第1个1924bit = Rx6截断 results的第2个1924biit
+=
+=
+Rx1截断
+results的第3个1924bit = Rx2截断 results的第4个1924biit
+=
+=
+Rx3截断
+2) |把4个Rx寄存器128*32bits的数截断成128*8bitsl，昱接方式 |
+imm==1: results的第1个19624bit=Rx3_6[31],Rx2_6[31],Rxl 6e[31],Rxe_e[31]，
+, Rx3_@[0],Rx2_@[0],Rx1_@[2],Rx@_@[2]
+resultsfJ#21024bit=Rx3_1[31],Rx2_1[31],Rx1_1[31],Rx@_1[31],
+, Rx3_1[@],Rx2_1[@],Rx1_1[@],Rx@_1[2]
+resultsfJ#31024bit=Rx3_2[31],Rx2_2[31],Rx1_2[31],Rx@_2[31],
+, Rx3_2[@],Rx2_2[@],Rx1_2[0],Rx@_2[2]
+resultsfJ#841024bit=Rx3_3[31],Rx2_3[31],Rx1_3[31],Rx@_3[31],
+, Rx3_3[0],Rx2_3[@],Rx1_3[0],Rx@_3[2]
+3) 用于QMADp之后
+for(i = 6; i < 32; i++)
+if(imm == 2){
+//用Rx的第1个1924bit分量
+results[6] .
+simd32[i]
+Rx[i%4]
+simd32[i/4];
+results[1].
+simd32[i]
+Rx[i%4]
+simd32[i/4+8];
+results[2].
+simd32[i]
+Rx[i%4]
+simd32[i/4+16];
+results[3].
+simd32[i]
+Rx[i%4]
+simd32[i/4+24];
+Jelse if (imm
+== 4){
+//用Rx的第2个1624bit分
+=
+Ss
+results[6] .
+simd32[i]
+Rx[i%4]
+simd32[i/4];
+results[1].
+simd32[i]
+Rx[i%4]
+simd32[i/4+8];
+results[2].
+simd32[i]
+Rx[i%4]
+simd32[i/4+16];
+results[3].
+simd32[i]
+Rx[i%4]
+simd32[i/4+24];
+Jelse if (imm
+== 8){
+//用Rx的第3个1624bit分
+=
+Ss
+results[6] .
+simd32[i]
+Rx[i%4]
+simd32[i/4];
+results[1].
+simd32[i]
+Rx[i%4]
+simd32[i/4+8];
+results[2].
+simd32[i]
+Rx[i%4]
+simd32[i/4+16];
+results[3].
+simd32[i]
+Rx[i%4]
+simd32[i/4+24];
+}else if(imm == 16){
+//用Rx的第4个1624bit分
+=
+Ss
+results[6] .
+simd32[i]
+Rx[i%4]
+simd32[i/4];
+results[1].
+simd32[i]
+Rx[i%4]
+simd32[i/4+8];
+results[2].
+simd32[i]
+Rx[i%4]
+simd32[i/4+16];
+results[3].
+simd32[i]
+Rx[i%4]
+simd32[i/4+24];
+yelse{
+results[6] .
+simd32[i]
+Q;

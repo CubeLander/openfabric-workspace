@@ -1,0 +1,6589 @@
+{
+  "schema_version": 1,
+  "report": "dfu_simulator_bundle_diff",
+  "comparison_policy": "summary_level_not_byte_equal_required;scheduler_differences_are_expected_between_legacy_and_refactor",
+  "legacy": {
+    "root": "simict3500final/gpdpu/users/risc_nn_riscv/testcase/build_out/gemm_template_fusion/worktree/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion/simulator_bin",
+    "components": {
+      "insts": {
+        "path": "simict3500final/gpdpu/users/risc_nn_riscv/testcase/build_out/gemm_template_fusion/worktree/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion/simulator_bin/insts_file.bin",
+        "size_bytes": 21168128,
+        "sha256": "2b15c1016136cc64aeb08fa5d406ce4ac7b1d8435220c2c0f18b0c621e3cab7e"
+      },
+      "exeblocks": {
+        "path": "simict3500final/gpdpu/users/risc_nn_riscv/testcase/build_out/gemm_template_fusion/worktree/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion/simulator_bin/exeblock_conf_info_file.bin",
+        "size_bytes": 266240,
+        "sha256": "b3a328f3773151f28fadcd1d284edebb6ee6d6a29d4743e6dd537d9b0d9ae9e4"
+      },
+      "instances": {
+        "path": "simict3500final/gpdpu/users/risc_nn_riscv/testcase/build_out/gemm_template_fusion/worktree/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion/simulator_bin/instance_conf_info_file.bin",
+        "size_bytes": 2097152,
+        "sha256": "3b9d70247acc9832d71d73ec88f044d5b083aea7f07a42c191e90fb994b19414"
+      },
+      "tasks": {
+        "path": "simict3500final/gpdpu/users/risc_nn_riscv/testcase/build_out/gemm_template_fusion/worktree/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion/simulator_bin/tasks_conf_info_file.bin",
+        "size_bytes": 480,
+        "sha256": "6599f6c9114b05977b25a04819f474a5d73bb56d3c6ac3b175ba4c26ee328d8e"
+      },
+      "subtasks": {
+        "path": "simict3500final/gpdpu/users/risc_nn_riscv/testcase/build_out/gemm_template_fusion/worktree/gpdpu/users/risc_nn_riscv/testcase/application/gemm_template_fusion/simulator_bin/subtasks_conf_info_file.bin",
+        "size_bytes": 8522496,
+        "sha256": "fc0a8a187cfa0f24ff7e6fe4082111db7961dc385180e412b1973f2c1cf58d31"
+      }
+    },
+    "inst_summary": {
+      "active_inst_count": 53376,
+      "opcode_counts": {
+        "COPY": 3072,
+        "HMMAL": 32768,
+        "HMUL": 2048,
+        "IMM": 128,
+        "LDN": 9216,
+        "RXINT": 1024,
+        "STD": 4096,
+        "TRCTT": 1024
+      },
+      "pe_instruction_counts": {
+        "PE00": 3592,
+        "PE01": 3336,
+        "PE02": 3336,
+        "PE03": 3080,
+        "PE10": 3592,
+        "PE11": 3336,
+        "PE12": 3336,
+        "PE13": 3080,
+        "PE20": 3592,
+        "PE21": 3336,
+        "PE22": 3336,
+        "PE23": 3080,
+        "PE30": 3592,
+        "PE31": 3336,
+        "PE32": 3336,
+        "PE33": 3080
+      },
+      "max_pe_instruction_count": 3592,
+      "end_inst_count": 0,
+      "sample_active_rows": [
+        {
+          "global_row_index": 0,
+          "pe": "PE00",
+          "local_pc": 0,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            0,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 1,
+          "pe": "PE00",
+          "local_pc": 1,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            256,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 2,
+          "pe": "PE00",
+          "local_pc": 2,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            512,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 3,
+          "pe": "PE00",
+          "local_pc": 3,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            768,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 4,
+          "pe": "PE00",
+          "local_pc": 4,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1024,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 5,
+          "pe": "PE00",
+          "local_pc": 5,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1280,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 6,
+          "pe": "PE00",
+          "local_pc": 6,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1536,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 7,
+          "pe": "PE00",
+          "local_pc": 7,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1792,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 8,
+          "pe": "PE00",
+          "local_pc": 8,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2048,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 9,
+          "pe": "PE00",
+          "local_pc": 9,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2304,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 10,
+          "pe": "PE00",
+          "local_pc": 10,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2560,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 11,
+          "pe": "PE00",
+          "local_pc": 11,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2816,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 12,
+          "pe": "PE00",
+          "local_pc": 12,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3072,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 13,
+          "pe": "PE00",
+          "local_pc": 13,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3328,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 14,
+          "pe": "PE00",
+          "local_pc": 14,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3584,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 15,
+          "pe": "PE00",
+          "local_pc": 15,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3840,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 16,
+          "pe": "PE00",
+          "local_pc": 16,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4096,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 17,
+          "pe": "PE00",
+          "local_pc": 17,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4352,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 18,
+          "pe": "PE00",
+          "local_pc": 18,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4608,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 19,
+          "pe": "PE00",
+          "local_pc": 19,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4864,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 20,
+          "pe": "PE00",
+          "local_pc": 20,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5120,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 21,
+          "pe": "PE00",
+          "local_pc": 21,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5376,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 22,
+          "pe": "PE00",
+          "local_pc": 22,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5632,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 23,
+          "pe": "PE00",
+          "local_pc": 23,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5888,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 24,
+          "pe": "PE00",
+          "local_pc": 24,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6144,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 25,
+          "pe": "PE00",
+          "local_pc": 25,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6400,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 26,
+          "pe": "PE00",
+          "local_pc": 26,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6656,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 27,
+          "pe": "PE00",
+          "local_pc": 27,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6912,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 28,
+          "pe": "PE00",
+          "local_pc": 28,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7168,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 29,
+          "pe": "PE00",
+          "local_pc": 29,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7424,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 30,
+          "pe": "PE00",
+          "local_pc": 30,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7680,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 31,
+          "pe": "PE00",
+          "local_pc": 31,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7936,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "exeblock_summary": {
+      "active_exeblock_count": 256,
+      "stage_instruction_counts": {
+        "CAL": 36992,
+        "FLOW": 3072,
+        "LD": 9216,
+        "ST": 4096
+      },
+      "instances_amount_counts": {
+        "1": 128,
+        "4": 128
+      },
+      "req_activation_counts": {
+        "0": 144,
+        "1": 112
+      },
+      "child_amount_counts": {
+        "0": 192,
+        "1": 16,
+        "2": 48
+      },
+      "sample_active_rows": {
+        "row000": {
+          "global_row_index": 0,
+          "block_idx": 0,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 0,
+            "CAL": 64,
+            "FLOW": 82,
+            "ST": 82,
+            "END": 82
+          },
+          "task_idx": 0,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row001": {
+          "global_row_index": 1,
+          "block_idx": 1,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 82,
+            "CAL": 146,
+            "FLOW": 146,
+            "ST": 146,
+            "END": 146
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row002": {
+          "global_row_index": 2,
+          "block_idx": 2,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 146,
+            "CAL": 146,
+            "FLOW": 146,
+            "ST": 210,
+            "END": 210
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row003": {
+          "global_row_index": 3,
+          "block_idx": 3,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 210,
+            "CAL": 274,
+            "FLOW": 834,
+            "ST": 834,
+            "END": 834
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row004": {
+          "global_row_index": 4,
+          "block_idx": 4,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 834,
+            "CAL": 834,
+            "FLOW": 834,
+            "ST": 834,
+            "END": 898
+          },
+          "task_idx": 0,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row005": {
+          "global_row_index": 5,
+          "block_idx": 5,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 898,
+            "CAL": 962,
+            "FLOW": 980,
+            "ST": 980,
+            "END": 980
+          },
+          "task_idx": 1,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row006": {
+          "global_row_index": 6,
+          "block_idx": 6,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 980,
+            "CAL": 1044,
+            "FLOW": 1044,
+            "ST": 1044,
+            "END": 1044
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row007": {
+          "global_row_index": 7,
+          "block_idx": 7,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1044,
+            "CAL": 1044,
+            "FLOW": 1044,
+            "ST": 1108,
+            "END": 1108
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row008": {
+          "global_row_index": 8,
+          "block_idx": 8,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1108,
+            "CAL": 1172,
+            "FLOW": 1732,
+            "ST": 1732,
+            "END": 1732
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row009": {
+          "global_row_index": 9,
+          "block_idx": 9,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 1732,
+            "CAL": 1732,
+            "FLOW": 1732,
+            "ST": 1732,
+            "END": 1796
+          },
+          "task_idx": 1,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row010": {
+          "global_row_index": 10,
+          "block_idx": 10,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1796,
+            "CAL": 1860,
+            "FLOW": 1878,
+            "ST": 1878,
+            "END": 1878
+          },
+          "task_idx": 2,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row011": {
+          "global_row_index": 11,
+          "block_idx": 11,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1878,
+            "CAL": 1942,
+            "FLOW": 1942,
+            "ST": 1942,
+            "END": 1942
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row012": {
+          "global_row_index": 12,
+          "block_idx": 12,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1942,
+            "CAL": 1942,
+            "FLOW": 1942,
+            "ST": 2006,
+            "END": 2006
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row013": {
+          "global_row_index": 13,
+          "block_idx": 13,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2006,
+            "CAL": 2070,
+            "FLOW": 2630,
+            "ST": 2630,
+            "END": 2630
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row014": {
+          "global_row_index": 14,
+          "block_idx": 14,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 2630,
+            "CAL": 2630,
+            "FLOW": 2630,
+            "ST": 2630,
+            "END": 2694
+          },
+          "task_idx": 2,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row015": {
+          "global_row_index": 15,
+          "block_idx": 15,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2694,
+            "CAL": 2758,
+            "FLOW": 2776,
+            "ST": 2776,
+            "END": 2776
+          },
+          "task_idx": 3,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row016": {
+          "global_row_index": 16,
+          "block_idx": 16,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2776,
+            "CAL": 2840,
+            "FLOW": 2840,
+            "ST": 2840,
+            "END": 2840
+          },
+          "task_idx": 3,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row017": {
+          "global_row_index": 17,
+          "block_idx": 17,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2840,
+            "CAL": 2840,
+            "FLOW": 2840,
+            "ST": 2904,
+            "END": 2904
+          },
+          "task_idx": 3,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row018": {
+          "global_row_index": 18,
+          "block_idx": 18,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2904,
+            "CAL": 2968,
+            "FLOW": 3528,
+            "ST": 3528,
+            "END": 3528
+          },
+          "task_idx": 3,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row019": {
+          "global_row_index": 19,
+          "block_idx": 19,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 3528,
+            "CAL": 3528,
+            "FLOW": 3528,
+            "ST": 3528,
+            "END": 3592
+          },
+          "task_idx": 3,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row032": {
+          "global_row_index": 32,
+          "block_idx": 0,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 0,
+            "CAL": 64,
+            "FLOW": 82,
+            "ST": 82,
+            "END": 82
+          },
+          "task_idx": 0,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row033": {
+          "global_row_index": 33,
+          "block_idx": 1,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 82,
+            "CAL": 82,
+            "FLOW": 82,
+            "ST": 146,
+            "END": 146
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row034": {
+          "global_row_index": 34,
+          "block_idx": 2,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 146,
+            "CAL": 210,
+            "FLOW": 770,
+            "ST": 770,
+            "END": 770
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row035": {
+          "global_row_index": 35,
+          "block_idx": 3,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 770,
+            "CAL": 770,
+            "FLOW": 770,
+            "ST": 770,
+            "END": 834
+          },
+          "task_idx": 0,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row036": {
+          "global_row_index": 36,
+          "block_idx": 4,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 834,
+            "CAL": 898,
+            "FLOW": 916,
+            "ST": 916,
+            "END": 916
+          },
+          "task_idx": 1,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row037": {
+          "global_row_index": 37,
+          "block_idx": 5,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 916,
+            "CAL": 916,
+            "FLOW": 916,
+            "ST": 980,
+            "END": 980
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row038": {
+          "global_row_index": 38,
+          "block_idx": 6,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 980,
+            "CAL": 1044,
+            "FLOW": 1604,
+            "ST": 1604,
+            "END": 1604
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row039": {
+          "global_row_index": 39,
+          "block_idx": 7,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 1604,
+            "CAL": 1604,
+            "FLOW": 1604,
+            "ST": 1604,
+            "END": 1668
+          },
+          "task_idx": 1,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row040": {
+          "global_row_index": 40,
+          "block_idx": 8,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1668,
+            "CAL": 1732,
+            "FLOW": 1750,
+            "ST": 1750,
+            "END": 1750
+          },
+          "task_idx": 2,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row041": {
+          "global_row_index": 41,
+          "block_idx": 9,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1750,
+            "CAL": 1750,
+            "FLOW": 1750,
+            "ST": 1814,
+            "END": 1814
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row042": {
+          "global_row_index": 42,
+          "block_idx": 10,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1814,
+            "CAL": 1878,
+            "FLOW": 2438,
+            "ST": 2438,
+            "END": 2438
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row043": {
+          "global_row_index": 43,
+          "block_idx": 11,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 2438,
+            "CAL": 2438,
+            "FLOW": 2438,
+            "ST": 2438,
+            "END": 2502
+          },
+          "task_idx": 2,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        }
+      }
+    },
+    "instance_summary": {
+      "active_instance_row_count": 65536,
+      "filled_slot_counts_excluding_zero_and_sentinel": {
+        "0": 24572,
+        "1": 8192
+      },
+      "sample_active_rows": {
+        "row00000": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00001": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00002": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00003": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00004": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00005": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00006": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00007": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00008": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00009": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00010": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00011": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00012": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00013": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00014": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00015": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00016": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00017": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00018": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00019": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00020": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00021": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00022": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00023": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00024": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00025": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00026": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00027": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00028": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00029": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00030": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00031": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ]
+      }
+    },
+    "task_summary": {
+      "active_task_count": 4,
+      "active_task_rows": {
+        "row0": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "row1": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            8,
+            9,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "row2": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            16,
+            17,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "row3": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            24,
+            25,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "subtask_summary": {
+      "active_subtask_count": 0,
+      "active_subtask_rows": {}
+    }
+  },
+  "candidate": {
+    "root": "/tmp/of_task_template_probe",
+    "components": {
+      "insts": {
+        "path": "/tmp/of_task_template_probe/simulator_bin/insts_file.bin",
+        "size_bytes": 21168128,
+        "sha256": "2b15c1016136cc64aeb08fa5d406ce4ac7b1d8435220c2c0f18b0c621e3cab7e"
+      },
+      "exeblocks": {
+        "path": "/tmp/of_task_template_probe/simulator_bin/exeblock_conf_info_file.bin",
+        "size_bytes": 266240,
+        "sha256": "b3a328f3773151f28fadcd1d284edebb6ee6d6a29d4743e6dd537d9b0d9ae9e4"
+      },
+      "instances": {
+        "path": "/tmp/of_task_template_probe/simulator_bin/instance_conf_info_file.bin",
+        "size_bytes": 2097152,
+        "sha256": "3b9d70247acc9832d71d73ec88f044d5b083aea7f07a42c191e90fb994b19414"
+      },
+      "tasks": {
+        "path": "/tmp/of_task_template_probe/simulator_bin/tasks_conf_info_file.bin",
+        "size_bytes": 480,
+        "sha256": "6599f6c9114b05977b25a04819f474a5d73bb56d3c6ac3b175ba4c26ee328d8e"
+      },
+      "subtasks": {
+        "path": "/tmp/of_task_template_probe/simulator_bin/subtasks_conf_info_file.bin",
+        "size_bytes": 8522496,
+        "sha256": "fc0a8a187cfa0f24ff7e6fe4082111db7961dc385180e412b1973f2c1cf58d31"
+      }
+    },
+    "inst_summary": {
+      "active_inst_count": 53376,
+      "opcode_counts": {
+        "COPY": 3072,
+        "HMMAL": 32768,
+        "HMUL": 2048,
+        "IMM": 128,
+        "LDN": 9216,
+        "RXINT": 1024,
+        "STD": 4096,
+        "TRCTT": 1024
+      },
+      "pe_instruction_counts": {
+        "PE00": 3592,
+        "PE01": 3336,
+        "PE02": 3336,
+        "PE03": 3080,
+        "PE10": 3592,
+        "PE11": 3336,
+        "PE12": 3336,
+        "PE13": 3080,
+        "PE20": 3592,
+        "PE21": 3336,
+        "PE22": 3336,
+        "PE23": 3080,
+        "PE30": 3592,
+        "PE31": 3336,
+        "PE32": 3336,
+        "PE33": 3080
+      },
+      "max_pe_instruction_count": 3592,
+      "end_inst_count": 0,
+      "sample_active_rows": [
+        {
+          "global_row_index": 0,
+          "pe": "PE00",
+          "local_pc": 0,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            0,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 1,
+          "pe": "PE00",
+          "local_pc": 1,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            256,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 2,
+          "pe": "PE00",
+          "local_pc": 2,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            512,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 3,
+          "pe": "PE00",
+          "local_pc": 3,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            768,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 4,
+          "pe": "PE00",
+          "local_pc": 4,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1024,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 5,
+          "pe": "PE00",
+          "local_pc": 5,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1280,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 6,
+          "pe": "PE00",
+          "local_pc": 6,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1536,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 7,
+          "pe": "PE00",
+          "local_pc": 7,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1792,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 8,
+          "pe": "PE00",
+          "local_pc": 8,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2048,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 9,
+          "pe": "PE00",
+          "local_pc": 9,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2304,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 10,
+          "pe": "PE00",
+          "local_pc": 10,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2560,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 11,
+          "pe": "PE00",
+          "local_pc": 11,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            2816,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            256,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 12,
+          "pe": "PE00",
+          "local_pc": 12,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3072,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 13,
+          "pe": "PE00",
+          "local_pc": 13,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3328,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 14,
+          "pe": "PE00",
+          "local_pc": 14,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3584,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 15,
+          "pe": "PE00",
+          "local_pc": 15,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            3840,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            384,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 16,
+          "pe": "PE00",
+          "local_pc": 16,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4096,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 17,
+          "pe": "PE00",
+          "local_pc": 17,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4352,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 18,
+          "pe": "PE00",
+          "local_pc": 18,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4608,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 19,
+          "pe": "PE00",
+          "local_pc": 19,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            4864,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            512,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 20,
+          "pe": "PE00",
+          "local_pc": 20,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5120,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 21,
+          "pe": "PE00",
+          "local_pc": 21,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5376,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 22,
+          "pe": "PE00",
+          "local_pc": 22,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5632,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 23,
+          "pe": "PE00",
+          "local_pc": 23,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            5888,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            640,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 24,
+          "pe": "PE00",
+          "local_pc": 24,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6144,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 25,
+          "pe": "PE00",
+          "local_pc": 25,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6400,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 26,
+          "pe": "PE00",
+          "local_pc": 26,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6656,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 27,
+          "pe": "PE00",
+          "local_pc": 27,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            6912,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            768,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 28,
+          "pe": "PE00",
+          "local_pc": 28,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7168,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 29,
+          "pe": "PE00",
+          "local_pc": 29,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7424,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 30,
+          "pe": "PE00",
+          "local_pc": 30,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7680,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 31,
+          "pe": "PE00",
+          "local_pc": 31,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            7936,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            896,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "exeblock_summary": {
+      "active_exeblock_count": 256,
+      "stage_instruction_counts": {
+        "CAL": 36992,
+        "FLOW": 3072,
+        "LD": 9216,
+        "ST": 4096
+      },
+      "instances_amount_counts": {
+        "1": 128,
+        "4": 128
+      },
+      "req_activation_counts": {
+        "0": 144,
+        "1": 112
+      },
+      "child_amount_counts": {
+        "0": 192,
+        "1": 16,
+        "2": 48
+      },
+      "sample_active_rows": {
+        "row000": {
+          "global_row_index": 0,
+          "block_idx": 0,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 0,
+            "CAL": 64,
+            "FLOW": 82,
+            "ST": 82,
+            "END": 82
+          },
+          "task_idx": 0,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row001": {
+          "global_row_index": 1,
+          "block_idx": 1,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 82,
+            "CAL": 146,
+            "FLOW": 146,
+            "ST": 146,
+            "END": 146
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row002": {
+          "global_row_index": 2,
+          "block_idx": 2,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 146,
+            "CAL": 146,
+            "FLOW": 146,
+            "ST": 210,
+            "END": 210
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row003": {
+          "global_row_index": 3,
+          "block_idx": 3,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 210,
+            "CAL": 274,
+            "FLOW": 834,
+            "ST": 834,
+            "END": 834
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row004": {
+          "global_row_index": 4,
+          "block_idx": 4,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 834,
+            "CAL": 834,
+            "FLOW": 834,
+            "ST": 834,
+            "END": 898
+          },
+          "task_idx": 0,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row005": {
+          "global_row_index": 5,
+          "block_idx": 5,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 898,
+            "CAL": 962,
+            "FLOW": 980,
+            "ST": 980,
+            "END": 980
+          },
+          "task_idx": 1,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row006": {
+          "global_row_index": 6,
+          "block_idx": 6,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 980,
+            "CAL": 1044,
+            "FLOW": 1044,
+            "ST": 1044,
+            "END": 1044
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row007": {
+          "global_row_index": 7,
+          "block_idx": 7,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1044,
+            "CAL": 1044,
+            "FLOW": 1044,
+            "ST": 1108,
+            "END": 1108
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row008": {
+          "global_row_index": 8,
+          "block_idx": 8,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1108,
+            "CAL": 1172,
+            "FLOW": 1732,
+            "ST": 1732,
+            "END": 1732
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row009": {
+          "global_row_index": 9,
+          "block_idx": 9,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 1732,
+            "CAL": 1732,
+            "FLOW": 1732,
+            "ST": 1732,
+            "END": 1796
+          },
+          "task_idx": 1,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row010": {
+          "global_row_index": 10,
+          "block_idx": 10,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1796,
+            "CAL": 1860,
+            "FLOW": 1878,
+            "ST": 1878,
+            "END": 1878
+          },
+          "task_idx": 2,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row011": {
+          "global_row_index": 11,
+          "block_idx": 11,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1878,
+            "CAL": 1942,
+            "FLOW": 1942,
+            "ST": 1942,
+            "END": 1942
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row012": {
+          "global_row_index": 12,
+          "block_idx": 12,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1942,
+            "CAL": 1942,
+            "FLOW": 1942,
+            "ST": 2006,
+            "END": 2006
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row013": {
+          "global_row_index": 13,
+          "block_idx": 13,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2006,
+            "CAL": 2070,
+            "FLOW": 2630,
+            "ST": 2630,
+            "END": 2630
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row014": {
+          "global_row_index": 14,
+          "block_idx": 14,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 2630,
+            "CAL": 2630,
+            "FLOW": 2630,
+            "ST": 2630,
+            "END": 2694
+          },
+          "task_idx": 2,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row015": {
+          "global_row_index": 15,
+          "block_idx": 15,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2694,
+            "CAL": 2758,
+            "FLOW": 2776,
+            "ST": 2776,
+            "END": 2776
+          },
+          "task_idx": 3,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row016": {
+          "global_row_index": 16,
+          "block_idx": 16,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": false,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2776,
+            "CAL": 2840,
+            "FLOW": 2840,
+            "ST": 2840,
+            "END": 2840
+          },
+          "task_idx": 3,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row017": {
+          "global_row_index": 17,
+          "block_idx": 17,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2840,
+            "CAL": 2840,
+            "FLOW": 2840,
+            "ST": 2904,
+            "END": 2904
+          },
+          "task_idx": 3,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row018": {
+          "global_row_index": 18,
+          "block_idx": 18,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 2904,
+            "CAL": 2968,
+            "FLOW": 3528,
+            "ST": 3528,
+            "END": 3528
+          },
+          "task_idx": 3,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row019": {
+          "global_row_index": 19,
+          "block_idx": 19,
+          "pe_pos": [
+            0,
+            0,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 3528,
+            "CAL": 3528,
+            "FLOW": 3528,
+            "ST": 3528,
+            "END": 3592
+          },
+          "task_idx": 3,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row032": {
+          "global_row_index": 32,
+          "block_idx": 0,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 0,
+            "CAL": 64,
+            "FLOW": 82,
+            "ST": 82,
+            "END": 82
+          },
+          "task_idx": 0,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row033": {
+          "global_row_index": 33,
+          "block_idx": 1,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 82,
+            "CAL": 82,
+            "FLOW": 82,
+            "ST": 146,
+            "END": 146
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row034": {
+          "global_row_index": 34,
+          "block_idx": 2,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 146,
+            "CAL": 210,
+            "FLOW": 770,
+            "ST": 770,
+            "END": 770
+          },
+          "task_idx": 0,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row035": {
+          "global_row_index": 35,
+          "block_idx": 3,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 770,
+            "CAL": 770,
+            "FLOW": 770,
+            "ST": 770,
+            "END": 834
+          },
+          "task_idx": 0,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row036": {
+          "global_row_index": 36,
+          "block_idx": 4,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 834,
+            "CAL": 898,
+            "FLOW": 916,
+            "ST": 916,
+            "END": 916
+          },
+          "task_idx": 1,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row037": {
+          "global_row_index": 37,
+          "block_idx": 5,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 916,
+            "CAL": 916,
+            "FLOW": 916,
+            "ST": 980,
+            "END": 980
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row038": {
+          "global_row_index": 38,
+          "block_idx": 6,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 980,
+            "CAL": 1044,
+            "FLOW": 1604,
+            "ST": 1604,
+            "END": 1604
+          },
+          "task_idx": 1,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row039": {
+          "global_row_index": 39,
+          "block_idx": 7,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 1604,
+            "CAL": 1604,
+            "FLOW": 1604,
+            "ST": 1604,
+            "END": 1668
+          },
+          "task_idx": 1,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        },
+        "row040": {
+          "global_row_index": 40,
+          "block_idx": 8,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1668,
+            "CAL": 1732,
+            "FLOW": 1750,
+            "ST": 1750,
+            "END": 1750
+          },
+          "task_idx": 2,
+          "subtask_idx": 0,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 18,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row041": {
+          "global_row_index": 41,
+          "block_idx": 9,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": true,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1750,
+            "CAL": 1750,
+            "FLOW": 1750,
+            "ST": 1814,
+            "END": 1814
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 2,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 64,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row042": {
+          "global_row_index": 42,
+          "block_idx": 10,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 1,
+          "has_stages": {
+            "LD": true,
+            "CAL": true,
+            "FLOW": false,
+            "ST": false
+          },
+          "stages_start_pc": {
+            "LD": 1814,
+            "CAL": 1878,
+            "FLOW": 2438,
+            "ST": 2438,
+            "END": 2438
+          },
+          "task_idx": 2,
+          "subtask_idx": 1,
+          "instances_amount": 4,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 64,
+            "CAL": 560,
+            "FLOW": 0,
+            "ST": 0
+          },
+          "is_leaf": false
+        },
+        "row043": {
+          "global_row_index": 43,
+          "block_idx": 11,
+          "pe_pos": [
+            0,
+            1,
+            0
+          ],
+          "req_activations": 0,
+          "has_stages": {
+            "LD": false,
+            "CAL": false,
+            "FLOW": false,
+            "ST": true
+          },
+          "stages_start_pc": {
+            "LD": 2438,
+            "CAL": 2438,
+            "FLOW": 2438,
+            "ST": 2438,
+            "END": 2502
+          },
+          "task_idx": 2,
+          "subtask_idx": 2,
+          "instances_amount": 1,
+          "child_amount": 0,
+          "inst_mem_based_addr": 0,
+          "stage_instruction_counts": {
+            "LD": 0,
+            "CAL": 0,
+            "FLOW": 0,
+            "ST": 64
+          },
+          "is_leaf": false
+        }
+      }
+    },
+    "instance_summary": {
+      "active_instance_row_count": 65536,
+      "filled_slot_counts_excluding_zero_and_sentinel": {
+        "0": 24572,
+        "1": 8192
+      },
+      "sample_active_rows": {
+        "row00000": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00001": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00002": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00003": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00004": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00005": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00006": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00007": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00008": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00009": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00010": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00011": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00012": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00013": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00014": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00015": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00016": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00017": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00018": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00019": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00020": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00021": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00022": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00023": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00024": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00025": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00026": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00027": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00028": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00029": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00030": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00031": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ]
+      }
+    },
+    "task_summary": {
+      "active_task_count": 4,
+      "active_task_rows": {
+        "row0": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "row1": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            8,
+            9,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "row2": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            16,
+            17,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "row3": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            24,
+            25,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "subtask_summary": {
+      "active_subtask_count": 0,
+      "active_subtask_rows": {}
+    }
+  },
+  "diff": {
+    "component_sizes": {
+      "exeblocks": {
+        "legacy": 266240,
+        "candidate": 266240,
+        "equal": true,
+        "delta": 0
+      },
+      "instances": {
+        "legacy": 2097152,
+        "candidate": 2097152,
+        "equal": true,
+        "delta": 0
+      },
+      "insts": {
+        "legacy": 21168128,
+        "candidate": 21168128,
+        "equal": true,
+        "delta": 0
+      },
+      "subtasks": {
+        "legacy": 8522496,
+        "candidate": 8522496,
+        "equal": true,
+        "delta": 0
+      },
+      "tasks": {
+        "legacy": 480,
+        "candidate": 480,
+        "equal": true,
+        "delta": 0
+      }
+    },
+    "component_hash_equal": {
+      "exeblocks": true,
+      "instances": true,
+      "insts": true,
+      "subtasks": true,
+      "tasks": true
+    },
+    "inst": {
+      "active_inst_count": {
+        "legacy": 53376,
+        "candidate": 53376,
+        "delta": 0
+      },
+      "max_pe_instruction_count": {
+        "legacy": 3592,
+        "candidate": 3592,
+        "delta": 0
+      },
+      "opcode_counts": {
+        "COPY": {
+          "legacy": 3072,
+          "candidate": 3072,
+          "equal": true,
+          "delta": 0
+        },
+        "HMMAL": {
+          "legacy": 32768,
+          "candidate": 32768,
+          "equal": true,
+          "delta": 0
+        },
+        "HMUL": {
+          "legacy": 2048,
+          "candidate": 2048,
+          "equal": true,
+          "delta": 0
+        },
+        "IMM": {
+          "legacy": 128,
+          "candidate": 128,
+          "equal": true,
+          "delta": 0
+        },
+        "LDN": {
+          "legacy": 9216,
+          "candidate": 9216,
+          "equal": true,
+          "delta": 0
+        },
+        "RXINT": {
+          "legacy": 1024,
+          "candidate": 1024,
+          "equal": true,
+          "delta": 0
+        },
+        "STD": {
+          "legacy": 4096,
+          "candidate": 4096,
+          "equal": true,
+          "delta": 0
+        },
+        "TRCTT": {
+          "legacy": 1024,
+          "candidate": 1024,
+          "equal": true,
+          "delta": 0
+        }
+      },
+      "pe_instruction_counts": {
+        "PE00": {
+          "legacy": 3592,
+          "candidate": 3592,
+          "equal": true,
+          "delta": 0
+        },
+        "PE01": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE02": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE03": {
+          "legacy": 3080,
+          "candidate": 3080,
+          "equal": true,
+          "delta": 0
+        },
+        "PE10": {
+          "legacy": 3592,
+          "candidate": 3592,
+          "equal": true,
+          "delta": 0
+        },
+        "PE11": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE12": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE13": {
+          "legacy": 3080,
+          "candidate": 3080,
+          "equal": true,
+          "delta": 0
+        },
+        "PE20": {
+          "legacy": 3592,
+          "candidate": 3592,
+          "equal": true,
+          "delta": 0
+        },
+        "PE21": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE22": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE23": {
+          "legacy": 3080,
+          "candidate": 3080,
+          "equal": true,
+          "delta": 0
+        },
+        "PE30": {
+          "legacy": 3592,
+          "candidate": 3592,
+          "equal": true,
+          "delta": 0
+        },
+        "PE31": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE32": {
+          "legacy": 3336,
+          "candidate": 3336,
+          "equal": true,
+          "delta": 0
+        },
+        "PE33": {
+          "legacy": 3080,
+          "candidate": 3080,
+          "equal": true,
+          "delta": 0
+        }
+      },
+      "legacy_sample": [
+        {
+          "global_row_index": 0,
+          "pe": "PE00",
+          "local_pc": 0,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            0,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 1,
+          "pe": "PE00",
+          "local_pc": 1,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            256,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 2,
+          "pe": "PE00",
+          "local_pc": 2,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            512,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 3,
+          "pe": "PE00",
+          "local_pc": 3,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            768,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 4,
+          "pe": "PE00",
+          "local_pc": 4,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1024,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 5,
+          "pe": "PE00",
+          "local_pc": 5,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1280,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 6,
+          "pe": "PE00",
+          "local_pc": 6,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1536,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 7,
+          "pe": "PE00",
+          "local_pc": 7,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1792,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "candidate_sample": [
+        {
+          "global_row_index": 0,
+          "pe": "PE00",
+          "local_pc": 0,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            0,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 1,
+          "pe": "PE00",
+          "local_pc": 1,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            256,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 2,
+          "pe": "PE00",
+          "local_pc": 2,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            512,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 3,
+          "pe": "PE00",
+          "local_pc": 3,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            768,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 4,
+          "pe": "PE00",
+          "local_pc": 4,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1024,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 5,
+          "pe": "PE00",
+          "local_pc": 5,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1280,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 6,
+          "pe": "PE00",
+          "local_pc": 6,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1536,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "global_row_index": 7,
+          "pe": "PE00",
+          "local_pc": 7,
+          "opcode": "LDN",
+          "unit_inst_type": 8,
+          "latency": 1,
+          "imms": [
+            1792,
+            0,
+            0
+          ],
+          "src_operands_idx": [
+            0,
+            0,
+            0
+          ],
+          "dst_operands_idx": [
+            128,
+            0,
+            0
+          ],
+          "dst_pe0": [
+            7,
+            0,
+            0
+          ],
+          "iter_exe_cond": 0,
+          "block_idx": 0,
+          "end_inst": 0,
+          "extra_fields": [
+            0,
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "exeblocks": {
+      "active_exeblock_count": {
+        "legacy": 256,
+        "candidate": 256,
+        "delta": 0
+      },
+      "stage_instruction_counts": {
+        "CAL": {
+          "legacy": 36992,
+          "candidate": 36992,
+          "equal": true,
+          "delta": 0
+        },
+        "FLOW": {
+          "legacy": 3072,
+          "candidate": 3072,
+          "equal": true,
+          "delta": 0
+        },
+        "LD": {
+          "legacy": 9216,
+          "candidate": 9216,
+          "equal": true,
+          "delta": 0
+        },
+        "ST": {
+          "legacy": 4096,
+          "candidate": 4096,
+          "equal": true,
+          "delta": 0
+        }
+      },
+      "instances_amount_counts": {
+        "1": {
+          "legacy": 128,
+          "candidate": 128,
+          "equal": true,
+          "delta": 0
+        },
+        "4": {
+          "legacy": 128,
+          "candidate": 128,
+          "equal": true,
+          "delta": 0
+        }
+      },
+      "req_activation_counts": {
+        "0": {
+          "legacy": 144,
+          "candidate": 144,
+          "equal": true,
+          "delta": 0
+        },
+        "1": {
+          "legacy": 112,
+          "candidate": 112,
+          "equal": true,
+          "delta": 0
+        }
+      },
+      "child_amount_counts": {
+        "0": {
+          "legacy": 192,
+          "candidate": 192,
+          "equal": true,
+          "delta": 0
+        },
+        "1": {
+          "legacy": 16,
+          "candidate": 16,
+          "equal": true,
+          "delta": 0
+        },
+        "2": {
+          "legacy": 48,
+          "candidate": 48,
+          "equal": true,
+          "delta": 0
+        }
+      }
+    },
+    "instances": {
+      "active_instance_row_count": {
+        "legacy": 65536,
+        "candidate": 65536,
+        "delta": 0
+      },
+      "filled_slot_counts_excluding_zero_and_sentinel": {
+        "0": {
+          "legacy": 24572,
+          "candidate": 24572,
+          "equal": true,
+          "delta": 0
+        },
+        "1": {
+          "legacy": 8192,
+          "candidate": 8192,
+          "equal": true,
+          "delta": 0
+        }
+      },
+      "legacy_sample": {
+        "row00000": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00001": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00002": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00003": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00004": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00005": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00006": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00007": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ]
+      },
+      "candidate_sample": {
+        "row00000": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00001": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00002": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00003": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00004": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00005": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00006": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ],
+        "row00007": [
+          "0x00020000",
+          "0xffffffff",
+          "0xffffffff",
+          "0xffffffff"
+        ]
+      }
+    },
+    "tasks": {
+      "row0": {
+        "legacy": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "candidate": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "equal": true
+      },
+      "row1": {
+        "legacy": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            8,
+            9,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "candidate": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            8,
+            9,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "equal": true
+      },
+      "row2": {
+        "legacy": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            16,
+            17,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "candidate": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            16,
+            17,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "equal": true
+      },
+      "row3": {
+        "legacy": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            24,
+            25,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "candidate": {
+          "is_exe_start": true,
+          "is_exe_end": true,
+          "subtasks_amount": 3,
+          "execute_times": 1,
+          "subtasks_idx": [
+            24,
+            25,
+            26,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "suc_tasks": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "equal": true
+      }
+    },
+    "subtasks": {},
+    "row_diff": {
+      "insts": {
+        "record_size_bytes": 304,
+        "capacity": 69632,
+        "active_row_count": {
+          "legacy": 53376,
+          "candidate": 53376,
+          "delta": 0
+        },
+        "shared_active_row_count": 53376,
+        "matching_shared_row_count": 53376,
+        "mismatched_shared_row_count": 0,
+        "only_legacy_row_count": 0,
+        "only_candidate_row_count": 0,
+        "only_legacy_rows_sample": [],
+        "only_candidate_rows_sample": [],
+        "field_diff_counts": {},
+        "sample_mismatched_rows": []
+      },
+      "exeblocks": {
+        "record_size_bytes": 520,
+        "capacity": 512,
+        "active_row_count": {
+          "legacy": 256,
+          "candidate": 256,
+          "delta": 0
+        },
+        "shared_active_row_count": 256,
+        "matching_shared_row_count": 256,
+        "mismatched_shared_row_count": 0,
+        "only_legacy_row_count": 0,
+        "only_candidate_row_count": 0,
+        "only_legacy_rows_sample": [],
+        "only_candidate_rows_sample": [],
+        "field_diff_counts": {},
+        "sample_mismatched_rows": []
+      },
+      "instances": {
+        "record_size_bytes": 32,
+        "capacity": 65536,
+        "active_row_count": {
+          "legacy": 65536,
+          "candidate": 65536,
+          "delta": 0
+        },
+        "shared_active_row_count": 65536,
+        "matching_shared_row_count": 65536,
+        "mismatched_shared_row_count": 0,
+        "only_legacy_row_count": 0,
+        "only_candidate_row_count": 0,
+        "only_legacy_rows_sample": [],
+        "only_candidate_rows_sample": [],
+        "field_diff_counts": {},
+        "sample_mismatched_rows": []
+      },
+      "tasks": {
+        "record_size_bytes": 120,
+        "capacity": 4,
+        "active_row_count": {
+          "legacy": 4,
+          "candidate": 4,
+          "delta": 0
+        },
+        "shared_active_row_count": 4,
+        "matching_shared_row_count": 4,
+        "mismatched_shared_row_count": 0,
+        "only_legacy_row_count": 0,
+        "only_candidate_row_count": 0,
+        "only_legacy_rows_sample": [],
+        "only_candidate_rows_sample": [],
+        "field_diff_counts": {},
+        "sample_mismatched_rows": []
+      },
+      "subtasks": {
+        "record_size_bytes": 266328,
+        "capacity": 32,
+        "active_row_count": {
+          "legacy": 12,
+          "candidate": 12,
+          "delta": 0
+        },
+        "shared_active_row_count": 12,
+        "matching_shared_row_count": 12,
+        "mismatched_shared_row_count": 0,
+        "only_legacy_row_count": 0,
+        "only_candidate_row_count": 0,
+        "only_legacy_rows_sample": [],
+        "only_candidate_rows_sample": [],
+        "field_diff_counts": {},
+        "sample_mismatched_rows": []
+      }
+    }
+  }
+}

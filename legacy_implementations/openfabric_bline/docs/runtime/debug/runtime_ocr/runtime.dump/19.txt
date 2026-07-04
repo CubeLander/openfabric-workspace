@@ -1,0 +1,70 @@
+ee FusionAccess - HUAKE02001
+
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - oO x
+ae Applications huakeO2 - File Manager | (@ Terminal - huake01@... {gy Terminal - huake01@... 23:38 EN || huaked2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Bo1fod: b8 00 00 00 00 mov $0x0 , seax
+
+401f12: e8 c9 f9 ff ff callq 4018e0 <printf@plt>
+
+401f17: 48 8b 3d 52 39 20 00 mov 0x203952(%rip) ,%*rdi # 605870 <stdout@@GLIBC_2.2.5>
+
+401fle: e8 ad fb ff ff callq 40lad0 <fflush@plt>
+
+401f23: 41 83 fc 03 cmp $0x3,%rl2d
+
+401f27: Te 28 jle 401f51 <main+0xle5>
+
+401f29: 48 8d 5d 18 lea 0x18(%rbp) , srbx
+
+401f2d: 41 8d 44 24 fc lea -0x4(%rl2) ,%eax
+
+401f32: 48 8d 6c c5 20 lea 0x20(%rbp,%*rax,8),%rbp
+
+401f37: 48 8b 3b mov (%rbx) ,%rdi
+
+401f3a: e8 09 fd ff ff callq 401c48 <open_so>
+
+401f3Ff: 48 85 c0 test %rax,%rax
+
+401f42: Of 84 50 03 00 00 je 402298 <main+0x52c>
+
+401f48: 48 83 c3 08 add $0x8 , crbx
+
+401f4c: 48 39 dd cmp Srbx,%rbp
+
+401f4Ff: 75 e6 jne 40137 <main+0xlcb>
+
+401f51: bf 10 46 40 00 mov $0x404610, %edi
+
+401f56: e8 a5 f9 ff ff callq 401900 <puts@plt>
+
+401f5b: 48 8b 3d Oe 39 20 00 mov 0x20390e(%rip) ,%*rdi # 605870 <stdout@@GLIBC_2.2.5>
+
+401f62: e8 69 fb ff ff callq 4@0lad0 <fflush@plt>
+
+401f67: 4c 8b 2d 62 39 20 00 mov 0x203962(%rip) ,%*r13 # 6058d0 <g_conf+0x10>
+
+401f6e: 4c 8b 35 6b 39 20 00 mov 0x20396b(%rip) ,%r14 # 6058e0 <g_conf+0x20>
+
+401f75: 4b 8d 7c ed 00 lea 0x0(%rl3,%rl3,8) ,%rdi
+
+401f7a: 48 cl e7 03 shl $0x3, %rdi
+
+401f7e: e8 71 Of 00 00 callq 402ef4 <xmalloc>
+
+401f83: 48 89 44 24 28 mov %rax,0x28(%rsp)
+
+401f88: 4d 85 ed test %r13,%rl3
+
+401f8b: Of 84 b9 00 00 00 je 40204a <main+0x2de>
+
+401f91: 48 89 c3 mov %rax,%rbx
+
+487,3 14%
+B2@Q
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + @s @ AB” A soon |

@@ -1,0 +1,37 @@
+ee FusionAccess - HUAKE02001
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - oO x
+wie Applications huake02 - File Manager, (yj Terminal - huake01@... | [By] Terminal - huake01@... 00:04 EN |. huakeo2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+File Edit View Terminal Tabs Help
+Is L
+t$(L
+| $OH
+t(UH
+%S%S
+main_thread.c
+loading runtime config ...
+can't open so: %s
+nr_modules
+nr_objects
+nr_threads
+init_args
+g_nr_thread_streams
+g_ thread streams
+port_info
+can't load: %s
+can't open module so: %s
+simict_create_object
+simict_start_object
+simict_end_object
+simict_port_msg _ proc
+simict_port_cmd_proc
+cmd_list
+cmd_list_size
+%6S .%S
+creating %lu threads ...
+[%s-%d]nr threads %lu
+[%s-%d]ok
+snprintf(full_path, len, "“%s%s", g search_path, path) >= 0
+217,1 17%
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + OQ @& |

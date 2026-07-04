@@ -1,0 +1,54 @@
+ee FusionAccess - HUAKEO2001
+
+3X) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client _ oO x
+wt Applications huakeO2 - File Manager (gj Terminal - huake01@... {gy Terminal - huake01@... 23:36 EN || huake0d2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+o194b: e9 80 ff ff ff jmpq 4018d0 <.plt>
+0000000000401950 <_ libc_start_main@plt>:
+
+401950: ff 25 3a 3d 20 00 jmpq *0x203d3a(%rip) # 605690 <_ libc_start_main@GLIBC_2.2.5>
+
+401956: 68 07 00 00 00 pushq $0x7
+
+40195b: e9 70 ff ff ff jmpq 4018d0 <.plt>
+0000000000401960 <pthread_ barrier _wait@plt>:
+
+401960: Tf 25 32 3d 20 00 jmpq *Qx203d32(%rip) # 605698 <pthread_barrier_wait@GLIBC_2.2.5>
+
+401966: 68 08 00 00 00 pushq $0x8
+
+40196b: e9 60 ff ff ff jmpq 4018d0 <.plt>
+0000000000401970 <pthread_mutex_init@plt>:
+
+401970: ff 25 2a 3d 20 00 jmpq *0x203d2a(%rip) # 6056a0 <pthread_mutex_init@GLIBC_2.2.5>
+
+401976: 68 09 00 00 00 pushq $0x9
+
+40197b: e9 50 ff ff ff jmpq 4018d0 <.plt>
+0000000000401980 <free@plt>:
+
+401980: Tf 25 22 3d 20 00 jmpq *Qx203d22(%rip) # 6056a8 <free@GLIBC_2.2.5>
+
+401986: 68 Oa 00 00 00 pushq $0xa
+
+40198b: e9 40 ff ff ff jmpq 4018d0 <.plt>
+0000000000401990 <pthread_create@plt>:
+
+401990: Tf 25 la 3d 20 00 jmpq *0x203dla(%rip) # 6056b0 <pthread_create@GLIBC_2.2.5>
+
+401996: 68 Ob 00 00 00 pushq $0xb
+
+40199b: e9 30 ff ff ff jmpq 4018d0 <.plt>
+00000000004019a0 <dlerror@plLt>:
+
+4019a0: Tf 25 12 3d 20 00 jmpq *Qx203d12(%rip) # 6056b8 <dlerror@GLIBC_2.2.5>
+
+55,3 1%
+a >
+Bea@Da
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+Oo — o . 22:50
+as | 0 cumnecem i ZEA BETIER St ) a Pes ABW AB aves A

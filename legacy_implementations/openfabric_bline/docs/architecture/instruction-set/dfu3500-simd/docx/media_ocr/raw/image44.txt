@@ -1,0 +1,11 @@
+imm[1:0]==0 immediate mode:
+Value(Operand index 0)[59:0] = [dst5,dst4,dst3,dst2,dst1,dst0,
+src5,src4,src3,src2,srclisrc0]:
+(1)select 6 simds( src5,src4,src3,src2,src1,src0) from Value(Operand index 1),
+(2)place them to 6 simds(dst5,dst4,dst3,dst2,dst1,dst0) position of Value(Operand index 2).
+32>dst5>dst4>dst3>dst2>dst1>dst0>=0; srci < 32; dsti==0 and i>0, disable i postion
+special use: when Val(Operand index 0)==zeros, exchange up[1023:512] and down[511:0] of Val(Operand idx2)
+指令写法参考:
+IMM, , , idx_reg, 321579821758215(60位的index编码立即数)
+shfl, idx_reg, vall val2
+special use:shfl, idx_reg , val2

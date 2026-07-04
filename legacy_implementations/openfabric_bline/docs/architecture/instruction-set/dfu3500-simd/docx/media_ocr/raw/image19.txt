@@ -1,0 +1,10 @@
+ADD, ADD4,Kernel0,Kernel1,Kernel3,,,1
+SUB , SUB5 ,KerneLO,Kernel1,Kernel4,,,1
+MUL, MUL6 ,KerneLO,Kernel1,Kernel5,,,1
+MADD , MADD7 ,KernelO,Kernel1,Kernel6, , ,1
+MIN, MIN8 ,KernelO,Kernel1,Kernel7,,,1
+MIN, MINS ,Kernel1,KernelO,Kernel8,,,1
+MIN, MIN10,Kernel2,Kernel2,Kernel9, 1
+MAX, MAX11,Kernelo,Kernel1,Kernel10, ,,1
+MAX, MAX12,Kernel1,Kernelo,Kernel11, ,,1
+MAX,MAX13,Kernel2,Kernel2,Kernel12, ,,1

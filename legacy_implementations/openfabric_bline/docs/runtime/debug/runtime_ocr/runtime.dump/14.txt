@@ -1,0 +1,68 @@
+e0e FusionAccess - HUAKEO2001
+
+3X) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - Oo x
+wt Applications huakeO2 - File Manager  {@j Terminal - huake01@... {) Terminal - huake01@... 23:37 EN || huakeod2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Bo1cd3: 74 27 je 401lcfc <open_so+0xb4>
+
+401cd5: 48 89 e8 mov Srbp,%*rax
+
+401cd8: 48 83 c4 08 add $0x8,%rsp
+
+401cdc: 5b pop Sorbx
+
+401cdd: 5d pop Srbp
+
+401cde: 41 5c pop %r12
+
+401ce0: 41 5d pop %r13
+
+401ce2: c3 retq
+
+401ce3: b9 38 48 40 00 mov $0x404838 , secx
+
+401ces: ba 30 00 00 00 mov $0x30, %edx
+
+401ced: be 79 45 40 00 mov $0x404579,%esi
+
+401cf2: bf 00 47 40 00 mov $0x404700, sedi
+
+401cf7: e8 24 fc ff ff callq 401920 <_assert_fail@plt>
+
+401cfc: be 09 01 00 00 mov $0x109,%esi
+
+401d01: 48 89 df mov Sorbx, %*rdi
+
+401d04: e8 17 fd ff ff callq 401a20 <dlopen@plt>
+
+401d09: 48 89 c5 mov %rax,%rbp
+
+401d0c: eb c7 jmp 401cd5 <open_so+0x8d>
+0000000000401d0e <dlsym_safe>:
+
+401d0e: 55 push Srbp
+
+401d0f: 53 push Sorbx
+
+401d10: 48 83 ec 08 sub $0x8,%rsp
+
+401d14: 48 89 fd mov S‘srdi,%rbp
+
+401d17: 48 89 f3 mov %rsi,%rbx
+
+401dla: e8 81 fc ff ff callq 4019a0 <dlerror@plt>
+
+401d1f: 48 89 de mov S%rbx,%rsi
+
+401d22: 48 89 ef mov Srbp,%rdi
+
+401d25: e8 16 fd ff ff callq 401a40 <dlsym@plt>
+
+352,3 10%
+Ba@QA
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+a = ts 22:51
+as | 0 cumnecem i ZEA BETIER St . a Pes ABW AB aves A

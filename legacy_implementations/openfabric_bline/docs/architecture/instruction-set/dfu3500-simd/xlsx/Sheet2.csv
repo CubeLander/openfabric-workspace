@@ -1,0 +1,240 @@
+Name,Function,Source operand,,,Destination  operand
+arith inst,a(31:0) means 32simds            a[31:0] means 32bits
+ADD,Value(Operand index 2)  = Value(Operand index 0) + Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+SUB,Value(Operand index 2)  = Value(Operand index 0) - Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+MUL,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+MAX,"Value(Operand index 2) = max(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+MIN,"Value(Operand index 2) = min(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+EQ,Value(Operand index 2)  = Value(Operand index 0) == Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+LT,Value(Operand index 2)  = Value(Operand index 0) < Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+GT,Value(Operand index 2)  = Value(Operand index 0) > Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+MADD,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) + Value(Operand index 2)  ,Operand index 0,Operand index 1,Operand index 2,Operand index 2
+arith unsigned inst,
+UADD,Value(Operand index 2)  = Value(Operand index 0) + Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+USUB,Value(Operand index 2)  = Value(Operand index 0) - Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+UMUL,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+UMAX,"Value(Operand index 2) = max(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+DP4A,"Value(Operand index 2)(i) += Value(Operand index 0)(i)[7:0] * Value(Operand index 1)(i)[7:0]
+                                       += Value(Operand index 0)(i)[15:8] * Value(Operand index 1)(i)[15:8]
+                                       += Value(Operand index 0)(i)[23:16] * Value(Operand index 1)(i)[23:16]
+                                       += Value(Operand index 0)(i)[31:24] * Value(Operand index 1)(i)[31:24]
+32bits*simd32                            {4*8bits}*simd32                     {4*8bits}*simd32",Operand index 0,Operand index 1,,"Operand index 2
+(dummy Reg)"
+ULT,Value(Operand index 2)  = Value(Operand index 0) < Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+UGT,Value(Operand index 2)  = Value(Operand index 0) > Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+UMADD,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) + Value(Operand index 2)  ,Operand index 0,Operand index 1,Operand index 2,Operand index 2
+COND,Value(Operand index 2)  = Value(Operand index 0) > 0 ? Value(Operand index 1) : Value(Operand index 2),Operand index 0,Operand index 1,Operand index 2,Operand index 2
+ULTS,Value(Operand index 2)  = Value(Operand index 0) < Value(Operand index 1) ? 1:0  ,Operand index 0,Operand index 1,,Operand index 2
+,该指令为控制指令，若运算结果为1，则运算部件通知控制部件，提前结束当前subtask的instance迭代。
+logic inst,
+LSL,Value(Operand index 2)  = Value(Operand index 0) << Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+LSR,Value(Operand index 2)  = Value(Operand index 0) >> Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+OR,Value(Operand index 2)  = Value(Operand index 0) | Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+AND,Value(Operand index 2)  = Value(Operand index 0) & Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+NOT,Value(Operand index 2)  = ! Value(Operand index 0) ,Operand index 0,,,Operand index 2
+XOR,Value(Operand index 2)  = Value(Operand index 0) ^ Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+ASR,Value(Operand index 2)  = Value(Operand index 0) >> Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+IMM,Value(Operand index 2)  = IMM,IMM(31:0),,,Operand index 2
+FIMM,"Value(Operand index 2)  = ｛IMM,opr2(30),IMM,opr2(28),IMM,opr2(26),IMM,opr2(24),IMM,opr2(22),IMM,opr2(20),IMM,opr2(18),IMM,opr2(16),IMM,opr2(14),IMM,opr2(12),IMM,opr2(10),IMM,opr2(8),IMM,opr2(6),IMM,opr2(4),IMM,opr2(2),IMM,opr2(0)}",IMM(31:0),,Operand index 2,Operand index 2
+,
+HALF FLOAT,,,,,
+HADD,Value(Operand index 2)  = Value(Operand index 0) + Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+HSUB,Value(Operand index 2)  = Value(Operand index 0) - Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+HMUL,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+HMAX,"Value(Operand index 2) = max(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+HMIN,"Value(Operand index 2) = min(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+HLT,Value(Operand index 2)  = Value(Operand index 0) < Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+HGT,Value(Operand index 2)  = Value(Operand index 0) > Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+HMADD,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) + Value(Operand index 2)  ,Operand index 0,Operand index 1,Operand index 2,Operand index 2
+HDIV,Value(Operand index 2)  = Value(Operand index 0) / Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+HSIS,超函数,Operand index 0,,,Operand index 2
+FLOAT,,,,,
+FADD,Value(Operand index 2)  = Value(Operand index 0) + Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+FSUB,Value(Operand index 2)  = Value(Operand index 0) - Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+FMUL,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+FMAX,"Value(Operand index 2) = max(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+FMIN,"Value(Operand index 2) = min(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+FLT,Value(Operand index 2)  = Value(Operand index 0) < Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+FGT,Value(Operand index 2)  = Value(Operand index 0) > Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+FMADD,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) + Value(Operand index 2)  ,Operand index 0,Operand index 1,Operand index 2,Operand index 2
+FDIV,Value(Operand index 2)  = Value(Operand index 0) / Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+FRCP,Value(Operand index 2)  = 1/(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FSQRT,Value(Operand index 2)  = Sqrt(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FRSQRT,Value(Operand index 2)  = 1/Sqrt(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FSIN,Value(Operand index 2)  = sin(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FCOS,Value(Operand index 2)  = cos(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FLOG2,Value(Operand index 2)  = LOG2(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FEXP2,Value(Operand index 2)  = EXP2(Value(Operand index 0)),Operand index 0,,,Operand index 2
+FP2DB,"imm==0: Value(Operand index 2) = double(Value(Operand index 0)(15:0))  simd32->simd16
+imm>0: Value(Operand index 2) = double(Value(Operand index 0)(31:16))  simd32->simd16",Operand index 0,IMM(7:0),,Operand index 2
+DB2FP,"Value(Operand index 2)(15:0) = float(Value(Operand index 0))  simd16->simd32
+imm>0: Value(Operand index 2)(31:16) = float(Value(Operand index 0))  simd16->simd32
+is disable for dc timing. Please use SHFL to reverse up and down",Operand index 0,,Operand index 2,Operand index 2
+H2FP,"imm==0: Value(Operand index 2) = float(Value(Operand index 0)(31:0))  simd64->simd32
+imm>0: Value(Operand index 2) = float(Value(Operand index 0)(63:32))  simd64->simd32",Operand index 0,IMM(7:0),,Operand index 2
+FP2H,"Value(Operand index 2)(15:0) = half float(Value(Operand index 0))  simd32->simd64
+imm>0: Value(Operand index 2)(31:16) = float(Value(Operand index 0))  simd16->simd32
+is disable for dc timing. Please use SHFL to reverse up and down",Operand index 0,,Operand index 2,Operand index 2
+FXP2FP,Value(Operand index 2) = float(Value(Operand index 0))  simd32->simd32,Operand index 0,,,Operand index 2
+FP2FXP,Value(Operand index 2) = int(Value(Operand index 0))  simd32->simd32,Operand index 0,,,Operand index 2
+SHFL,"imm[1:0]==0   immediate mode:
+Value(Operand index 0)[59:0] = [dst5,dst4,dst3,dst2,dst1,dst0,    src5,src4,src3,src2,src1,src0]:
+ (1)select 6 simds( src5,src4,src3,src2,src1,src0) from Value(Operand index 1),
+ (2)place them to 6 simds(dst5,dst4,dst3,dst2,dst1,dst0) position of Value(Operand index 2).
+32>dst5>dst4>dst3>dst2>dst1>dst0>=0;  srci < 32;  dsti==0 and i>0,  disable i postion
+special use:  when Val(Operand index 0)==zeros, exchange up[1023:512] and down[511:0] of Val(Operand idx2)
+指令写法参考：
+IMM, , , idx_reg, 321579821758215(60位的index编码立即数)
+shfl, idx_reg, val1, val2    
+special use:shfl, idx_reg, , val2 ",Operand index 0[59:0],Operand index 1,Operand index 2,Operand index 2
+,"imm[1:0]==1   fp32-merge simd32 mode:
+Value(Operand index 0)(15:0) =
+  [dst7,dst6,dst5,dst4,dst3,dst2,dst1,dst0,      src7,src6,src5,src4,src3,src2,src1,src0]:
+  (1)select 8 simds( src7,src6,src5,src4,src3,src2,src1,src0) from Value(Operand index 1)(31:0),
+  (2)place them to 8 simds(dst7,dst6,dst5,dst4,dst3,dst2,dst1,dst0) position of Value(Operand index 2)(31:0).
+  32>dst7>dst6>dst5>dst4>dst3>dst2>dst1>dst0>=0;  srci < 32;  dsti==0 and i>0,  disable i postion
+  special use:  when  src0=src1=dst0=dst1, broadcase Value(Operand index 1)(src0) to all 32 simds
+指令写法参考：
+LDN, , , idx_reg（16个simd分量分别指定16个index位置）
+shfl, idx_reg, val1, val2 ",Operand index 0,,,
+,"imm[1:0]==2   fp64-merge simd16 mode:
+Value(Operand index 0)(15:0) =
+  [dst7,dst6,dst5,dst4,dst3,dst2,dst1,dst0,      src7,src6,src5,src4,src3,src2,src1,src0]:
+  (1)select 8 simds( src7,src6,src5,src4,src3,src2,src1,src0) from Value(Operand index 1)(15:0),
+  (2)place them to 8 simds(dst7,dst6,dst5,dst4,dst3,dst2,dst1,dst0) position of Value(Operand index 2)(15:0).
+  16>dst7>dst6>dst5>dst4>dst3>dst2>dst1>dst0>=0;  srci < 32;  dsti==0 and i>0,  disable i postion
+ easy use:  when  src0=src1=dst0=dst1, broadcase Value(Operand index 1)(src0) to all 16 simds",,,,
+,"imm[1:0]==3   shift simd32 mode:
+shift_num = Value(Operand index 0)(0),   shifting low simds of val2 to the high simds of val1
+Value(Operand index 2) = {Value(Operand index 2)(shift_num-1:0), Value(Operand index 1)(31:shift_num)}",,,,
+DOUBLE,,,,,
+DADD,Value(Operand index 2)  = Value(Operand index 0) + Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+DSUB,Value(Operand index 2)  = Value(Operand index 0) - Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+DMUL,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+DMAX,"Value(Operand index 2) = max(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+DMIN,"Value(Operand index 2) = min(Value(Operand index 0) , Value(Operand index 1))",Operand index 0,Operand index 1,,Operand index 2
+DLT,Value(Operand index 2)  = Value(Operand index 0) < Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+DGT,Value(Operand index 2)  = Value(Operand index 0) > Value(Operand index 1) ? 1:0,Operand index 0,Operand index 1,,Operand index 2
+DMADD,Value(Operand index 2)  = Value(Operand index 0) * Value(Operand index 1) + Value(Operand index 2)  ,Operand index 0,Operand index 1,Operand index 2,Operand index 2
+DDIV,Value(Operand index 2)  = Value(Operand index 0) / Value(Operand index 1) ,Operand index 0,Operand index 1,,Operand index 2
+DSQRT,Value(Operand index 2)  = Sqrt(Value(Operand index 0)),Operand index 0,,,Operand index 2
+MASK,"功能：修改运算部件内部8个mask寄存器（store执行时屏蔽某些simd分量）
+操作数0的simd0分量的[13:0]比特 =  {Ext_flag,Ext_offset[1:0],Regid_off[1:0],double_mark, Maskregno[7:5],mask_val[4:0]}
+1）double_mark: 指示-是否开启双simd分量写回模式
+2）Maskregno[7:5]: 表示要填入mask0到mask7的8个中的哪个寄存器
+3）mask_val[4:0]: 表示要填入mask暂存器的值，对应32bit分量粒度
+4）Regid_off[1:0]: 表示SIMD128模式下寄存器编号偏移
+5）Ext_offset[1:0]: 表示8bit分量索引，与mask_val[4:0]组合使用
+6）Ext_flag: 与double_mark组合使用，表示8/16/32/64bit分量写回模式，具体参考word图中描述。",Operand index 0,,,"Operand index 0
+(dummy Reg)"
+GINST,Value(Operand index 2)  = inst_num,,,,Operand index 2
+GTASK,Value(Operand index 2)  = task_num,,,,Operand index 2
+GSIMD,"Value(Operand index 2)  = {31,30,…,1,0}",,,,Operand index 2
+RXIN,"将opMem数值赋值到暂存器RX/LRX里: 
+1）RX0,RX1,RX2,RX3用于int8计算； 
+imm=0: RX0 <= src0     imm=1: RX1 <= src0
+imm=2: RX2 <= src0     imm=3: RX3 <= src0
+imm=12: 对RX0,RX1,RX2,RX3清零
+
+2）LRX0，LRX1，LRX2，LRX3，LRX4，LRX5，LRX6，LRX7的(32bits)用于sldshif和sstshif指令间接寻址  
+imm=4: LRX0 <= src0  imm=5: LRX1 <= src0
+imm=6: LRX2 <= src0  imm=7: LRX3 <= src0
+imm=8: LRX4 <= src0  imm=9: LRX5 <= src0
+imm=10: LRX6 <= src0 imm=11: LRX7 <= src0
+",Operand index 0,,,"Operand index 2
+(dummy Reg)"
+RXOUT,"把用于int8计算的RX[0-3]值取回到目的寄存器里： 
+imm=0: RX0 => src2     imm=1: RX1 => src2
+imm=2: RX2 => src2     imm=3: RX3 => src2
+(LRX不适用)",,,,Operand index 2
+TRCT8,"imm==0:  
+Val(Operand index 2) = Truncate( {Rx3,Rx2,Rx1,Rx0} )[7:0]  
+imm==1:  
+Val(Operand index 2)=Truncate( {Rx3(31),Rx2(31),Rx1(31),Rx0(31)},.., {Rx3(0),Rx2(0),Rx1(0),Rx0(0)} )[7:0]
+       8bits*simd128              32bits*simd128 
+用于QMADD后的TRCT8：
+imm[1]=1: Rx0 => src2;
+imm[2]=1: Rx1 => src2;
+imm[3]=1: Rx2 => src2;
+imm[4]=1: Rx3 => src2;",,,,Operand index 2
+QMADD,"{Rx3,Rx2,Rx1,Rx0}       +=        Value(Operand index 0) * Value(Operand index 1)
+32bits*simd128                            8bits*simd128                     8bits*simd128
+只支持无符号uint8 的计算
+QMADD计算完之后，需结合TRCT8指令，才能拿到正确结果
+Rx0[0] += src0[0]*src1[0]
+  32bits        8bits*8bits
+Rx1[0] += src0[1]*src1[1]
+Rx2[0] += src0[2]*src1[2]
+Rx3[0] += src0[3]*src1[3]
+Rx0[1] += src0[4]*src1[4]
+  32bits        8bits*8bits",Operand index 0,Operand index 1,,"Operand index 2
+(dummy Reg)"
+EXPD32,"
+imm==0:  Val(Operand index 2) = int32( Val(Operand index0)(0)[7:0], … , Val(Operand index0)(31)[7:0] )
+imm==1:  Val(Operand index 2) = int32( Val(Operand index0)(0)[15:8], … , Val(Operand index0)(31)[15:8] )
+imm==2:  Val(Operand index 2) = int32( Val(Operand index0)(0)[23:16], … , Val(Operand index0)(31)[23:16] )
+imm==3:  Val(Operand index 2) = int32( Val(Operand index0)(0)[31:24], … , Val(Operand index0)(31)[31:24] )
+       32bits*simd32     <=         8bits*simd32     
+",Operand index 0,,,Operand index 2
+flow inst,,,,,
+COPYT,"Value(Operand index 1, pe index 1)  = Value(Operand index 0)",Operand index 0,Operand index 1,,PE index 1
+mem inst,,,,,
+LDN(1024bit), Value(Operand index 2) = SPM(LD Base Reg X +IMM)  *4Byte,IMM,,,Operand index 2
+HLDT(4096bit),见word文档,,,,
+LDM(1024bit), Value(Operand index 2) = 32{SPM(LD Base Reg X +IMM)}  ,IMM,,,Operand index 2
+ILDMT(4096bit),见word文档,,,,
+LDSHIFT(1024bit),,,,,
+SLDSHIF(4096bit)," Value(Operand index 2) = SPM(LD Base Reg X +IMM (+/-)LRX[shft_No] * shft_cnt )  
+dst_pe_idx[:10]：4条LDSHIFT指令间的硬件地址偏移；
+dst_pe_idx[9]：0-加上暂存的地址偏移；1-减去暂存的地址偏移;
+dst_pe_idx[8:3]：shft_cnt 
+dst_pe_idx[2:0]：shft_No
+",IMM,,Operand index2,
+STD（1024bit）,"选择是否结合MASK寄存器：
+other_info==NULL/0:
+  SPM(ST Base Reg X +IMM)()  = Value(Operand index 2)
+other_info==1~8：(write back only one simd)，指定用到的mask寄存器编号  
+k={simd_mask_reg[4:0],simd_mask_reg[12:11]}(MASK指令写到MASK[idx]中的信息); 
+{ext_flag,double_mark}= {simd_mask_reg[13],simd_mask_reg[8]}
+   32bit分量：{ext_flag,double_mark}==2'b00,  SPM(ST Base Reg X +IMM)(k+3:k)  = Value(Operand index 2)(k+3:k)
+   64bit分量：{ext_flag,double_mark}==2'b01,  SPM(ST Base Reg X +IMM)(k+7:k)  = Value(Operand index 2)(k+7:k)
+   8bit分量： {ext_flag,double_mark}==2'b10,  SPM(ST Base Reg X +IMM)(k)  = Value(Operand index 2)(k)
+   16bit分量：{ext_flag,double_mark}==2'b11,  SPM(ST Base Reg X +IMM)(k+1:k)  = Value(Operand index 2)(k+1:k)
+
+",IMM,,Operand index 2,
+HSTT(4096bit),可结合MASK寄存器，实现mask访存，详见word文档,,,,
+STM(1024bit),"索引粒度为8bit，写回最低K={dst_pe_idx[4:0]，dst_pe_idx[8:7]}个分量，或者最高128-K个分量。
+dst_pe_idx[4:0]: 
+dst_pe_idx[6:5]: [hign,low]
+dst_pe_idx[8:7]: 
+[high,low]为2'b01，写最高的128-K个分量；
+[high,low]为2'b10，写最低的128-K个分量；
+[high,low]为2'b00，表示所有分量全部写回;
+K==0,所有分量全部写回；",IMM,,Operand index 2,
+SSTM(4096bit),"索引粒度为8bit，写回最低K={dst_pe_idx[4:0]，dst_pe_idx[8:7]}个分量，或者最高128-K个分量。
+dst_pe_idx[4:0]: 
+dst_pe_idx[6:5]: [hign,low]
+dst_pe_idx[8:7]: 
+dst_pe_idx[10:9]:regidx索引，SIMD128模式对应选择4个regid中的一个，SIMD64，SIMD32按比例减少。
+[high,low]为2'b01，根据regidx选择某个寄存器，写regidx寄存器内最高的128-K个分量，同时编号大于此寄存器的其它寄存器全部写回；
+[high,low]为2'b10，根据regidx选择某个寄存器，写regidx寄存器内最低的128-K个分量，同时编号小于此寄存器的全部写回；
+[high,low]为2'b00，表示所有分量全部写回;
+K==0,所有分量全部写回；",IMM,,Operand index 2,
+STSHIF(1024bit),,,,,
+SSTSHIF(4096bit)," Value(Operand index 2) = SPM(LD Base Reg X +IMM (+/-)LRX[shft_No] * shft_cnt )  
+汇编器可见，模拟器和硬件不可见。把指令翻译成四条LDSHIF指令(补充指令之间偏移设置信息)
+dst_pe_idx[:10]：4条STSHIF指令间的硬件地址偏移；
+dst_pe_idx[9]：0-加上暂存的地址偏移；1-减去暂存的地址偏移;
+dst_pe_idx[8:3]：shft_cnt 
+dst_pe_idx[2:0]：shft_No
+选择是否结合MASK寄存器：
+other_info==NULL/0:
+SPM(ST Base Reg X +IMM（+/-）LRx[shft_No] * shft_cnt ) =  Value(Operand index 2) 
+
+other_info==1：(write back only one simd)
+k={simd_mask_reg[4:0],simd_mask_reg[12:11]}(MASK指令写到LRX[idx]中的信息); 
+{ext_flag,double_mark}= {simd_mask_reg[13],simd_mask_reg[8]}
+   32bit分量：{ext_flag,double_mark}==2'b00,  SPM(ST Base Reg X +IMM（+/-）Rx[shft_No] * shft_cnt)(k+3:k)  = Value(Operand index 2)(k+3:k)
+   64bit分量：{ext_flag,double_mark}==2'b01,  SPM(ST Base Reg X +IMM（+/-）Rx[shft_No] * shft_cnt)(k+7:k)  = Value(Operand index 2)(k+7:k)
+   8bit分量： {ext_flag,double_mark}==2'b10,  SPM(ST Base Reg X +IMM（+/-）Rx[shft_No] * shft_cnt)(k)  = Value(Operand index 2)(k)
+   16bit分量：{ext_flag,double_mark}==2'b11,  SPM(ST Base Reg X +IMM（+/-）Rx[shft_No] * shft_cnt)(k+1:k)  = Value(Operand index 2)(k+1:k)",IMM,,Operand index 2,

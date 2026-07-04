@@ -1,0 +1,4 @@
+4 AND, AND2,Kernel1,Kernel2,Kernel3,,,,
+5 OR, OR3,Kernel1,Kernel2,Kernel4,,,,
+5 NOT,NOT4,Kernel1, ,Kernel5,,,,
+7 XOR,XOR5,Kernel1,Kernel2,Kernel6,,,,

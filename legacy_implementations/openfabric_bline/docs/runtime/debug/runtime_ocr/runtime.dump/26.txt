@@ -1,0 +1,38 @@
+‘e6©e FusionAccess - HUAKEO2001
+3X) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - oO x
+we Applications huakeO2 - File Manager {gj Terminal - huake01@... {@ Terminal - huake01@... f=] 23:38 EN .| huake0d2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+File Edit View Terminal Tabs Help
+o225c: 48 89 de mov Serbx, %rsi
+40225f: bf a3 45 40 00 mov $0x4045a3, sedi
+402264: e8 77 f6 ff ff callq 4018e0 <printf@plt>
+402269: 48 8b 3d 00 36 20 00 mov 0x203600(%rip) ,%rdi # 605870 <stdout@@GLIBC_2.2.5>
+402270: e8 5b f8 ff ff callq 40lad0 <fflush@plt>
+402275: bt tf ff ff ff mov SOxtttttttt, sedi
+40227a: e8 91 f6 ff ff callq 401910 <exit@plt>
+40227f: b9 40 48 40 00 mov $0x404840 , %ecx
+402284: ba 64 00 00 00 mov $0x64, %edx
+402289: be 79 45 40 00 mov $0x404579,%esi
+40228e: bf 70 47 40 00 mov $0x404770, sedi
+402293: e8 88 f6 ff ff callq 401920 <_assert_fail@plt>
+402298: 48 8b 33 mov (%rbx) ,%rsi
+40229b: bf 13 46 40 00 mov $0x404613, sedi
+4022a0: e8 3b f6 ff ff callq 4018e0 <printf@plt>
+4022a5: 48 8b 3d c4 35 20 00 mov 0x2035c4(%rip) ,%rdi # 605870 <stdout@@GLIBC_2.2.5>
+4022ac: e8 1f f8 ff ff callq 4@0lad0 <fflush@plt>
+4022b1: bf ff ff ff ff mov SOxTTtttttt, sedi
+4022b6: e8 55 f6 ff ff callq 401910 <exit@plt>
+4022bb: 4c 89 e6 mov %r12,%rsi
+4022be: bf 23 46 40 00 mov $0x404623 , sedi
+40223: e8 18 f6 ff ff callq 4018e0 <printf@plt>
+4022c8: 48 8b 3d al 35 20 00 mov 0x2035al(%rip) ,%rdi # 605870 <stdout@@GLIBC_2.2.5>
+4022cf: e8 fc f7 ff ff callq 4@lad0 <fflush@plt>
+4022d4: bf ff ff ff ff mov SOxTtTtttttt, sedi
+4022d9: e8 32 f6 ff ff callq 401910 <exit@plt>
+4022de: 41 bd 00 00 00 00 mov $0x0,%rl13d
+4022e4: e9 db fd ff ff jmpq 4020c4 <main+0x358>
+4022e9: 48 8b 15 f8 35 20 00 mov Ox2035f8(%rip) ,*rdx # 6058e8 <g_conf+0x28>
+676,3 20%
+BaDWa
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+= | 0 cumnesem i WATER + @ks @ |

@@ -1,0 +1,13 @@
+ee
+en 4
+for(k = 0; k <4; ks+){
+for(i
+=
+=
+0; i < SIMD_UNIT
+i++) {
+results[k] .ufix[i]
+= inst_trace_info->instance_ idx
+}
+_
+}

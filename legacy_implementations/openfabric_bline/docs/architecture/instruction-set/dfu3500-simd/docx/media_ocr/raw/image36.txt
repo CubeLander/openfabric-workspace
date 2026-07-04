@@ -1,0 +1,8 @@
+L nst _ name, inst tag_name,src_reg_Ldqxo,src_reg_Ldxl,dst_ reg_Ldqx:dqst pe_Ldx, unm, iteration
+2 HLDT,HLDTO, , ,KernetL9,-1,9,9
+3 IMM,IMM1,, ,KerneL1, ,824633721,1
+| FIMM,FIMM2,,,Kernel1, , 1068280840, 1
+5 DMUL,DMUL3,KernelO,Kernel1,Kernel2,,,1
+5 DADD ,DADD4 ,KernelO,Kernel1,Kernel3,, ,1
+7 HSTT,HSTT5, , ,Kernel2,-1,0,1
+3 HSTT,HSTT6, , ,Kernel3,-1,0,2

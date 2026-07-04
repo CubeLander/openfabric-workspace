@@ -1,0 +1,70 @@
+‘ee FusionAccess - HUAKEO2001
+
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - oO x
+we Applications huakeO2 - File Manager | [@j Terminal - huake01@... {gy Terminal - huake01@... f=] 23:37 EN .| huakeod2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Boldfs: be cl 45 40 00 mov $0x4045c1,%esi
+
+40l1dfd: 48 8b 3d c4 3a 20 00 mov 0x203ac4(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+401e04: e8 05 ff ff ff callq 401d0e <dlsym_safe>
+
+401e09: 48 8b 00 mov (%rax) ,%rax
+
+401e0c: 48 89 05 cd 3a 20 00 mov %rax,0x203acd(%rip) # 6058e0 <g_conf+0x20>
+
+401e13: be c4 45 40 00 mov $0x4045c4,%esi
+
+401e18: 48 8b 3d a9 3a 20 00 mov 0x203aa9(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+40lelf: e8 ea fe ff ff callq 401d0e <dlsym_safe>
+
+401e24: 48 89 05 bd 3a 20 00 mov %rax,0x203abd(%rip) # 6058e8 <g_conf+0x28>
+
+401e2b: be cc 45 40 00 mov $0x4045cc,%esi
+
+401e30: 48 8b 3d 91 3a 20 00 mov 0x203a91(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+401e37: e8 d2 fe ff ff callq 401d0e <dlsym_safe>
+
+401le3c: 48 8b 00 mov (%rax) ,%rax
+
+401e3Ff: 48 89 05 aa 3a 20 00 mov %rax,0x203aaa(%rip) # 6058T0 <g_conf+0x30>
+
+401e46: be d7 45 40 00 mov $0x4045d7, %esi
+
+401e4b: 48 8b 3d 76 3a 20 00 mov 0x203a76(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+401e52: e8 b7 fe ff ff callq 401d0e <dlsym_safe>
+
+401e57: 48 89 c2 mov %rax,%rdx
+
+401le5a: b8 00 00 00 00 mov $0x0 , seax
+
+401e5f: tf d2 callq *%rdx
+
+401e61: 48 89 05 90 3a 20 00 mov %rax,0x203a90(%rip) # 6058T8 <g_conf+0x38>
+
+401e68: be el 45 40 00 mov $0x4045e1,%esi
+
+401le6d: 48 8b 3d 54 3a 20 00 mov 0x203a54(%rip) ,%*rdi # 6058c8 <g_conf+0x8>
+
+401e74: e8 95 fe ff ff callq 401d0e <dlsym_safe>
+
+401e79: 48 8b 00 mov (%rax) ,%rax
+
+40le7c: 48 89 05 7d 3a 20 00 mov %rax,0x203a7d(%rip) # 605900 <g_conf+0x40>
+
+401e83: be f5 45 40 00 mov $0x4045f5,%esi
+
+401e88: 48 8b 3d 39 3a 20 00 mov 0x203a39(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+401e8Ff: e8 7a fe ff ff callq 401d0e <dlsym_safe>
+
+433,3 13%
+BaDWaA
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+= | 0 cumnesem i WATER + @ks @ AB” SAB soeeno |

@@ -1,0 +1,56 @@
+e0e FusionAccess - HUAKE02001
+
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - Oo x
+ae Applications huakeO2 - File Manager |) Terminal - huake01@... | (By) Terminal - huake01@... 23:36 EN || huake0d2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Bolaad: ff 25 92 3c 20 00 jmpq *0x203c92(%rip) # 605738 <pthread_mutex_unlock@GLIBC_2.2.5>
+
+401laa6: 68 1c 00 00 00 pushq $0xlc
+
+40laab: e9 20 fe ff ff jmpq 4018d0 <.plt>
+000000000040labO <pthread_kill@plt>:
+
+401lab0: Tf 25 8a 3c 20 00 jmpq *0x203c8a(%rip) # 605740 <pthread_kill@GLIBC_2.2.5>
+
+401lab6: 68 1d 00 00 00 pushq $0xld
+
+40labb: e9 10 fe ff ff jmpq 4018d0 <.plt>
+0000000000401lacO <sigwait@plt>:
+
+401lacO: ff 25 82 3c 20 00 jmpq *0x203c82(%rip) # 605748 <sigwait@GLIBC_2.2.5>
+
+401lac6: 68 le 00 00 00 pushq $0xle
+
+40lacb: e9 00 fe ff ff jmpq 4018d0 <.plt>
+0000000000401lad0 <fflush@plLt>:
+
+401lad0: ff 25 7a 3c 20 00 jmpq *0x203c7a(%rip) # 605750 <fflush@GLIBC_2.2.5>
+
+401lad6: 68 1f 00 00 00 pushq $0xl1f
+
+40ladb: e9 fO fd ff ff jmpq 4018d0 <.plt>
+Disassembly of section .text:
+0000000000401lae0 <_start>:
+
+401lae0: 31 ed xor Sebp,%*ebp
+
+401lae2: 49 89 dl mov %rdx,%r9
+
+401lae5: 5e pop S%rsi
+
+401lae6: 48 89 e2 mov Srsp,%rdx
+
+401lae9: 48 83 e4 TO and SOxtftttffttttttfftttO,%srsp
+
+40laed: 50 push %rax
+
+40laee: 54 push Srsp
+
+163 ,3 4%
+Bsa@wQa
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+Oo — o . 22:50
+as | 0 cumnecem i ZEA BETIER St ) a Pes ABW AB aves A

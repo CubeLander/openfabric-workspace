@@ -1,0 +1,68 @@
+e0e FusionAccess - HUAKE02001
+
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - Oo x
+wt Applications huakeO2 - File Manager  [@j Terminal - huake01@... {i Terminal - huake01@... 23:37 EN || huakeod2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+o1d22: 48 89 ef mov Srbp,%rdi
+
+401d25: e8 16 fd ff ff callq 401a40 <dlsym@plt>
+
+401d2a: 48 89 c5 mov %rax,%rbp
+
+401d2d: e8 6e fc ff ff callq 4019a0 <dlerror@plt>
+
+401d32: 48 85 cO0 test %rax,%*rax
+
+401d35: 75 Oa jne 401d41 <dlsym_safe+0x33>
+
+401d37: 48 89 e8 mov Ssrbp,%rax
+
+401d3a: 48 83 c4 08 add $0x8,%rsp
+
+401d3e: 5b pop %orbx
+
+401d3f: 5d pop Srbp
+
+401d40: c3 retq
+
+401d41: 48 89 c2 mov %rax,%rdx
+
+401d44: 48 89 de mov S%rbx,%rsi
+
+401d47: bf 40 47 40 00 mov $0x404740, sedi
+
+401d4c: b8 00 00 00 00 mov $0x0 , %eax
+
+401d51: e8 8a fb ff ff callq 4018e0 <printf@plt>
+
+401d56: 48 8b 3d 13 3b 20 00 mov 0x203b13(%rip) ,%rdi # 605870 <stdout@@GLIBC_2.2.5>
+
+401d5d: e8 6e fd ff ff callq 40lad0 <fflush@plt>
+
+401d62: bf ff ff ff ff mov SOxTt fT tttftf , sedi
+
+401d67: e8 a4 fb ff ff callq 401910 <exit@plt>
+0000000000401d6c <main>:
+
+401d6c: 41 57 push %r15
+
+401d6e: 41 56 push %orl4
+
+401d70: 41 55 push %r13
+
+401d72: 41 54 push %r12
+
+401d74: 55 push Srbp
+
+401d75: 53 push Sorbx
+
+401d76: 48 83 ec 38 sub $0x38,%rsp
+
+379 ,3 11%
+BA2@Q
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+Oo — an 22:51
+as | 0 cumnecem i ZEA BETIER St . a Pes ABW AB aves A

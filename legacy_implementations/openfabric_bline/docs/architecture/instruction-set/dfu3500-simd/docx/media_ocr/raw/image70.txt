@@ -1,0 +1,9 @@
+SLDSHIFT ré Ricc
+2m 单位 作用 |
+imm 4Bytes 地址偏移
+dst_pe_idx[2:0] 4Bytes Shift_No
+dst_pe_idx[8:3] 4Bytes Shift_cnt
+9 0-加上和暂存的地址偏移， =
+est-pe texte] 1 BE PRICE,
+(n+1)*32*4Bytes 、
+dst_pe_idx[:10] (n+1)*1024bits 硬件指令间偏移

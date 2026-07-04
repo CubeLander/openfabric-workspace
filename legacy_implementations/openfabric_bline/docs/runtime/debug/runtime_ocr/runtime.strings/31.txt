@@ -1,0 +1,37 @@
+ee FusionAccess - HUAKE02001
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client _ oO x
+yw Applications huakeO2 - File Manager | (gj Terminal - huake01@... | (a) Terminal - huake01@... 00:06 EN |. huakeo2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+File Edit View Terminal Tabs Help
+fil_readline version
+open_so
+fflush
+obj_name
+_I0_backup_base
+_shortbuf
+_I0_2_1 stdout_
+rl_completion_word_break_hook
+g_conf
+tilde _expansion_preexpansion_hook
+__ align
+__off64 t
+rl_end
+pool_node t
+KEYMAP_ENTRY_ARRAY
+rl_ignore_ completion duplicates
+_I0_buf_end
+nr_thread_streams
+rl_editing_ mode
+rl_point
+rl_compdisp_func_t
+rl_deprep_term_function
+FUNMAP
+dlerror
+end i
+rl_pending input
+rl_prefer_env_winsize
+stderr
+short int
+811,1 64%
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + OQ @& AB” AB soesn0 7

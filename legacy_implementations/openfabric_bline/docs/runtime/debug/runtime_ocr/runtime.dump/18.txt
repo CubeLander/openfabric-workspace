@@ -1,0 +1,70 @@
+‘ee FusionAccess - HUAKEO2001
+
+xX liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client oa o x
+ae Applications huakeO2 - File Manager (— Terminal - huake01@... {@ Terminal - huake01@... 23:38 EN || huaked2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Boless: 48 8b 3d 39 3a 20 00 mov 0x203a39(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+401e8F: e8 7a fe ff ff callq 401d0e <dlsym_safe>
+
+401e94: 48 89 05 6d 3a 20 00 mov %rax,0x203a6d(%rip) # 605908 <g_conf+0x48>
+
+401e9b: be 06 46 40 00 mov $0x404606 , <esi
+
+401lea0: 48 8b 3d 21 3a 20 00 mov 0x203a21(%rip) ,%rdi # 6058c8 <g_conf+0x8>
+
+401lea7: e8 62 fe ff ff callq 401d0e <dlsym_safe>
+
+40leac: 48 89 05 5d 3a 20 00 mov %rax,0x203a5d(%rip) # 605910 <g_conf+0x50>
+
+401leb3: 48 83 3d 45 3a 20 00 cmpq $0x0,0x203a45(%rip) # 605900 <g_conf+0x40>
+
+40leba: 00
+
+40lebb: 74 35 je 40lef2 <main+0x186>
+
+40lebd: bb 00 00 00 00 mov $0x0, %ebx
+
+401lec2: b8 00 00 00 00 mov $0x0 , seax
+
+40lec7: 48 8d 3c 80 lea (%rax, %*rax,4) ,%rdi
+
+40lecb: 48 cl e7 04 shl $0x4, %rdi
+
+40lecf: 48 03 3d 32 3a 20 00 add 0x203a32(%rip) ,%rdi # 605908 <g_conf+0x48>
+
+40led6: e8 d5 la 00 00 callq 4039b0 <thread_msg queue_init>
+
+40ledb: 85 cO test %eax , *eax
+
+40ledd: Of 85 9c 03 00 00 jne 40227 <main+0x513>
+
+401lee3: 83 c3 01 add $0x1,%ebx
+
+401lee6: 48 63 c3 movslq %ebx, %rax
+
+401lee9: 48 3b 05 10 3a 20 00 cmp 0x203al10(%rip) ,%rax # 605900 <g_conf+0x40>
+
+401lef0: 72 d5 jb 40lec7 <main+0x15b>
+
+40lef2: bf 10 46 40 00 mov $0x404610, sedi
+
+40lef7: e8 04 fa ff ff callq 401900 <puts@plt>
+
+40lefc: 48 8b 3d 6d 39 20 00 mov 0x20396d(%rip) ,%rdi # 605870 <stdout@@GLIBC_2.2.5>
+
+401f03: e8 c8 fb ff ff callq 40lad0 <fflush@plt>
+
+401f08: bf aQ 47 40 00 mov $0x4047a0, sedi
+
+401fOd: b8 00 00 00 00 mov $0x0 , seax
+
+401f12: e8 c9 f9 ff ff callq 4018e0 <printf@plt>
+
+460,3 14%
+BE@DQA
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + @s @ AB” A soon |

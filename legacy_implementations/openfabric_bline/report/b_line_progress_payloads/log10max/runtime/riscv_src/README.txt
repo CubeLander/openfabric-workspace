@@ -1,0 +1,1 @@
+Generated RISC-V control source for partner validation. Build on arch-13 with the validation script; it uses shared DpuAPI/common headers from SIMICT_ROOT and does not require a vendor case testarm.c.

@@ -1,0 +1,16 @@
+a
+imm==0: Value(index 0)[59:0] = [dst5,dst4,dst3,dst2,dst1,dst0, src5,src4,src3,src2,src1,src0]
+源数据Src1l-1024bits-simd32
+GR)
+CEP ECE EPP EEE
+Srcolis30bits, oa 7一
+1, 3, 6, 8, 12, 14
+Src0的31-60bits，6个目的idx:
+10.
+— 后5个idx不能为0
+[apelsalslslslalslalslalslslell
+源数据Src2-1024bits-simd32
+CRM) wy
+Telefe ieee te]
+目的数据Src2-1024bits-simd32
+r CRIB

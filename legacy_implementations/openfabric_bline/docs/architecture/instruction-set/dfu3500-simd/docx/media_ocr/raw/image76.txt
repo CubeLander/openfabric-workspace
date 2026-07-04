@@ -1,0 +1,20 @@
+Extflag，double mark==10
+& a
+3 =
+LT LT nan T T
+Va N.
+7 NY
+J AN
+7 \
+a \
+va \
+(Tae TT |] Re Oo
+[L_ Tastl | (4: 0) BRB: 0-31
+S%
+53
+Ext_flag,double_mark==10，这两位生效优先豚最高，意指取最终取到的一定是8位数据.。
+reg_idx们为取4个reg的哪一个reg，= =01意指取第2个reg
+然后在第二个reg内取8们数据，怎么取:
+1, val (4: 0) 位为取哪一个simd分量，比如00011，是取编号3的simd分量
+2、ext_offset位，在编号3的分量生础上生效，信称0/1/2/3个8bit，来取8bit数据。
+比如==01，夫示信物8bit，取8bit的数据，

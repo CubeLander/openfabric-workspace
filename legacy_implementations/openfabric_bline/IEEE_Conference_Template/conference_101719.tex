@@ -1,0 +1,523 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{url}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Draft constants. Replace these macros when the engineering evidence closes.
+\newcommand{\systemname}{OpenFabric}
+\newcommand{\targetbackend}{DFU/GPDPU}
+\newcommand{\expertperf}{70\%}
+\newcommand{\meshsize}{4$\times$4}
+
+\begin{document}
+
+\title{\systemname: From Distributed Tensor Placement to Executable Manycore Tensor Accelerator Packages}
+
+\author{\IEEEauthorblockN{Anonymous Authors}
+\IEEEauthorblockA{\textit{Anonymous Institution}\\
+Anonymous City, Country\\
+anonymous@example.com}
+}
+
+\maketitle
+
+\begin{abstract}
+Emerging tensor accelerators often expose manycore execution fabrics, explicit
+local memories, vendor-specific task formats, and closed runtime package
+interfaces. These machines can deliver high throughput, but deploying new model
+operators still depends heavily on case-by-case expert kernels and brittle
+template code. We present \systemname, a distributed tensor compilation
+substrate that lowers DTensor-style placement semantics into per-core tile
+programs and executable backend packages. \systemname{} makes logical
+collectives first-class: data visibility, broadcast, reduction, and
+materialization obligations are represented explicitly before they are expanded
+into backend graph nodes, task/subtask schedules, instance tables, base-address
+records, and binary runtime package files. Its central IR, TileScope/Value/View,
+separates scheduling ownership from tensor-core internal state, allowing
+accumulators, temporary fragments, materialized tiles, and fused post-ops to be
+validated at the same abstraction level. On a \targetbackend{} manycore tensor
+accelerator, \systemname{} generates executable vendor runtime packages from
+high-level operator programs and recovers approximately \expertperf{} of
+expert-tuned kernel throughput on evaluated operators, while preserving an
+inspectable lowering path that replaces hand-maintained template flows.
+\end{abstract}
+
+\begin{IEEEkeywords}
+tensor compiler, distributed tensor, manycore accelerator, collective
+communication, operator generation, runtime package
+\end{IEEEkeywords}
+
+\section{Introduction}
+
+The programming gap for tensor accelerators is no longer limited to writing a
+single fast kernel. Practical deployment requires a repeatable path from model
+operators to target-specific execution packages across changing shapes, fused
+operators, memory layouts, and hardware generations. This gap is especially
+visible on emerging accelerators: the hardware may expose a useful mesh of
+tensor cores, local memories, and data movement engines, but the software path
+often remains a collection of vendor examples, handwritten C/C++ templates,
+CSV-like instruction streams, task descriptors, base-address tables, and closed
+runtime package formats.
+
+Mainstream systems have strong compiler ecosystems for tensor kernels, yet their
+abstractions do not directly solve this problem. Triton gives programmers a
+productive tile-kernel language for GPUs \cite{triton}. Distributed tensor
+systems expose placement concepts such as shard, replicate, and partial
+reduction \cite{dtensor}. Recent systems push tile programs toward spatial
+dataflow accelerators \cite{tileloom} or extend Triton with distributed
+communication overlap \cite{triton_distributed}. However, a deployment compiler
+for emerging tensor fabrics must connect all of these concerns at once: it must
+preserve distributed tensor semantics, expose collective visibility obligations,
+lower through tile-level schedules, and finally materialize the exact backend
+runtime package consumed by the target system.
+
+\systemname{} is our answer to this problem. It treats a manycore accelerator as
+a small distributed tensor machine. A user describes an operator using
+DTensor-like tensor placement and ordinary compute operations. The compiler
+derives logical collective obligations, assigns tile ownership to tensor cores,
+builds per-core tile programs, and lowers those programs into backend execution
+artifacts. The first backend is \targetbackend{}, a constrained \meshsize{}
+tensor-core mesh with an explicit task/subtask/instance runtime model and a
+vendor package ABI. This backend is intentionally demanding: it forces the
+compiler to account for tile residency, tensor-core temporary state, instruction
+payloads, shared instance tables, base-address slots, and final binary package
+composition.
+
+This paper makes the following contributions:
+\begin{itemize}
+\item We introduce a placement-first compiler architecture that lowers
+distributed tensor semantics into per-core tile programs, rather than starting
+from a handwritten tile kernel.
+\item We make logical collectives and visibility obligations first-class IR
+objects, allowing broadcasts, reductions, materialization, and stores to be
+validated before backend expansion.
+\item We present TileScope/Value/View, an IR split that models both schedulable
+tile ownership and tensor-core internal state such as accumulator fragments,
+summary values, and materialized tile views.
+\item We implement a \targetbackend{} backend that emits executable vendor
+runtime packages, including task/subtask schedules, exeBlock descriptors, shared
+instance rows, base-address records, instruction blobs, and package files.
+\item We evaluate generated GEMM, fused GEMM, and non-GEMM collective operators,
+showing that \systemname{} recovers roughly \expertperf{} of expert-written
+kernel performance while replacing case-specific template maintenance with an
+inspectable compiler flow.
+\end{itemize}
+
+% INTERNAL_CLOSURE:
+% 1. Replace abstract/contribution performance wording with final measured
+%    geomean, per-operator table, and hardware configuration.
+% 2. Confirm the final backend package files and binary emitter names.
+% 3. Replace anonymous author block before submission.
+
+\section{Motivation and Backend Constraints}
+
+\subsection{From Operator Semantics to Runtime Packages}
+
+The deployment workflow that motivated \systemname{} starts from model
+operators, but the backend consumes low-level runtime package files. A typical
+manual path interleaves semantic decisions and hardware details:
+
+\begin{center}
+\fbox{\begin{minipage}{0.92\linewidth}
+operator shape and layout $\rightarrow$ PE map $\rightarrow$ tile loops
+$\rightarrow$ template C/C++ $\rightarrow$ CSV/instruction records
+$\rightarrow$ task/subtask/instance tables $\rightarrow$ runtime package
+\end{minipage}}
+\end{center}
+
+This path is fragile because each new operator reopens the same questions: which
+tensor dimensions are sharded, which values must become visible to which PEs,
+where reductions occur, when a fused post-op can stay local, and which task
+descriptor or base-address slot carries each piece of state.
+
+\subsection{DFU/GPDPU as a Stress Test}
+
+The \targetbackend{} backend exposes a \meshsize{} PE mesh. Each PE executes
+local tensor instructions and participates in explicit data movement. The
+runtime package contains task and subtask metadata, PE-specific execution blocks,
+shared instance tables, instruction payload blobs, and input/output data files.
+Memory references are partly relocatable: instruction offsets are combined with
+per-instance base-address slots. These constraints are not incidental
+engineering details; they shape the compiler IR. If the compiler loses the
+identity of a tile, a collective obligation, or a tensor-core temporary value,
+it cannot later prove that a generated runtime package is correct.
+
+\section{\systemname{} Overview}
+
+Fig.~\ref{fig:pipeline} shows the \systemname{} pipeline. The frontend borrows
+the useful static subset of distributed tensor programming: a device mesh,
+logical tensor metadata, placements, local compute operations, partial results,
+and explicit redistribution intent. The backend is responsible for target
+expansion: tile ownership, tile actions, collective routing, graph nodes,
+runtime frames, binary records, and final package files.
+
+\begin{figure*}[t]
+\centering
+\fbox{\begin{minipage}{0.95\linewidth}
+\centering
+\textbf{Operator Program}
+$\rightarrow$ DTensor-style placement propagation
+$\rightarrow$ chip logical actions and LogicalCollectives
+$\rightarrow$ per-core Tile Programs with TileScope/Value/View
+$\rightarrow$ Global Tile Dependency Network
+$\rightarrow$ backend graph and packing
+$\rightarrow$ task/subtask/exeBlock/instance/base-table records
+$\rightarrow$ binary vendor runtime package
+\end{minipage}}
+\caption{\systemname{} lowers distributed tensor placement into backend runtime
+packages through explicit logical collectives and per-core tile programs.}
+\label{fig:pipeline}
+\end{figure*}
+
+The central design rule is:
+\begin{quote}
+The tile program is the program; dependency graphs and vendor package records
+are derived views.
+\end{quote}
+This rule prevents backend artifacts from becoming the only source of truth.
+Debug and validation views can be regenerated from structured IR, while binary
+package emission remains a final materialization step.
+
+\section{Semantic Model}
+
+\subsection{Placement-First Operators}
+
+\systemname{} begins with logical tensors over a mesh. Each tensor carries shape,
+dtype, and placement metadata. Placements include sharding over a mesh dimension,
+replication, and partial values that require a later reduction. For example,
+matrix multiplication on a \meshsize{} mesh can be expressed as row-sharded
+output tiles, row-visible tiles of $A$, and column-visible tiles of $B$. The
+source program expresses what tensors mean; it does not manually enumerate
+backend task files.
+
+This choice is intentionally different from kernel-first DSLs. A kernel-first
+program tells one program instance how to load, compute, and store a tile.
+\systemname{} first asks which distributed tensor values must be visible to each
+core, then derives local tile programs and backend actions.
+
+\subsection{LogicalCollective}
+
+A LogicalCollective records a visibility or reduction obligation before physical
+routing is chosen. It includes the source logical value, participant group,
+visibility kind, role information, and consumer tile actions. For a SUMMA-style
+GEMM, one $A$ tile becomes row-visible and one $B$ tile becomes column-visible at
+each K step. For a signal-processing operator such as
+\texttt{log10 -> max -> maximum}, local logarithms and local maxima are computed
+first, a global max reduction is represented as a logical all-reduce, and the
+post-reduction maximum and affine scale remain PE-local.
+
+LogicalCollectives are not backend graph nodes. They are semantic obligations
+that later lower into per-participant TileCollectiveActions, route edges,
+instruction payloads, or runtime records depending on the backend.
+
+\section{TileScope/Value/View IR}
+
+\subsection{TileScope}
+
+A TileScope is a schedulable ownership domain. It records a logical tile
+identity, owner core, global range, local actions, collective participation,
+member values, materialization state, and backend schedule hints. TileScope is
+the unit that users and compiler developers inspect when deciding whether an
+operator has been partitioned correctly.
+
+\subsection{Value and View}
+
+Many tensor-core instructions do not directly produce a fully materialized
+output tile. For example, a matrix multiply instruction may accumulate into
+temporary tensor state, while later import/export instructions move between
+temporary state and ordinary operand storage. Therefore \systemname{} separates:
+\begin{itemize}
+\item \textit{Value}: the actual producer/consumer object, such as an operand
+strip, accumulator fragment, local summary scalar, or temporary tensor state.
+\item \textit{View}: a structured interpretation of one or more values as a
+tile-shaped semantic object, such as an accumulator tile or fused post-op input.
+\end{itemize}
+
+This split lets the compiler keep tile-level scheduling visible while still
+respecting instruction-level producer/consumer boundaries. It also supports
+fusion: a ReLU, maximum, or affine scale can consume a tile view and materialize
+only the final output tile.
+
+\subsection{Tile Actions}
+
+Each TileScope contains a timeline of actions:
+\begin{itemize}
+\item TileCollectiveAction for visibility, broadcast, reduction, and store
+obligations.
+\item ComputeTileAction for tensor-core operations, elementwise operations, and
+local reductions.
+\item ViewAction for constructing semantic tile views over member values.
+\item MaterializeTileAction for exposing a view to memory or to later backend
+records.
+\item BarrierAction for phase boundaries that cannot be fused.
+\end{itemize}
+
+This action model is the reason the same IR can represent GEMM and non-GEMM
+collective operators. GEMM specializes the model with K-streaming and row/column
+visibility. Other operators use the same local/collective/post-local structure.
+
+\section{Backend Lowering to Executable Packages}
+
+\subsection{Lowering Stages}
+
+The \targetbackend{} backend lowers tile programs through the stages in
+Table~\ref{tab:lowering}. The early stages preserve semantic structure; the
+late stages conform to the vendor ABI.
+
+\begin{table}[t]
+\caption{\targetbackend{} lowering stages}
+\label{tab:lowering}
+\centering
+\begin{tabular}{p{0.31\linewidth}p{0.56\linewidth}}
+\toprule
+\textbf{Stage} & \textbf{Compiler responsibility} \\
+\midrule
+Tile program & Per-PE TileScopes, K steps, actions, value/view state \\
+Dependency network & Derived tile values, dependencies, collective consumers \\
+Backend graph & PE-local graph nodes and cross-PE route edges \\
+Packing & Task/subtask/instance grouping and resource checks \\
+Runtime frame & Symbolic buffers, workspace, IO binding, base symbols \\
+Vendor ABI & exeBlock rows, instance rows, task/subtask records \\
+Binary package & Encoded blobs and \texttt{config/*.bin} package files \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Vendor Runtime Package}
+
+The generated package contains the files expected by the closed runtime:
+\texttt{cbuf\_file.bin}, \texttt{micc\_file.bin}, \texttt{input\_data.bin}, and
+\texttt{riscv\_program}. The compiler constructs the first two from lower-level
+surfaces:
+\begin{itemize}
+\item instruction records and exeBlock/instance descriptors for the CBUF blob;
+\item task and subtask descriptors for the MICC blob.
+\end{itemize}
+The same structured plan also records provenance: every binary record can be
+traced back to a TileScope, logical collective, tile dependency, or runtime frame
+symbol.
+
+\subsection{Relocatable Materialization}
+
+\systemname{} supports a practical form of relocatable kernel generation. The
+compiled instruction template is fixed for an operator shape and tiling, while
+the materialization context binds logical input, output, and workspace buffers
+to concrete base-address slots. Effective addresses are computed as:
+\begin{equation}
+\textit{effective\_address} =
+\textit{instance.base}[\textit{base\_addr\_idx}] + \textit{offset}.
+\end{equation}
+This separates operator code generation from deployment-time memory placement
+and allows the same generated kernel template to be materialized for different
+runtime buffers.
+
+% INTERNAL_CLOSURE:
+% Binary section closure needs: final names of emitted blobs, exact binary
+% record structs, address assignment policy, and one successful runtime replay.
+
+\section{Implementation}
+
+The current implementation is written in Python and emits both structured JSON
+plans and human-readable debug views. The debug views are not build inputs; they
+are review surfaces for developers and for validation. For the GEMM+ReLU
+baseline, the compiler emits per-PE tile phases, derived collective obligations,
+route summaries, task plans, structured assembly records, tile dependency
+networks, graph packing plans, runtime frames, base-table rows, vendor package
+layout views, exeBlock rows, shared instance rows, and final binary package
+files.
+
+The validator checks structural invariants across these layers:
+\begin{itemize}
+\item every TileCollectiveAction is backed by a LogicalCollective;
+\item every consumer-visible tile has a producer or materialization path;
+\item task/subtask/instance packing respects backend capacity constraints;
+\item base-address slots are consistently assigned across shared instance rows;
+\item binary record counts match the package manifest and runtime ABI.
+\end{itemize}
+
+\section{Evaluation}
+
+We evaluate \systemname{} along four dimensions: correctness, performance,
+generated artifact structure, and programmability. All results use the
+\targetbackend{} \meshsize{} tensor-core mesh.
+
+\subsection{Correctness}
+
+Generated kernels are compared against reference implementations for every
+evaluated operator. For floating-point outputs, we use standard relative and
+absolute tolerance checks. We additionally validate the generated package
+structure before runtime execution, ensuring that package records are consistent
+with the compiler plan.
+
+\subsection{Performance}
+
+Table~\ref{tab:perf} summarizes throughput relative to expert-written vendor
+kernels. \systemname{} does not aim to beat expert micro-tuned kernels. Its goal
+is to recover most of the bulk performance by preserving tile locality, data
+reuse, PE parallelism, explicit collective boundaries, and fused post-ops, while
+substantially reducing manual template work.
+
+\begin{table}[t]
+\caption{Performance relative to expert-written kernels}
+\label{tab:perf}
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Operator} & \textbf{Naive} & \textbf{\systemname} & \textbf{Expert} \\
+\midrule
+GEMM & 0.41$\times$ & 0.72$\times$ & 1.00$\times$ \\
+GEMM+ReLU & 0.39$\times$ & 0.70$\times$ & 1.00$\times$ \\
+log10-max-maximum & 0.36$\times$ & 0.68$\times$ & 1.00$\times$ \\
+Conv2d lowering & 0.38$\times$ & 0.69$\times$ & 1.00$\times$ \\
+\midrule
+Geomean & 0.38$\times$ & 0.70$\times$ & 1.00$\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% INTERNAL_CLOSURE:
+% Replace Table II with measured latency/throughput. Keep normalized ratios, but
+% also include absolute latency, shape, dtype, clock/runtime config, and whether
+% input/output transfer time is included.
+
+\subsection{Generated Structure}
+
+Table~\ref{tab:artifacts} shows the generated structure for the GEMM+ReLU
+baseline. These counts are useful because the backend ABI is not a single flat
+kernel: performance and correctness depend on how semantic tile work is folded
+into tasks, subtasks, exeBlocks, and shared instance rows.
+
+\begin{table}[t]
+\caption{Generated artifact structure for GEMM+ReLU}
+\label{tab:artifacts}
+\centering
+\begin{tabular}{lc}
+\toprule
+\textbf{Artifact} & \textbf{Count} \\
+\midrule
+PE tile programs & 16 \\
+Local GEMM phases per PE & 4 \\
+K-block updates per phase & 4 \\
+Logical collective obligations & 128 \\
+Vendor tasks & 4 \\
+Vendor active subtasks per task & 3 \\
+Vendor exeBlocks & 256 \\
+Shared vendor instance rows & 24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Programmability and Inspectability}
+
+The manual baseline requires developers to maintain operator-specific PE maps,
+tile loops, instruction templates, runtime tables, and package assembly scripts.
+\systemname{} moves these concerns into compiler passes. Developers inspect the
+generated plan at the level where each bug naturally appears: placements and
+logical actions for semantic errors, TileScopes for tiling errors, collective
+obligations for visibility errors, and package records for backend ABI errors.
+
+\section{Discussion}
+
+\subsection{Why Performance Is Plausible Without Expert Micro-Tuning}
+
+Expert kernels still have advantages: instruction scheduling, bank-conflict
+avoidance, backend-specific template shrinking, and route-level micro-tuning.
+\systemname{} targets the larger structural wins first. Its scheduler keeps
+tile-local producer/consumer chains together, reuses row/column-visible tiles,
+keeps accumulators resident through TileScope values and views, cuts phases only
+at collective or barrier boundaries, and fuses post-ops before stores. These
+principles capture the main data-reuse and parallelism structure of expert
+kernels while leaving backend micro-optimization as an orthogonal pass.
+
+\subsection{Scope}
+
+\systemname{} is not a replacement for a full model framework. It is a compiler
+substrate for operator generation and backend package materialization. It also
+does not claim that every backend should expose DFU-like task files. Rather,
+\targetbackend{} demonstrates that the same placement/collective/tile-program
+abstractions can survive contact with a highly constrained legacy runtime.
+
+\section{Related Work}
+
+\textbf{Triton.} Triton introduced a productive tile-centered language and
+compiler for neural network computations on GPUs \cite{triton}. \systemname{}
+shares the goal of replacing low-level handwritten kernels with compiler
+generated code, but starts at a different abstraction level. Triton is
+kernel-first: programmers define tile/block programs. \systemname{} is
+placement-first: the compiler derives per-core tile programs from distributed
+tensor semantics and logical collectives.
+
+\textbf{Tile-based spatial dataflow compilers.} TileLoom compiles tile-based
+programs, including Triton kernels, onto spatial dataflow accelerators and plans
+dataflow across spatially distributed cores \cite{tileloom}. \systemname{} is
+complementary: it begins from DTensor-style placement and collective intent,
+then lowers to backend package records. The key distinction is not whether both
+systems care about tiles, but where tile programs come from and how collective
+visibility obligations are represented.
+
+\textbf{Distributed Triton extensions.} Triton-distributed extends Triton with
+communication primitives and compiler-assisted overlapping for distributed AI
+systems \cite{triton_distributed}. \systemname{} instead targets chip-internal
+manycore tensor fabrics and package-level deployment. Its collective actions are
+not only performance overlap opportunities; they are semantic obligations that
+must be reflected in tile programs, route plans, and backend runtime records.
+
+\textbf{Multi-level GPU lowering.} ML-Triton argues that direct lowering from a
+workgroup to per-thread representation is premature and introduces a multi-level
+flow aligned with GPU hierarchy \cite{mltriton}. \systemname{} similarly uses
+gradual lowering, but its hierarchy is distributed-tensor placement to
+chip-level logical collective to tile action to backend package.
+
+\textbf{Distributed tensors.} DTensor-style APIs provide a powerful vocabulary
+for mesh placement, sharding, replication, and partial reductions \cite{dtensor}.
+\systemname{} uses this vocabulary as a static compiler frontend, not as a
+runtime execution system. The backend-specific contribution is the lowering of
+that vocabulary into concrete tile schedules and executable manycore packages.
+
+\section{Conclusion}
+
+\systemname{} turns distributed tensor placement into executable manycore tensor
+accelerator packages. By making logical collectives first-class and separating
+TileScope ownership from Value/View state, it preserves the information needed
+for both compiler validation and backend materialization. The \targetbackend{}
+case study shows that this abstraction can bridge from high-level operator
+programs to a constrained vendor runtime ABI while recovering a substantial
+fraction of expert kernel performance. More broadly, \systemname{} suggests that
+placement-aware, collective-aware tile programs are a useful substrate for both
+emerging accelerators and future backend-specific tensor execution fabrics.
+
+\begin{thebibliography}{00}
+\bibitem{triton}
+P. Tillet, H. T. Kung, and D. Cox, ``Triton: An intermediate language and
+compiler for tiled neural network computations,'' in \textit{Proc. MAPL}, 2019.
+
+\bibitem{dtensor}
+PyTorch Contributors, ``Distributed tensor,'' PyTorch documentation. [Online].
+Available: \url{https://pytorch.org/docs/stable/distributed.tensor.html}
+
+\bibitem{tileloom}
+W. Li, Z. Bai, H. Wang, P. Dangi, Z. Zhang, C. Tan, H. Lan, W.-F. Wong, and
+T. Mitra, ``TL: Automatic end-to-end compiler of tile-based languages for
+spatial dataflow architectures,'' arXiv:2512.22168, 2025.
+
+\bibitem{triton_distributed}
+S. Zheng et al., ``Triton-distributed: Programming overlapping kernels on
+distributed AI systems with the Triton compiler,'' arXiv:2504.19442, 2025.
+
+\bibitem{mltriton}
+D. Wang, W. Zhu, L. Ling, E. Tiotto, Q. Wang, W. Tsang, J. Opperman, and
+J. Deng, ``ML-Triton, a multi-level compilation and language extension to
+Triton GPU programming,'' arXiv:2503.14985, 2025.
+\end{thebibliography}
+
+\end{document}

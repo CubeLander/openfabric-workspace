@@ -1,0 +1,54 @@
+ee FusionAccess - HUAKEO2001
+
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client _ oO x
+yw Applications huakeO2 - File Manager {gj Terminal - huake01@... {@ Terminal - huake01@... 23:36 EN || huake0d2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Wo1sto: ff 25 6a 3d 20 00 jmpq  *0x203d6a(%rip) # 605660 <snprintf@GLIBC 2.2.5>
+
+4018f6: 68 01 00 00 00 pushq $0xl
+
+4018fb: e9 do ff ff ff jmpq 4018d0 <.plt>
+0000000000401900 <puts@plt>:
+
+401900: Tf 25 62 3d 20 00 jmpq *Qx203d62(%rip) # 605668 <puts@GLIBC_2.2.5>
+
+401906: 68 02 00 00 00 pushq $0x2
+
+40190b: e9 cQ ff ff ff jmpq 4018d0 <.plt>
+0000000000401910 <exit@plt>:
+
+401910: Tf 25 5a 3d 20 00 jmpq *0x203d5a(%rip) # 605670 <exit@GLIBC_2.2.5>
+
+401916: 68 03 00 00 00 pushq $0x3
+
+40191b: e9 bo ff ff ff jmpq 4018d0 <.plt>
+0000000000401920 <__assert_fail@plt>:
+
+401920: Tf 25 52 3d 20 00 jmpq *0x203d52(%rip) # 605678 <__assert_fail@GLIBC_2.2.5>
+
+401926: 68 04 00 00 00 pushq $0x4
+
+40192b: e9 aQ ff ff ff jmpq 4018d0 <.plt>
+0000000000401930 <putchar@plt>:
+
+401930: Tf 25 4a 3d 20 00 jmpq *0x203d4a(%rip) # 605680 <putchar@GLIBC_2.2.5>
+
+401936: 68 05 00 00 00 pushq $0x5
+
+40193b: e9 90 ff ff ff jmpq 4018d0 <.plt>
+0000000000401940 <malloc@plt>:
+
+401940: Tf 25 42 3d 20 00 jmpq *0x203d42(%rip) # 605688 <malloc@GLIBC_2.2.5>
+
+401946: 68 06 00 00 00 pushq $0x6
+
+40194b: e9 80 ff ff ff jmpq 4018d0 <.plt>
+
+28,3 0%
+Ba@Q
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+Oo — o . 22:49
+as | 0 cumnecem i ZEA BETIER St ) a Pes ABW AB aves A

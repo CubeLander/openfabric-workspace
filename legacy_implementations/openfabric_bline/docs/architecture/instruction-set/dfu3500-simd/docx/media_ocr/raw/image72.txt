@@ -1,0 +1,5 @@
+H
+MASK暂存器
+|
+{Ext_flag, Ext_offset[1:0],Regid_off{1:0],double_mark,mask_val[4:0]}
+H

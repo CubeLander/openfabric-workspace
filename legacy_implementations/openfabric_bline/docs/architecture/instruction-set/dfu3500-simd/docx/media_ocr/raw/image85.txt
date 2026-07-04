@@ -1,0 +1,25 @@
+HSTT
+re RICORE
+imm
+4Bytes
+地址偏移
+(n+1)*32*4Bytes
+硬件指令间偏移
+dst_pe_idx
+(n+1)*1024bits
+0: KE Amasks et
+extr_feild[0]
+1-8: 结合mask寄存器，mask编号
+从1开始，一共8个mask寄存器
+128
+硬件指令0
+硬件指令1
+硬件指令2
+imm =0
+=
+dst_pe_idx
+= -
+硬件指令3
+fp16
+simd128
+Spm数据

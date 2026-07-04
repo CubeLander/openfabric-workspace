@@ -1,0 +1,3 @@
+HLDT,HLDT9，,，, ,KernetLg,-1;,9,9
+_HLDT,HLDT1，，,KerneL1, -1,32,0
+ULTS ,ULTS2,Kernelo,Kernel1,Kernel2, ,,1

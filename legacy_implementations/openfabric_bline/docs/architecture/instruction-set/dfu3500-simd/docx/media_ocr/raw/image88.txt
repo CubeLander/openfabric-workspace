@@ -1,0 +1,10 @@
+dst_pe_idx[10:9]=0x00:regidx索引，选择regidx=0的寄存器;
+dst_pe_idx[6:5]: [high,low]=0x01;
+dst_pe_idx[4:0]: 0x00000
+dst_pe_idx[8:7]: 0x01
+写回regidx寄存器内最高的128-1个分量，编号大于此寄存器的其它寄存器全部写回。 如下疼中黄色部分所未，
+Regidx 3
+Regidx 2
+Regidx 1
+Regidx 0
+Po 国

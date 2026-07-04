@@ -1,0 +1,5 @@
+for(k = 0; k < 4; k++){
+for(i = 0; i < SIMD_UNIT; i++) {
+results[k].ufix[i] = task_idx;
+}
+}

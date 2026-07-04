@@ -1,0 +1,13 @@
+: ILDMT, ILDMT19,,,Kerneli9, -1,8,0,1,3
+:ILDMT, ILDMT20,,,Kernel20, -1,9,0,1
+:ILDMT,ILDMT21,,,Kernel21, -1,9,0,1,1
+: ILDMT, ILDMT22,, ,Kernel22, -1,9,0,1,2
+: ILDMT, ILDMT23,, ,Kernel23, -1,9,0,1,3
+:ILDMT, ILDMT24,,,Kernel24, -1,10,0,1
+:ILDMT,ILDMT25,,,Kernel25, -1,10,0,1,1
+: ILDMT, ILDMT26,,,Kernel26, -1,10,0,1,2
+: ILDMT, ILDMT27,,,Kernel27, -1,10,0,1,3
+:ILDMT, ILDMT28,, ,Kernel28, -1,11,0,1
+:ILDMT,ILDMT29,,,Kernel29, -1,11,0,1,1
+: ILDMT, ILDMT30,, ,Kernel30, -1,11,0,1,2
+: ILDMT, ILDMT31,, ,Kernel31, -1,11,0,1,3

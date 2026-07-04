@@ -1,0 +1,18 @@
+四ADD ,FADD4,KernetLg ,KerneL1,Kernel3,,,1
+”FSUB ,FSUB5,KernetLg,KernetL1,KerneL4，，，1
+3 FMUL, FMUL6 ,KernelO,Kernel1,Kernel5,,,1
+) FMADD , FMADD7 ,KernelO,Kernel1,Kernel6, , ,1
+) FMIN, FMIN8 ,KernelO,Kernel1,Kernel7,,,1
+| FMIN, FMINS,Kernel1,KernelO,Kernel8,,,1
+> FMIN, FMIN10 ,Kernel2,Kernel2,Kernel9, ,,1
+3 FMAX, FMAX11,Kerneld,Kernel1,Kernel10, ,,1
+| FMAX, FMAX12,Kernel1,Kernelo,Kerneli1,,,1
+> FMAX, FMAX13,Kernel2,Kernel2,Kernel12, , ,1
+> EQ, E014 ,Kernelo,Kernel1,Kernel13, ,,1
+” EQ, E015,Kernel2,Kernel2,Kernel14, , 1
+3 FLT,FLT16,KernelO,Kernel1,Kernel15,,,1
+) FLT, FLT17,Kernel1,KernelO,Kernel16,,,1
+) FLT, FLT18,Kernel2,Kernel2,Kernel17,,,1
+| FGT,FGT19,KernelO,Kernel1,Kernel18, ,,1
+2 FGT ,FGT20,Kernel1,KernelO,Kernel19,, ,1
+3 FGT,FGT21,Kernel2,Kernel2,Kernel20,,,1

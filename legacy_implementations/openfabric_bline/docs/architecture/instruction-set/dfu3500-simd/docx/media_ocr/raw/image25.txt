@@ -1,0 +1,5 @@
+INTS8 混合精度乘加指令 A(8bits) * B(8bits) + 32(bits)
+imm='b00,A(uint8) * B(uint8) + uint32;
+imm='b01,A(int8) * B(uint8) + int32;
+imm='b10,A(uint8) * B(int8) + int32;
+imm='b11,A(int8) * B(int8) + int32;

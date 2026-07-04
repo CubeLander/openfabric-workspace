@@ -1,0 +1,5 @@
+HLDT,HLDT9，,, ,Kernet9, -1,9,9
+FP2DB,FP2DB1,KernetLg, ,KernetL1,,9,1
+| FP2DB, FP2DB2, Kernel, ,Kernel2, ,1,1
+; DADD ,DADD3, Kernel1,Kernel2,Kernel3, , 1
+. HSTT,HSTT4, , ,Kernel3,-1,0,1

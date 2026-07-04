@@ -1,0 +1,7 @@
+imm[1:0]==2 fp64-merge simd16 mode:
+Value(Operand index 0)(15:0) =
+[dst7,dst6,dst5,dst4,dst3,dst2,dst1,dst0, —_src7,src6,src5,src4,src3,src2,src1,srcO]:
+(1)select 8 simds( src7,src6,src5,src4,src3,src2,src1,src0) from Value(Operand index 1)(15:0),
+(2)place them to 8 simds(dst7,dst6,dst5,dst4,dst3,dst2,dst1,dst0) position of Value(Operand index 2)(15:0).
+16>dst7>dst6>dst5>dst4>dst3>dst2>dst1>dst0>=0; srci < 32; dsti==0 and i>0, disable i postion
+easy use: when src0=srcl=dst0=dst1, broadcase Value(Operand index 1)(src0) to all 16 simds

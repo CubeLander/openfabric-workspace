@@ -1,0 +1,20 @@
+HLDT
+Fe Ricore
+imm
+4Bytes
+地址偏移
+dst_pe_idx
+(n+1)*32*4Bytes
+硬件指令间偏移
+(n+1)*1024bits
+128
+硬件指令0
+硬件指令1
+imm =0
+硬件指令2
+dst_pe_idx =0
+硬件指令3
+三三国王一
+fp16
+simd128
+spm数据

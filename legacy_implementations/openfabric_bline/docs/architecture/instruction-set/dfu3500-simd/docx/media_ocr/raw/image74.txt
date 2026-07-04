@@ -1,0 +1,15 @@
+Extflag, double_mark==00
+(CT simi PT
+#4 ‘
+7 N
+44 Ae
+5 AN
+“ ‘
+“ SS,
+四 AN
+Ext_flag,double_mark==00，这两位生效优先级最高，意指取最终取到的一定是32位数据.
+1024bit分成32个32bit，val (4: 0) 只能取0-31
+reg_idx位为取4个reg的哪一个reg，= =01章指取第2个reg
+然后在第二个reg内取32位数据，怎么取:
+1, val (4: 0) 位为取哪一个simd分量，比如00011，是了编号3的simd分量
+2、ext_offset位，在编号3的分量基础上生效，偏移0/1/2/3个8bit，来取32bit数据。

@@ -1,0 +1,24 @@
+HSTT
+r¢ RIcoRE
+imm
+ABytes
+地址偏移
+dst_pe_idx
+(n+1)*32*4Bytes
+硬件指令间偏移
+(n+1)*1024bits
+128
+1024bits
+硬件指令0
+1024bits
+硬件指令1
+1024bits
+imm = 0
+硬件指令2
+1024bits
+硬件指令3
+1024bits
+dst_pe_idx = 1
+fp16
+simd128
+spm数所

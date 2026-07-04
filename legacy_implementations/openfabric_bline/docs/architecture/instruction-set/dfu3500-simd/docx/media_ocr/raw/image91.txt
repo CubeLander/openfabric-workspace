@@ -1,0 +1,8 @@
+results[@].simd32[i]
+8;
+results[1].simd32[i]
+8;
+results[2].simd32[i]
+8;
+results[3].simd32[i]
+8;

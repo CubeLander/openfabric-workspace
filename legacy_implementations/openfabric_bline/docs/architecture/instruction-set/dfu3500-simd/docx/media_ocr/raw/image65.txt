@@ -1,0 +1,14 @@
+ILDMT Fe Ricore
+imm 4Bytes 地址偏移
+dst_pe_idx[0] = 数据类型
+dst_pe_idx[:1] (n+1)*4Bytes 硬件指令间偏移
+4Bytes
+硬fHS0 Pte ttt ft
+而伯指人1 Lt yy yy yy
+硬件指S2 [| | | | | imm =o
+硬件指令3 8 [| astpe jax = (o<<t)) 0
+pot ttt tt
+(| |] | | yy
+simd128 Pi}, ty
+Litt? TT yy
+spm数据

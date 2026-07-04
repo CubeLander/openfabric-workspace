@@ -1,0 +1,68 @@
+e0e FusionAccess - HUAKEO2001
+
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - Oo x
+we Applications huakeO2 - File Manager (gj Terminal - huake01@... {@ Terminal - huake01@... 23:37 EN .| huakeod2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Bo1b75: 55 push %rbp
+
+401b76: 48 81 ee 48 58 60 00 sub $0x605848 , %rsi
+
+401b7d: 48 cl fe 03 sar $0x3,%rsi
+
+401b81: 48 89 e5 mov Srsp,%rbp
+
+401b84: 48 89 f0 mov %rsi,%*rax
+
+401b87: 48 cl e8 3f shr $Ox3f , srax
+
+401b8b: 48 01 c6 add %rax,%*rsi
+
+401b8e: 48 dl fe sar Sorsi
+
+401b91: 74 15 je 401ba8 <register_tm_clones+0x38>
+
+401b93: b8 00 00 00 00 mov $0x0 , %eax
+
+401b98: 48 85 c0 test %rax,%rax
+
+401b9b: 74 Ob je 401lba8 <register_tm_clones+0x38>
+
+401b9d: 5d pop ‘erbp
+
+401b9e: bf 48 58 60 00 mov $0x605848 , sedi
+
+401ba3: ff e0 jmpq *%5rax
+
+401ba5: Of 1f 00 nopl (%rax)
+
+401ba8: 5d pop Ssrbp
+
+401ba9: c3 retq
+
+401baa: 66 Of 1f 44 00 00 nopw 0x0(%rax,%rax,1)
+0000000000401bb0 <_ do global_dtors_aux>:
+
+401bb0: 80 3d cl 3c 20 00 00 cmpb $0x0,0x203cc1(%rip) # 605878 <completed.6833>
+
+401bb7: 75 62 jne 401clb <__do global_dtors_aux+0x6b>
+
+401bb9: 55 push Ssrbp
+
+401bba: 48 8b 05 bf 3c 20 00 mov Ox203cbf (%rip) ,%*rax # 605880 <dtor_idx.6835>
+
+401bcl: 48 89 e5 mov Srsp,%rbp
+
+401bc4: 41 54 push %r12
+
+401bc6: 53 push Sorbx
+
+401bc7: bb 58 54 60 00 mov $0x605458 , sebx
+
+244,3 7%
+Bea@®@Qa
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+a = ts 22:50
+a | 0 cumnesem i ZENA BETIER Gi ) a wg ABW AB aves A

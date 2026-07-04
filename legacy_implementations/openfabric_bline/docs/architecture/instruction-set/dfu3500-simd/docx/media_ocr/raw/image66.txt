@@ -1,0 +1,14 @@
+ILDMT re RICORE
+imm 4Bytes 地址偏移
+dst_pe_idx[0] - 数据类型
+dst_pe_idx[:1] (n+1)*4Bytes 硬件指令间偏移
+4Bytes
+醒作指0 Ft tt ey tt
+aoe : |} ttt tt yt
+硬件指S2 [| | | | | imm =o
+BESS 0 FETT ext ne iax= ren 10
+px ttt Tt Tt
+LPT Tt yyy
+simd128 Pt tt tt ty
+LET TTT TT
+spm数据

@@ -1,0 +1,10 @@
+重排simd各个分量的位置
+imm[1:0]=0，为之前旧的 idx压缩成5bit，最多shuffle6个32数的模式
+imm[1:0]=1，为新的idx为32bit数，最多shuffle8个32数的模式
+imm[1:0]=2，为新的idx为32bit数，最多shuffle8个64数的模式
+imm[1:0]=3，为shift模式，2个数高低simd32分量拼接的模式
+目的寄存器src2谨记事先初始化
+imm[2]=0, 第一组1024bit数内部shuffle; imm[2]=1, 第一组1024bit数内部数据保持;
+imm[3]=0, 第二组1024bit数内部shuffle; imm[3]=1, 第二组1024bit数内部数据保持;
+imm[4]=0, 第三组1024bit数内部shuffle; imm[4]=1, 第三组1024bit数内部数据保持;
+imm[5]=0, 第四组1024bit数内部shuffle; imm[5]=1, 第四组1024bit数内部数据保持;

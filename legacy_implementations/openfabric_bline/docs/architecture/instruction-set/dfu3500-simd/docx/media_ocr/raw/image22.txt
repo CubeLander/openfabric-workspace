@@ -1,0 +1,15 @@
+VADD , VADD4 ,KernelO,Kerneli,Kernets,,,1
+USUB , USUB5 ,KernelO,Kernel1,Kernel4, , 1
+UMUL , UMUL6 ,KernelO,Kernel1,Kernel5, , ,1
+UMADD , UMADD7 ,KerneL9,Kernel1,Kernel6,,,1
+UMAX, UMAX8 , KernelO,Kernel1,Kernel10, , 1
+UMAX, UMAX9, Kernel1,Kernelo,Kerneli1,,,1
+UMAX, UMAX10,Kernel2,Kernel2,Kernel12,,,1
+EQ, £011,KernelO,Kernel1,Kernel13,, ,1
+EQ, £012,Kernel2,Kernel2,Kernel14,, ,1
+ULT,ULT13,Kernelo,Kernel1,Kernel15, , 1
+ULT,ULT14 ,Kernel1,Kernelo,Kernel16, , 1
+ULT,ULT15 ,Kernel2,Kernel2,Kernel17, , ,1
+UGT ,UGT16 ,KernelO,Kernel1,KerneL18, , 1
+UGT ,UGT17 ,Kernel1,Kernelo,Kernel19, , 1
+UGT,UGT18,Kernel2,Kernel2,Kernel20,,,1

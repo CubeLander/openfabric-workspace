@@ -1,0 +1,15 @@
+ve yp tte mm ere
+摊作数0的simad0分量的[13:0]比特 = {Ext flag.Ext_offset[1:0] Regid_off[1:0]. double mark,
+Maskregno[7:5,mask_val[4:0}
+1) double mark: 指示-是天开启双simd分重写回模式
+2)
+Maskregno[7:5]:
+要填入mask0到mask7的8个中的哪个寺存袁
+3)
+mask_val[4:0]: 表示要填入mask暂存咒的值，对应32bit分重粒度
+14)
+5)
+Regid_off[1:0|: 表示SIMD128/64/32樟式下寺存句编号偏移
+a)
+Ext_offset[1:0}: 表示8bit分重素引，与mask_val[4:0]组合使用
+Ext flan: En hn组入伟用 36558/16/29/eahit4>we EGS. Bike words be

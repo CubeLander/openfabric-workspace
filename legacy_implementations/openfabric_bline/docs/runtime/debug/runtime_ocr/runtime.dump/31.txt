@@ -1,0 +1,70 @@
+ee FusionAccess - HUAKE02001
+
+3X) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - oO x
+we Applications huakeO2 - File Manager | (— Terminal - huake01@... {@ Terminal - huake01@... 23:48 EN || huake0d2
+Terminal - huake01@arch-13:/project/home-new/huakeO 1/simict3500final/core/runtime
+
+File Edit View Terminal Tabs Help
+
+Bo23bb: 4c 89 65 18 mov %r12,0x18(%rbp)
+
+4023bf: 49 8b 45 10 mov 0x10(%r13) ,%rax
+
+4023c3: 48 89 45 20 mov %rax,0x20(%rbp)
+
+4023c7: 83 44 24 18 01 addl $0x1,0x18(%rsp)
+
+4023cc: 41 83 c7 01 add $0x1,%rl5d
+
+4023d0: 49 8b 45 00 mov Ox0(%rl3) ,%rax
+
+4023d4: 48 8b 50 30 mov 0x30(%rax) , srdx
+
+4023d8: 44 3b 3a cmp (%rdx) ,%r15d
+
+4023db: Of 8c 08 Tf ff TT jl 4022e9 <main+0x57d>
+
+4023e1: 83 44 24 lc 01 addl $0x1,0xlc(%rsp)
+
+4023e6: 8b 44 24 lc mov Oxlc(%rsp) , %eax
+
+4023ea: 48 63 dO movslq %eax, %rdx
+
+4023ed: 48 3b 15 ec 34 20 00 cmp 0x2034ec(%rip) , srdx # 6058e0 <g_conf+0x20>
+
+4023f4: Of 83 Oa fd ff fT jae 402104 <main+0x398>
+
+4023fa: 48 8d 04 52 lea (%rdx, %rdx,2) ,%rax
+
+4023fe: 48 8b 74 24 20 mov Ox20(%rsp) ,%*rsi
+
+402403: 4c 8d 2c c6 lea (%rsi,%*rax,8) ,%r13
+
+402407: 49 8b 45 00 mov 0x0(%rl3) ,%rax
+
+40240b: 48 8b 48 30 mov 0x30(%rax) , *rcx
+
+40240f: 83 39 00 cmpl $0x0, (%rcx)
+
+402412: 7e cd jle 4023e1 <main+0x675>
+
+402414: 48 cl e2 04 shl $0x4, %rdx
+
+402418: 48 89 54 24 08 mov %rdx,0x8(%rsp)
+
+40241d: 41 bf 00 00 00 00 mov $0x0,%rl5d
+
+402423: e9 cl fe ff ff jmpq 4022e9 <main+0x5/7d>
+
+402428: b9 18 48 40 00 mov $0x404818 , secx
+
+40242d: ba b7 00 00 00 mov $0xb7, %edx
+
+402432: be 79 45 40 00 mov $0x404579,%esi
+
+402437: bf cQ 47 40 00 mov $0x4047c0, sedi
+
+757,3 23%
+B2@Qa
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+= | 0 cumnesem i WATER + @ks @ AB” AB sreano |

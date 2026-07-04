@@ -1,0 +1,10 @@
+DADD ,DADD8 ,KernelO,Kernel1,Kernel3,, ,1
+DSUB , DSUB9 , KernelO,Kernel1,Kernel4, , 1
+DMUL, DMUL10,KernelO,Kernel1,Kernel5, , ,1
+DMADD ,DMADD11,Kernel@,Kernel1,Kernel6, ,,1
+DMIN , DMIN12,KernelO,Kernel1,Kernel7, , ,1
+DMIN , DMIN13,Kernel1,KernelO,Kernel8, , ,1
+DMIN , DMIN14,Kernel2,Kernel2,Kernel9, , 1
+DMAX, DMAX15,KernelO,Kernel1,Kernel10,,,1
+DMAX, DMAX16 ,Kernel1,KernelO,Kernel11,,,1
+DMAX, DMAX17,Kernel2,Kernel2,Kernel12,,,1

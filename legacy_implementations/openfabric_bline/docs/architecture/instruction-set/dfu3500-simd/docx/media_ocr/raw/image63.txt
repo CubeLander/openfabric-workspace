@@ -1,0 +1,6 @@
+simd_mode[0]用dst_pe idx[0]表示，simd_mode[1]用extra_fields【0】[0]表示，8bit/16bit的偏移用
+extra fields【1】[1:0]表示;
+simd_ mode[1:0]=0 multiple 32x32bits模式
+simd mode[1:0]=1 multiple 16x64bits模式
+simd_ mode[1:0]=2 multiple 64x16bits模式
+simd_ mode[1:0]=3 multiple 128x8bits模式

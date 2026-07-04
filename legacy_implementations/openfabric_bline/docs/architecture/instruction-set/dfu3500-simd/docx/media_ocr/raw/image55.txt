@@ -1,0 +1,8 @@
+? HLDT HLDTO, , ,Kernet9,9,9,9
+3 HLDT,HLDT1,, ,Kernel1,0,128,0
+| HLDT,HLDT2,, ,Kernel2,0,256,0
+> HLDT HLDT3, , ,Kernel3,0,384,0
+) HSTT,HSTT4,, ,Kernel,0,0,1
+/ HSTT,HSTTS, , ,Kernel1,0,128,1
+3 HSTT,HSTT6, , ,Kernel2,0,256,1
+) HSTT,HSTT7, , ,Kernel3, 0,384, 1

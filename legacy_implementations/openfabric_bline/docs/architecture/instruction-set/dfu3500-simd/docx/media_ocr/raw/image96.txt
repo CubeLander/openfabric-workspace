@@ -1,0 +1,23 @@
+{Rx3,Rx2,Rx1,Rx0}
++=
+Value(Operand index 0) * Value(Operand index 1)
+32bits*simd128
+8bits*simd128
+8bits*simd128
+只支持无符号uint8 的计算
+ae
+QMADD计算完之后，需
+2a
+结合:
+TRCT8指令，才
+He.
+拿到正确结果
+Rx0[0] += srcO[0]*src1[0]
+32bits
+8bits*8bits
+Rx1[0] += srcO[1]*src1[1]
+Rx2[0] += srcO[2]*src1[2]
+Rx3[0] += srcO[3]*src1[3]
+RxO[1] += srcO[4]*src1[4]
+32bits
+8bits*8bits

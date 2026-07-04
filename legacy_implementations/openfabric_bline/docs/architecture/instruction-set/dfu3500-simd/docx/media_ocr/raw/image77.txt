@@ -1,0 +1,20 @@
+Ext_flag, double_mark==11
+é &
+名 2
+TT sing T T |
+cf NS，
+rl AN
+/ N
+a SS,
+/ 、
+7 .
+a NY
+ee ea T 1 aE et
+L_ Tris [ (4: 0) 取值: 0-31
+Se
+Ext flag.double_mark==11, 这两位生效优先级最高，意措取最终取到的一十是16位数据.
+reg_idx们为取4人reg的哪一人reg，==01意指取第2个reg
+然后在第二个reg内取16位数据，怎么取:
+1、val (4: 0) 位为取电一个simd分县，比各00011，是到编号3的simd分量
+2、ext_offset位，在六号3的分量基础上生效，信移0/1/2/3个8bit，来取16bit数据。
+比如==01，夫示信物8bit，取16bit的数据.

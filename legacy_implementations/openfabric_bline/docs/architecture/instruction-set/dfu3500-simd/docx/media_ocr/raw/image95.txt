@@ -1,0 +1,2 @@
+{Rx3,Rx2,Rx1,Rx0} += Value(Operand index 0) * Value(Operand index 1)
+32bits*simd128 8bits*simd128 8bits*simd128

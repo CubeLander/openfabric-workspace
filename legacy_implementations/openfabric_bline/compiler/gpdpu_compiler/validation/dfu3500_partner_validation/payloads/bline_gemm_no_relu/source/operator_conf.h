@@ -1,0 +1,23 @@
+// #define PE_ROW 4
+// #define PE_COL 4
+// #define PE_NUM	(PE_ROW*PE_COL)
+// #define TASK_NUM 1
+// #define UNROLL_NUM 16
+
+//A数组的规模
+#define INPUT_HEIGHT_A 256
+#define INPUT_WIDTH_A 256
+//B数组的规模
+#define INPUT_HEIGHT_B 256
+#define INPUT_WIDTH_B 256
+//C数组的规模
+#define INPUT_HEIGHT_C 256
+#define INPUT_WIDTH_C 256
+//batch的大小
+#define INPUT_BATCH_SIZE 1
+
+// #define MEM_MATRIX_A_ADDR 0x00000000
+// #define MEM_MATRIX_B_ADDR (MEM_MATRIX_A_ADDR + INPUT_HEIGHT_A*INPUT_WIDTH_A*INPUT_BATCH_SIZE*TASK_NUM*sizeof(short))
+// #define MEM_MATRIX_C_ADDR (MEM_MATRIX_B_ADDR + INPUT_HEIGHT_B*INPUT_WIDTH_B*INPUT_BATCH_SIZE*TASK_NUM*sizeof(short))
+// #define OUTPUT_MEM_ADDR   0x00003000
+

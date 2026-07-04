@@ -1,0 +1,5 @@
+Value(Operand index 2)(i) += Value(Operand index 0)(i)[7:0] * Value(Operand index 1)(i)[7:0]
++= Value(Operand index 0)(i)[15:8] * Value(Operand index 1)(i)[15:8]
++= Value(Operand index 0)(i)[23:16] * Value(Operand index 1)(i)[23:16]
++= Value(Operand index 0)(i)[31:24] * Value(Operand index 1)(i)[31:24]
+32bits*simd32 {4*8bits}*simd32 {4*8bits}*simd32

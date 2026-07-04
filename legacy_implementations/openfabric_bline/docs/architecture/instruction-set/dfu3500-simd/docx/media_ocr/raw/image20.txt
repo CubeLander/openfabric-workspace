@@ -1,0 +1,6 @@
+LT,LT16,KernelL9,KerneL1,KerneL15，，，,1
+) LT,LT17,Kernel1,Kerneld,Kernel16,,,1
+) LT, LT18,Kernel2,Kernel2,Kernel17,,,1
+_ GT,GT19,Kerneld,Kernel1,Kernel18,,,1
+- GT, GT20,Kernel1,Kerneld,Kernel19, ,,1
+. GT,GT21,Kernel2,Kernel2,Kernel20,,,1

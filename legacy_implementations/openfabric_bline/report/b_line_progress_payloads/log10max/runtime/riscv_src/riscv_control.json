@@ -1,0 +1,68 @@
+{
+  "case_id": "log10max_single_task",
+  "finish_app": true,
+  "launches": [
+    {
+      "input_transfer_group": "input",
+      "instance_count": 1,
+      "launch_id": "kernel0",
+      "micc_buffer": 0,
+      "output_transfer_group": "output",
+      "task_count": 1,
+      "wait": true
+    }
+  ],
+  "spm_image_size_bytes": 3145728,
+  "tensors": [
+    {
+      "byte_offset": 0,
+      "byte_size": 131072,
+      "direction": "input",
+      "dtype": "fp32",
+      "name": "mel_spec",
+      "reference_path": "reference/mel_spec.fp32.bin",
+      "shape": [
+        64,
+        512
+      ]
+    },
+    {
+      "byte_offset": 524288,
+      "byte_size": 131072,
+      "direction": "output",
+      "dtype": "fp32",
+      "name": "Y",
+      "reference_path": "reference/Y.fp32.bin",
+      "shape": [
+        64,
+        512
+      ]
+    }
+  ],
+  "transfers": [
+    {
+      "byte_size": 131072,
+      "ddr_offset": 0,
+      "direction": "ddr_to_spm",
+      "group_id": "input",
+      "instance_id": null,
+      "phase": "before_launch",
+      "spm_offset": 0,
+      "task_id": null,
+      "tensor_name": "mel_spec",
+      "transfer_id": "load_mel_spec"
+    },
+    {
+      "byte_size": 131072,
+      "ddr_offset": 524288,
+      "direction": "spm_to_ddr",
+      "group_id": "output",
+      "instance_id": null,
+      "phase": "after_launch",
+      "spm_offset": 524288,
+      "task_id": null,
+      "tensor_name": "Y",
+      "transfer_id": "store_Y"
+    }
+  ]
+}

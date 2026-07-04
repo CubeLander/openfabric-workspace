@@ -1,0 +1,5 @@
+imm==0: Val(Operand index 2) = int32( Val(Operand index0)(0)[7:0], ..., Val(Operand index0)(31)[7:0] )
+imm==1: Val(Operand index 2) = int32( Val(Operand index0)(0)[15:8], ... , Val(Operand index0)(31)[15:8] )
+imm==2: Val(Operand index 2) = int32( Val(Operand index0)(0)[23:16], ... , Val(Operand index0)(31)[23:16] )
+imm==3: Val(Operand index 2) = int32( Val(Operand index0)(0)[31:24], ..., Val(Operand index0)(31)[31:24] )
+32bits*simd32_ <= 8bitsrsimd32

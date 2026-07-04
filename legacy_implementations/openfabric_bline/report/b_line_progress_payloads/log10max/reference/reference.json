@@ -1,0 +1,13 @@
+{
+  "case_id": "log10max_single_task",
+  "dtype": "fp32",
+  "formula": "Y=(maximum(log10(clamp_min(X,1e-10)), max(log10(X))-8)+4)*0.25",
+  "global_max": 0.9030382417933968,
+  "input_offset_bytes": 0,
+  "output_offset_bytes": 524288,
+  "shape": [
+    64,
+    512
+  ],
+  "spm_image_size_bytes": 3145728
+}

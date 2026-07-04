@@ -1,0 +1,3 @@
+imm[1:0]==3 shift simd32 mode:
+shift_num = Value(Operand index 0)(0), shifting low simds of val2 to the high simds of val1
+\Value(Operand index 2) = {Value(Operand index 2)(shift_num-1:0), Value(Operand index 1)(31:shift_num)}

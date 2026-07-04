@@ -1,0 +1,38 @@
+‘e6©e FusionAccess - HUAKEO2001
+3% liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboxX Client - Oo x
+we Applications huakeO2 - File Manager (gj Terminal - huake01@... {@) Terminal - huake01@... 00:00 EN |. huakeo2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+File Edit View Terminal Tabs Help
+i
+Symbol table ‘.dynsym' contains 99 entries:
+Num: Value Size Type Bind Vis Ndx Name
+0: 0000000000000000 © NOTYPE LOCAL DEFAULT UND
+1: 0000000000605760 © NOTYPE WEAK DEFAULT 24 data_start
+2: 0000000000403dcc 109 FUNC GLOBAL DEFAULT 12 safe_time_info_record_msg
+3: 0000000000402Ff4c 63 FUNC GLOBAL DEFAULT 12 time_add
+4: 0000000000403985 42 FUNC GLOBAL DEFAULT 12 rb_first_postorder
+5: 0000000000000000 0 FUNC GLOBAL DEFAULT UND printf@GLIBC 2.2.5 (2)
+6: 0000000000402ed5 29 FUNC GLOBAL DEFAULT 12 object_usr_data
+7: 0000000000404480 2 FUNC GLOBAL DEFAULT 12 _ libc_csu_fini
+8: 0000000000000000 0 FUNC GLOBAL DEFAULT UND snprintf@GLIBC_ 2.2.5 (2)
+9: 000000000040 1ae0 0 FUNC GLOBAL DEFAULT 12 _start
+10: 0000000000402ec1 10 FUNC GLOBAL DEFAULT 12 current_time
+11: 0000000000403c30 12 FUNC GLOBAL DEFAULT 12 safe_time_info_update_upstream
+12: 00000000004039fa 158 FUNC GLOBAL DEFAULT 12 thread_msg_queue_send
+13: 0000000000000000 © NOTYPE WEAK DEFAULT UND __gmon_start__
+14: 0000000000000000 © NOTYPE WEAK DEFAULT UND _Jv_RegisterClasses
+15: 0000000000000000 0 FUNC GLOBAL DEFAULT UND puts@GLIBC 2.2.5 (2)
+16: 0000000000403834 24 FUNC GLOBAL DEFAULT 12 rb_first
+17: 0000000000000000 0 FUNC GLOBAL DEFAULT UND exit@GLIBC 2.2.5 (2)
+18: 0000000000000000 0 FUNC GLOBAL DEFAULT UND _ assert_fail@GLIBC 2.2.5 (2)
+19: 0000000000404558 0 FUNC GLOBAL DEFAULT 13 _ fini
+20: 000000000040445a 29 FUNC GLOBAL DEFAULT 12 init_sim_thread_cmd_mode
+21: 0000000000403ea9 13 FUNC GLOBAL DEFAULT 12 safe_time_of_active_ object
+22: 0000000000000000 0 FUNC GLOBAL DEFAULT UND putchar@GLIBC_2.2.5 (2)
+23: 0000000000403a98 180 FUNC GLOBAL DEFAULT 12 thread_msg_queue_receive
+24: 0000000000403935 80 FUNC GLOBAL DEFAULT 12 rb_next_postorder
+25: 0000000000000000 0 FUNC GLOBAL DEFAULT UND malloc@GLIBC 2.2.5 (2)
+“runtime.symbols" 295L, 21883C 1,0-1 Top
+Ba@a
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+i | 0 cumnecem i WHEAT IO + OQ @& AB” IB soesn0 |

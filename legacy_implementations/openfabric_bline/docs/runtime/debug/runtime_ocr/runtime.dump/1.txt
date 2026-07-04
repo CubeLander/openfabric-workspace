@@ -1,0 +1,32 @@
+e0e FusionAccess - HUAKE02001
+XX) liwenming-master:39 - all-random-for-liwenming - huake02 - Exceed TurboX Client - Oo x
+we Applications huakeO2 - File Manager (gj Terminal - huake01@... {@ Terminal - huake01@... 23:36 EN || huake0d2
+Terminal - huake01@arch-13:/project/home-new/huakeO1/simict3500final/core/runtime
+File Edit View Terminal Tabs Help
+|
+runtime: file format elf64-x86-64
+Disassembly of section .init:
+00000000004018b8 <_init>:
+4018b8: 48 83 ec 08 sub $0x8,%rsp
+4018bc: e8 4b 02 00 00 callq 401b0c <call_gmon_start>
+4018cl1: e8 5a 03 00 00 callq 401c20 <frame_dummy>
+4018c6: e8 55 2c 00 00 callq 404520 <_ do global_ctors_aux>
+4018cb: 48 83 c4 08 add $0x8,%rsp
+4018cf: c3 retq
+Disassembly of section .plt:
+00000000004018d0 <.plt>:
+4018d0: ff 35 72 3d 20 00 pushq 0x203d72(%rip) # 605648 <_GLOBAL_OFFSET_TABLE_+0x8>
+4018d6: ff 25 74 3d 20 00 jmpq *0x203d74(%rip) # 605650 <_GLOBAL_OFFSET_TABLE_+0x10>
+4018dc: Of 1f 40 00 nopl 0x0 (%rax)
+00000000004018e0 <printf@plt>:
+4018e0: ff 25 72 3d 20 00 jmpq *0x203d72(%rip) # 605658 <printf@GLIBC_2.2.5>
+4018e6: 68 00 00 00 00 pushq $0x0
+4018eb: e9 eO ff ff ff jmpq 4018d0 <.plt>
+00000000004018f0 <snprintf@plt>:
+4018f0: ff 25 6a 3d 20 00 jmpq *0x203d6a(%rip) # 605660 <snprintf@GLIBC_2.2.5>
+4018f6: 68 01 00 00 00 pushq $0xl
+“runtime.dump" 3286L, 171937C 1,0-1 Top
+Ba@aQa
+OpentText Exceed TurboX 12.0.4 (Build.7508) Copyright © 2013-2021 Open Text. All Rights Reserved. Trademarks owned by Open Text. | Legal Notices
+Oo — o . 22:49
+as | 0 cumnecem i ZEA BETIER St ) a Pes ABW AB aves A

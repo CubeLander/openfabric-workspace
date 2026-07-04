@@ -1,0 +1,3 @@
+Bnst_name, inst_tag_name,src_reg_idx0,src_reg_idx1,dst_reg_idx,dst_pe idx, imm, iteration
+HLDT,HLDTO, , ,rKernelo, -1,0,0
+COPYT,COPYT1, rKernelO, ,rKernelO,1,,1
