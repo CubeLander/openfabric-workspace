@@ -59,10 +59,10 @@ tt-metal/
 ```text
 根目录 *.md
 docs/
-drafts/
 research/
 notes/
 legacy_implementations/openfabric_bline/
+legacy_docs/
 ```
 
 ## 第一轮发现
@@ -73,12 +73,9 @@ legacy_implementations/openfabric_bline/
 
 ```text
 TWO_LEVEL_DTENSOR_NOTES_CN.md
-OPENFABRIC_IDEAL_ABSTRACTION_NOTES_CN.md
-LOGICAL_TILE_MATERIALIZED_OPERAND_MODEL.md
 docs/openfabric-lowering-principles.md
 docs/operator-coverage-checklist.md
 docs/address-binding-projections.md
-docs/typed-vector-operand-design.md
 docs/runtime-plan-image.md
 docs/vendor-workflow-evidence/
 docs/isa/
@@ -90,13 +87,6 @@ docs/isa/
 TWO_LEVEL_DTENSOR_NOTES_CN.md
   当前命名和模型的最高指导。
 
-OPENFABRIC_IDEAL_ABSTRACTION_NOTES_CN.md
-  仍有价值，但其中 `DTensor tile` 应理解为旧名；应被 scoped projection 模型修正。
-
-LOGICAL_TILE_MATERIALIZED_OPERAND_MODEL.md
-  仍有价值，但应把 logical tile 的 truth source 改写到
-  `FiberTensorView -> TileRef -> TypedTileValue` 链条里。
-
 docs/openfabric-lowering-principles.md
   当前工程原则仍然重要，但 `Sites And Fiber Values` 部分可以进一步对齐
   StreamTensorView / FiberTensorView。
@@ -105,18 +95,12 @@ docs/openfabric-lowering-principles.md
 第一批需要更新旧术语的文件：
 
 ```text
-SPM_PLAN_REFACTOR_PLAN.md
-drafts/gemm-dtensor-address-auto-planning-cn.md
-drafts/gemm-fiberop-design-notes.md
-research/planning/*.md
-research/roadmap/openfabric-publication-roadmap.md
 research/targets/tenstorrent-portability-scout.md
-research/audit/operator_coverage_targets.md
 ```
 
-其中 `research/planning/` 是旧论文叙事集中区：大量使用
+`research/planning/` 曾是旧论文叙事集中区：大量使用
 `DTensor programming model`、`Tile Program`、`TileValue`、
-`ProcessorTileProgram`。这些不是全错，但现在应该改写成：
+`ProcessorTileProgram`。这些不是全错，但已经被删除，后续论文叙事应该改写成：
 
 ```text
 Scoped Tensor Projection for Spatial Accelerators
@@ -279,6 +263,53 @@ legacy_implementations/openfabric_bline/IEEE_Conference_Template/
 ```
 
 ## 已执行清扫
+
+### 2026-07-04 表层旧设计文档清理
+
+用户判断：`TWO_LEVEL_DTENSOR_NOTES_CN.md` 的新架构思想高于旧设计文档；被新架构
+覆盖、明显落伍、或会误导后续实现的旧设计文档可以删除。
+
+据此删除：
+
+```text
+ADDRESS_REGISTER_ABSTRACTION_PLAN_DRAFT.md
+LOGICAL_TILE_MATERIALIZED_OPERAND_MODEL.md
+OPENFABRIC_IDEAL_ABSTRACTION_NOTES_CN.md
+SPM_PLAN_REFACTOR_PLAN.md
+HANDOFF_1.md
+drafts/
+research/planning/
+research/audit/operator_coverage_targets.md
+research/roadmap/openfabric-publication-roadmap.md
+docs/chip-program-plan.md
+docs/dtensor-stage-shard-address-plan.md
+docs/typed-vector-operand-design.md
+docs/draft-convergence-audit.md
+docs/log10-refactored-integration-plan.md
+docs/lowering-shell-reorg.md
+docs/vendor-toolchain-source-organization.md
+docs/softmax-subtask-site-refactor.md
+docs/independent_prompt/
+```
+
+保留原则：
+
+```text
+TWO_LEVEL_DTENSOR_NOTES_CN.md
+  继续作为最高架构指导。
+
+DFU3500_ADDRESS_COMPOSITION_NOTES.md
+  保留，因为主要记录 base_addr + imm 这类硬件/ABI address facts。
+
+docs/isa/
+docs/vendor-workflow-evidence/
+docs/operator-coverage-checklist.md
+docs/openfabric-vector-hardware-coverage.md
+docs/runtime-plan-image.md
+docs/address-binding-projections.md
+docs/partial-reduce-stage-binding.md
+  保留，因为它们更像事实、能力边界或 target lowering 约束，而不是旧架构主张。
+```
 
 ### 2026-07-04 legacy Python / payload 清理
 

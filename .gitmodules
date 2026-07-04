@@ -1,3 +1,7 @@
 [submodule "OpenFabric"]
 	path = OpenFabric
 	url = git@github.com:intellistream/OpenFabric.git
+
+[submodule "tt-metal"]
+	path = tt-metal
+	url = git@github.com:tenstorrent/tt-metal.git

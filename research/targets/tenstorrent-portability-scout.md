@@ -194,7 +194,7 @@ Choose the first implementation route:
    - may hide too much low-level TileAction detail.
 
 2. TT-Metalium-first:
-   - better match for Tile Program and kernel lowering;
+   - better match for FiberTensorView materialization and kernel lowering;
    - more implementation work;
    - stronger systems paper evidence if runnable.
 

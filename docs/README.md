@@ -16,12 +16,8 @@ vendor-assembler-input-protocol.md
 openfabric-lowering-principles.md
 runtime-plan-image.md
 operator-coverage-checklist.md
-draft-convergence-audit.md
-chip-program-plan.md
-dtensor-stage-shard-address-plan.md
 address-binding-projections.md
 partial-reduce-stage-binding.md
-typed-vector-operand-design.md
 openfabric-vector-hardware-coverage.md
 ```
 
@@ -38,7 +34,6 @@ TypedTileValue -> Operand` 重新解释。
 gemm-vendor-graph-csv-layout.md
 gemm-subtask-blocks-and-graph-dependency.md
 graph-plan-projection.md
-softmax-subtask-site-refactor.md
 isa/hmmal.md
 vendor-workflow-evidence/
 ```
@@ -55,15 +50,13 @@ cmake-shadow-build.md
 ## Cleanup Policy
 
 `docs/` 只放未来仍应遵守或查证的内容。已经被实现、源码 README、更高层原则文档
-覆盖的过程草稿应删除，不在这里长期堆积。仍然带有未完成任务、开放风险或后续路线的
-设计讨论继续保留在 `../drafts/`；本轮逐篇 triage 记录见
-`draft-convergence-audit.md`。Scoped projection 之后的新一轮 workspace 清扫记录见
-`../SCOPED_TENSOR_PROJECTION_CLEANUP_AUDIT_CN.md`。
+覆盖的过程草稿应删除，不在这里长期堆积。Scoped projection 之后的新一轮 workspace
+清扫记录见 `../SCOPED_TENSOR_PROJECTION_CLEANUP_AUDIT_CN.md`。
 
 旧的 OpenFabric / B-line 文档已经收进旧实现目录：
 
 ```text
-../legacy_implementations/openfabric_bline/docs/
+../legacy_docs/
 ```
 
 不要默认把旧文档树搬回来。只有当某份文档重新成为
