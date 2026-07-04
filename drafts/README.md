@@ -4,12 +4,16 @@ This directory is only for unfinished design notes and risk registers. A draft
 should leave this directory once it has either become current project guidance
 under `../docs/` or has been superseded by implementation/source-local docs.
 
+Current naming guidance comes from `../TWO_LEVEL_DTENSOR_NOTES_CN.md`. Drafts
+that still say `DTensor`, `DTensorTileRef`, `TileValue`, or `Tile Program`
+should be read as pre-scoped-projection language until rewritten.
+
 Current unfinished notes:
 
 | Draft | Status |
 | --- | --- |
-| `gemm-dtensor-address-auto-planning-cn.md` | Active GEMM/tensor address auto-planning route; tracks remaining materialization action, external layout, base-row, and CSV address work. |
-| `gemm-fiberop-design-notes.md` | Deferred GEMM FiberOp API direction; useful when we return to plan-to-fiber lowering. |
+| `gemm-dtensor-address-auto-planning-cn.md` | Active GEMM/tensor address auto-planning route, but needs terminology migration from DTensor refs to Stream/Fiber projections. |
+| `gemm-fiberop-design-notes.md` | Deferred GEMM FiberOp API direction; useful when we return to StreamTensorView/FiberTensorView lowering. |
 | `openfabric-strong-generalization-gap-notes-cn.md` | Short active gap list around ChipProgramPlan, CollectivePlan, artifact manifest, and deferred automatic lowering. |
 | `spm-data-operator-generation-todo-cn.md` | TODO for eventually generating SPM/input-data helpers from the operator entry. |
 
@@ -33,7 +37,7 @@ Recently resolved:
 | `runtime-config-image-riscv-plan-cn.md` | Superseded by RuntimePlanImage; no separate runtime config image route remains active. |
 | `runtime-plan-image-protocol-cn.md` | Protocol moved to `../docs/runtime-plan-image.md`; source ABI remains in `common_app_builder/openfabric_runtime_plan_image.h`. |
 | `subtask-site-common-abstraction-draft.md` | Implementation has landed; durable rules are in lowering principles. |
-| `tensor-materialization-decoupling-cn.md` | Merged into the active GEMM DTensor address plan and address-binding docs. |
+| `tensor-materialization-decoupling-cn.md` | Merged into the active GEMM address plan and address-binding docs; old DTensor wording is superseded by scoped projection. |
 | `three-operator-lifecycle-abstraction-table-cn.md` | Cross-operator lifecycle guidance moved to lowering principles and coverage docs. |
 | `gemm-subtask-blocks-and-graph-dependency-dump-cn.md` | Promoted to `../docs/gemm-subtask-blocks-and-graph-dependency.md`. |
 | `softmax-graph-plan-notes.md` | Design intent promoted to `../docs/graph-plan-projection.md`; draft removed. |

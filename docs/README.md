@@ -9,6 +9,8 @@
 先读这些，它们定义当前路线的设计边界：
 
 ```text
+../TWO_LEVEL_DTENSOR_NOTES_CN.md
+../SCOPED_TENSOR_PROJECTION_CLEANUP_AUDIT_CN.md
 handwritten-operator-contract.md
 vendor-assembler-input-protocol.md
 openfabric-lowering-principles.md
@@ -22,6 +24,11 @@ partial-reduce-stage-binding.md
 typed-vector-operand-design.md
 openfabric-vector-hardware-coverage.md
 ```
+
+`../TWO_LEVEL_DTENSOR_NOTES_CN.md` 现在是 workspace 级的最高命名指导。旧文档中
+的 `DTensor` / `Tile Program` / `TileValue` / `ProcessorTileProgram` 不应再默认
+作为最终架构语言；需要按 `Tensor -> StreamTensorView -> FiberTensorView ->
+TypedTileValue -> Operand` 重新解释。
 
 ## Current Case Evidence
 
@@ -50,7 +57,8 @@ cmake-shadow-build.md
 `docs/` 只放未来仍应遵守或查证的内容。已经被实现、源码 README、更高层原则文档
 覆盖的过程草稿应删除，不在这里长期堆积。仍然带有未完成任务、开放风险或后续路线的
 设计讨论继续保留在 `../drafts/`；本轮逐篇 triage 记录见
-`draft-convergence-audit.md`。
+`draft-convergence-audit.md`。Scoped projection 之后的新一轮 workspace 清扫记录见
+`../SCOPED_TENSOR_PROJECTION_CLEANUP_AUDIT_CN.md`。
 
 旧的 OpenFabric / B-line 文档已经收进旧实现目录：
 

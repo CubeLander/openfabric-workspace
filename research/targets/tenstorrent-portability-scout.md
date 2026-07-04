@@ -1,6 +1,7 @@
 # Tenstorrent Portability Scout
 
-Status: research scout for a possible second OpenFabric backend target.
+Status: research scout for a possible second OpenFabric backend target. Mapping
+language updated to follow `../../TWO_LEVEL_DTENSOR_NOTES_CN.md`.
 
 Date: 2026-07-02
 
@@ -41,10 +42,12 @@ runtime behavior from DFU3500.
 | OpenFabric concept | Tenstorrent candidate |
 | --- | --- |
 | `DeviceMesh` | Tensix core grid |
-| `DTensor` | TT-NN tensor with shape, layout, memory layout, and storage |
-| `TileValue` | tile-resident value, likely carried through circular buffers or TT tensor tiles |
+| `Tensor` | TT-NN tensor with shape, layout, memory layout, and storage |
+| `StreamTensorView` | Tensor projection over a core grid, program, kernel group, or sharded TT tensor view |
+| `FiberTensorView` | Per-core/per-kernel local shard or tile-space in L1/circular buffers |
+| `TypedTileValue` | tile-resident value, likely carried through circular buffers, Dst, SrcA/SrcB, SFPU view, or TT tensor tiles |
 | `StorageBoundary` | host tensor, DRAM tensor, L1-resident tile data |
-| `TileAction` | TT-Metalium kernel-local compute or data movement step |
+| logical `add/mul/matmul_accumulate/load/store` | TT-Metalium kernel-local compute or data movement step |
 | `LogicalCollective` | explicit multicast/data-movement protocol or cooperating kernels |
 | `RuntimeActionPlan` | host-side program/device launch and buffer transfers |
 | `ArtifactManifest` | TT-Metalium source, compile target, run command, simulator output, checker |
@@ -81,7 +84,7 @@ Candidate operators:
 OpenFabric requirement:
 
 ```text
-one TileAction over one TileValue
+one FiberTensorView-local logical action over one TypedTileValue
 ```
 
 Tenstorrent requirement:
@@ -101,7 +104,7 @@ Success:
 OpenFabric requirement:
 
 ```text
-DTensor tile placement over a core grid
+StreamTensorView tile placement over a core grid
 ```
 
 Tenstorrent requirement:
@@ -121,7 +124,7 @@ Success:
 OpenFabric requirement:
 
 ```text
-Tile contraction with A/B/C placement
+FiberTensorView tile contraction with A/B/C StreamTensorView placement
 ```
 
 Tenstorrent requirement:
@@ -147,7 +150,7 @@ Candidates:
 OpenFabric requirement:
 
 ```text
-LogicalCollective with participants and visible result TileValues
+LogicalCollective with participants and visible TypedTileValues
 ```
 
 Tenstorrent requirement:
@@ -168,8 +171,9 @@ A successful scout can support this paper claim:
 
 ```text
 OpenFabric's concepts are target-aware but not target-owned: the same
-placement, TileValue, and LogicalCollective abstractions can describe both a
-closed customer DFU3500 flow and a public Tenstorrent-style tile accelerator.
+Tensor/Stream/Fiber projection, TypedTileValue, and LogicalCollective
+abstractions can describe both a closed customer DFU3500 flow and a public
+Tenstorrent-style tile accelerator.
 ```
 
 It should not claim:

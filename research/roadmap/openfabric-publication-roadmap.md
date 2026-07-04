@@ -1,19 +1,20 @@
 # OpenFabric Publication Roadmap
 
-Status: active roadmap for turning the current DFU3500 milestone into a
-publishable OpenFabric research story.
+Status: active roadmap, but the headline thesis must be updated to the scoped
+tensor projection model in `../../TWO_LEVEL_DTENSOR_NOTES_CN.md`.
 
 Date: 2026-07-03
 
 ## Publication Thesis
 
-OpenFabric should be presented as a DTensor and Tile Program abstraction for
+OpenFabric should now be presented as a scoped tensor projection abstraction for
 NoC-style spatial accelerators:
 
 ```text
-DTensor placement and storage boundaries
-  -> per-PE Tile Programs with named TileValues
-  -> LogicalCollective visibility objects
+Tensor truth and storage boundaries
+  -> StreamTensorView over execution/data scopes
+  -> FiberTensorView over local compute/materialization scopes
+  -> TypedTileValue / Operand materialization
   -> target-specific package / runtime artifacts
 ```
 
@@ -21,6 +22,10 @@ DFU3500 is the first real target and customer validation path. It is not the
 conceptual boundary. The next research step is to show that the same
 OpenFabric concepts reduce operator surface area for another tiled NoC target,
 with Tenstorrent as the most attractive public candidate.
+
+Historical note: later sections may still say `DTensor`, `Tile Program`,
+`TileValue`, or `ProcessorTileProgram`. Read those as old names unless the
+section explicitly argues for the old object.
 
 ## Current Milestone
 

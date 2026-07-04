@@ -1,9 +1,14 @@
 # OpenFabric Paper Planning Room
 
+Status: historical paper-planning room. Its evidence map is still useful, but
+the headline terminology predates `../../TWO_LEVEL_DTENSOR_NOTES_CN.md`.
+Future paper drafts should use scoped tensor projection language instead of
+the older `DTensor + Tile Program` framing.
+
 This directory is the internal planning room for the OpenFabric paper:
 
 ```text
-OpenFabric: A DTensor Programming Model for Spatial Accelerators
+OpenFabric: Scoped Tensor Projection for Spatial Accelerators
 ```
 
 It is not the public paper text. Each file designs one paper section: what the
@@ -16,12 +21,13 @@ Spatial accelerator programming is fundamentally a problem of making tensor
 values visible at the right processing elements under explicit resource,
 routing, storage, and runtime-package constraints.
 
-OpenFabric proposes a DTensor-inspired programming model for this setting:
+OpenFabric now frames this as scoped tensor projection:
 
 ```text
-DTensor program
-  -> per-PE Tile Program with globally named TileValues
-  -> logical collective / visibility lowering
+Tensor
+  -> StreamTensorView
+  -> FiberTensorView
+  -> TypedTileValue / Operand materialization
   -> vendor-compatible case-authoring material
   -> existing assembler/runtime toolchain
 ```
@@ -69,7 +75,9 @@ We proved a fully generic compiler for all accelerators.
 Frame it as:
 
 ```text
-We identify DTensor visibility as the right semantic layer for spatial
-accelerator operators, and show that this layer can be lowered into real
-vendor-compatible operator surfaces across several exposure cases.
+We identify scoped tensor projection as the right semantic layer for spatial
+accelerator operators: tensor truth is projected through stream/fiber execution
+scopes before tile values are materialized into target operands. We show that
+this layer can be lowered into real vendor-compatible operator surfaces across
+several exposure cases.
 ```

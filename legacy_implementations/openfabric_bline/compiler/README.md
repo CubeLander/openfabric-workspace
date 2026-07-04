@@ -1,12 +1,19 @@
 # DFU Tiny Distributed Tensor Compiler
 
-This directory contains the planned compiler implementation. The first version
-should stay deliberately small: support output-sharded GEMM, emit inspectable IR
-and schedules first, then lower to CSV/runtime package once the plan matches the
-known vendor examples.
+Status: historical notes only. The old Python compiler implementation was
+removed on 2026-07-04 because it is superseded by the scoped tensor projection
+model and the active OpenFabric implementation.
 
-The Python package name is `gpdpu_compiler`. The core logical tensor metadata
-intentionally mirrors PyTorch DTensor where it helps developer intuition:
+This file is kept as a tombstone for the old route. The text below describes a
+pre-scoped-projection plan and should not be treated as runnable guidance.
+
+The old idea was to build a deliberately small compiler: support output-sharded
+GEMM, emit inspectable IR and schedules first, then lower to CSV/runtime package
+once the plan matches the known vendor examples.
+
+The removed Python package was named `gpdpu_compiler`. Its core logical tensor
+metadata intentionally mirrored PyTorch DTensor where it helped developer
+intuition:
 
 ```text
 gpdpu_compiler.core.DeviceMesh        inspired by torch.distributed.device_mesh
@@ -29,10 +36,10 @@ image as a behavioral guardrail while refactoring compiler layers: new IR work
 may change byte layout, but it must not regress the ability to run
 `gemm_template_fusion` with `task_num=4` through SimICT.
 
-The long-term partner validation entry lives in
-[`gpdpu_compiler/validation/dfu3500_partner_validation/`](gpdpu_compiler/validation/dfu3500_partner_validation/).
-It replaces the old scratch `gemmfix` workflow and should be kept as part of
-the compiler source package.
+The former partner validation entry under
+`gpdpu_compiler/validation/dfu3500_partner_validation/` was also removed with
+the Python package and generated payloads. Future validation should be rebuilt
+from the active OpenFabric package flow, not resurrected from this archive.
 
 ## First Implementation Slice
 
@@ -88,7 +95,7 @@ Dependency graph is a derived view.
 Backend graph is a lowering result.
 ```
 
-The active compiler documentation index is [`docs/compiler/README.md`](../docs/compiler/README.md).
+The archived compiler documentation index is [`docs/compiler/README.md`](../docs/compiler/README.md).
 Historical construction notes live under [`compiler/notes/`](notes/), while binary/package
 facts are centralized under [`docs/compiler/binary_packaging/`](../docs/compiler/binary_packaging/).
 
@@ -100,13 +107,14 @@ DFU backend, those actions lower further into PE-local `GRAPH_NODE` records and
 cross-PE graph edges. A DFU `GRAPH_NODE` is therefore not a collective-wide
 node; it is a local execution block assigned to one PE.
 
-For the baseline GEMM example:
+Historical examples such as:
 
 ```bash
 python3 compiler/examples/gemm.py
 ```
 
-the generated files include:
+no longer exist in this archive. Generated bundle descriptions below are kept
+only to explain what the old route attempted.
 
 ```text
 tmp/gpdpu_compiler_examples/gemm/plan.json

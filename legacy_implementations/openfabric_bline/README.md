@@ -1,9 +1,15 @@
 # Legacy OpenFabric B-line Archive
 
-This folder archives the pre-`second_wind` OpenFabric/B-line implementation,
-documentation, notes, materials, papers, baseline records, and validation
-artifacts.  It is preserved as reference material, not as the active
-development path.
+This folder archives the pre-`second_wind` OpenFabric/B-line documentation,
+notes, baseline records, and vendor/reference evidence. It is preserved as
+reference material, not as the active development path.
+
+Cleanup note, 2026-07-04: the old Python compiler implementation, tests, helper
+tools, validation payloads, progress payloads, historical upload bundle, and IEEE
+template workspace were removed from this archive. Their useful lessons are
+covered by the scoped tensor projection notes and the active OpenFabric
+implementation; the Python code itself was not runnable enough to keep as a
+working baseline.
 
 The active ground-truth implementation is now:
 
@@ -14,20 +20,14 @@ The active ground-truth implementation is now:
 ## Contents
 
 ```text
-compiler/      old OpenFabric/B-line compiler package, tools, validation payloads
-tests/         tests for the archived compiler path
-tools/         extraction/OCR helper tools from the old repo layout
-report/        old report drafts and B-line progress payload notes
+compiler/      old compiler notes only; Python package removed
+report/        old report outline; generated progress payloads removed
 research/      old research notes
 docs/          archived design docs and vendor_reference evidence
 notes/         archived working notes
-materials/     archived original/reference materials
-IEEE_Conference_Template/
-               archived paper draft workspace
 RUNNABLE_BASELINE.md
                archived baseline note
 *.md           handoff, reliability, and B-line checkpoint notes
-*.tgz          old upload/validation bundle
 *.sh           old remote comparison helper scripts
 ```
 
@@ -39,14 +39,12 @@ Use this folder to mine failed-route lessons:
 template/fiber abstractions
 binary ABI experiments
 runtime-ready gates
-validation scripts
-partner upload packaging
+partner upload packaging notes
 ```
 
-Do not resume development here by default.  New work should start from the
-vendor case authoring contract and the runnable `simict3500final` cases, then
-pull ideas from this archive only when they can be grounded back to real vendor
-case evidence.
+Do not resume development here. New work should start from the scoped tensor
+projection model and the active OpenFabric implementation, then pull facts from
+this archive only when they can be grounded back to real vendor case evidence.
 
 ## Current Boundary
 

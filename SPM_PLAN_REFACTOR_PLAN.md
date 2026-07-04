@@ -1,5 +1,13 @@
 # SPM Plan Refactor Plan
 
+Status: useful engineering plan, but terminology predates
+`TWO_LEVEL_DTENSOR_NOTES_CN.md`.
+
+Terminology note: `DTensor` in this file should generally be read as `Tensor`
+truth plus `StreamTensorView` / `FiberTensorView` projections. The SPM
+base/slot distinction remains valid; the naming should be migrated during the
+next rewrite.
+
 This note tracks the current bad smells around OpenFabric SPM layout and
 DFU3500 instance base slots. The goal is to make plan-level tensor placement
 flat and inspectable, while keeping target-specific base-slot assignment in the
